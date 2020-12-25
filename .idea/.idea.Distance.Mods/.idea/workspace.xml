@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="using correct unity version now lol">
+    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="uh">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.Raycast/Assets/shaders" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Assets/shaders" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Assets/shaders" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Assets/shaders" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Distance.Raycast.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Distance.Raycast.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity/Assets/AssetBundles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Unity/Assets/AssetBundles.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity/Assets/AssetBundles.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Unity/Assets/AssetBundles/AssetBundles" beforeDir="false" afterPath="$PROJECT_DIR$/Unity/Assets/AssetBundles/AssetBundles" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Unity/Assets/AssetBundles/AssetBundles.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Unity/Assets/AssetBundles/AssetBundles.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity/Assets/AssetBundles/AssetBundles.manifest.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Unity/Assets/AssetBundles/AssetBundles.manifest.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity/Assets/AssetBundles/AssetBundles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Unity/Assets/AssetBundles/AssetBundles.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity/Assets/AssetBundles/shaders" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity/Assets/AssetBundles/AssetBundles.manifest.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity/Assets/AssetBundles/AssetBundles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity/Assets/AssetBundles/shaders" beforeDir="false" afterPath="$PROJECT_DIR$/Unity/Assets/AssetBundles/shaders" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Unity/Assets/AssetBundles/shaders.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Unity/Assets/AssetBundles/shaders.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity/Assets/AssetBundles/shaders.manifest.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Unity/Assets/AssetBundles/shaders.manifest.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity/Assets/AssetBundles/shaders.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Unity/Assets/AssetBundles/shaders.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity/Assets/AssetBundles/shaders.manifest.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity/Assets/AssetBundles/shaders.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Unity/Assets/Depth.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Unity/Assets/Depth.shader" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,6 +101,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/52/e7ca391e/LineRenderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/25/ea85e6cc/IEnumerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/59/6ff91688/InterceptorCollectable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/17/ded4c914/Material.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/c3/cd876294/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Distance.Cheat/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Distance.Cheat/mod.json" root0="FORCE_HIGHLIGHTING" />
@@ -154,8 +156,8 @@
       <option value="$PROJECT_DIR$/Distance.Raycast/Distance.Raycast.csproj" />
       <option value="$PROJECT_DIR$/.gitignore" />
       <option value="$PROJECT_DIR$/Unity/Assets/Editor/CreateAssetBundles.cs" />
-      <option value="$PROJECT_DIR$/Unity/Assets/test.shader" />
       <option value="$PROJECT_DIR$/Distance.Raycast/Entry.cs" />
+      <option value="$PROJECT_DIR$/Unity/Assets/test.shader" />
       <option value="$PROJECT_DIR$/Unity/Assets/Depth.shader" />
       <option value="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" />
     </changedPaths>
@@ -225,7 +227,8 @@
       <workItem from="1608866950697" duration="1627000" />
       <workItem from="1608871282525" duration="5690000" />
       <workItem from="1608881473106" duration="304000" />
-      <workItem from="1608881897780" duration="4165000" />
+      <workItem from="1608881897780" duration="4284000" />
+      <workItem from="1608932481806" duration="1133000" />
     </task>
     <task id="LOCAL-00001" summary="poopy">
       <created>1608881070386</created>
@@ -297,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608883615457</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="uh">
+      <created>1608886505416</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1608886505416</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +335,7 @@
     <MESSAGE value="okay" />
     <MESSAGE value="build assetbundles" />
     <MESSAGE value="using correct unity version now lol" />
-    <option name="LAST_COMMIT_MESSAGE" value="using correct unity version now lol" />
+    <MESSAGE value="uh" />
+    <option name="LAST_COMMIT_MESSAGE" value="uh" />
   </component>
 </project>

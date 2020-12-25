@@ -3,26 +3,35 @@
         Tags { "RenderType"="Opaque" }
         Pass {
             CGPROGRAM
-
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
 
-            struct v2f {
-                float4 pos : POSITION;
-                float2 depth : TEXCOORD0;
+            struct appdata {
+                float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
             };
 
-            v2f vert(appdata_base v) {
+            struct v2f {
+                float4 pos : SV_POSITION;
+                float2 uv : TEXCOORD0;
+            };
+
+            sampler2D _CameraDepthTexture;
+
+            v2f vert(appdata v) {
                 v2f o;
                 o.pos = UnityObjectToClipPos(v.vertex);
-                UNITY_TRANSFER_DEPTH(o.depth);
+                o.uv = v.uv;
                 return o;
             }
 
-            half4 frag(v2f i) : COLOR {
-                float depth = Linear01Depth(i.depth);
-                return fixed4(depth, depth, depth, 1);
+            half4 frag(v2f i) : SV_Target {
+                float depth = tex2D(_CameraDepthTexture, i.uv);
+                depth = Linear01Depth(depth);
+                depth = 1 - depth;
+                return depth;
+                // return fixed4(depth, depth, depth, 1);
             }
             ENDCG
         }
