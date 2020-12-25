@@ -17,7 +17,7 @@
       <e p="Distance.Mods.sln" t="IncludeFlat" />
       <e p="Distance.Raycast" t="IncludeRecursive">
         <e p="Assets" t="Include">
-          <e p="shaders" t="Include" />
+          <e p="Assets" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="DepthCamera.cs" t="Include" />

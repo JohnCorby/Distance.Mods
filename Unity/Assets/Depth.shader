@@ -1,10 +1,13 @@
 ﻿Shader "Custom/Depth" {
     SubShader {
-        Tags { "RenderType"="Opaque" }
+        // No culling or depth
+        Cull Off ZWrite Off ZTest Always
+
         Pass {
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+
             #include "UnityCG.cginc"
 
             struct appdata {
@@ -13,25 +16,25 @@
             };
 
             struct v2f {
-                float4 pos : SV_POSITION;
+                float4 vertex : SV_POSITION;
                 float2 uv : TEXCOORD0;
             };
 
-            sampler2D _CameraDepthTexture;
-
             v2f vert(appdata v) {
                 v2f o;
-                o.pos = UnityObjectToClipPos(v.vertex);
+                o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv;
                 return o;
             }
 
-            half4 frag(v2f i) : SV_Target {
+            sampler2D _CameraDepthTexture;
+
+            fixed4 frag(v2f i) : SV_Target
+            {
                 float depth = tex2D(_CameraDepthTexture, i.uv);
                 depth = Linear01Depth(depth);
-                depth = 1 - depth;
+                depth = 1 - depth; // closer = higher
                 return depth;
-                // return fixed4(depth, depth, depth, 1);
             }
             ENDCG
         }
