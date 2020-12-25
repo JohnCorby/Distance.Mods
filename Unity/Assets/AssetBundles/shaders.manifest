@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 3618332050
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 98fb8449cea55be0c7ced9638e861e3d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2c8988ac2083246e0cc7e34c05a709a4
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/Depth.shader
+- Assets/AssetBundles/AssetBundles.manifest
+- Assets/AssetBundles/shaders.manifest
+Dependencies: []

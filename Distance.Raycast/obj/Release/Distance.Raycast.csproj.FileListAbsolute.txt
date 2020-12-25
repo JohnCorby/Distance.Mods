@@ -3,3 +3,4 @@ D:\Code Stuff\Distance.Mods\Distance.Raycast\obj\Release\Distance.Raycast.csproj
 D:\Code Stuff\Distance.Mods\Distance.Raycast\bin\Release\mod.json
 D:\Code Stuff\Distance.Mods\Distance.Raycast\bin\Release\Distance.Raycast.dll
 D:\Code Stuff\Distance.Mods\Distance.Raycast\obj\Release\Distance.Raycast.dll
+D:\Code Stuff\Distance.Mods\Distance.Raycast\bin\Release\Assets\shaders

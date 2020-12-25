@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="bruh">
-      <change afterPath="$PROJECT_DIR$/Unity/Assets/Depth.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/riderModule.iml" afterDir="false" />
+    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="okay">
+      <change afterPath="$PROJECT_DIR$/Unity/Assets/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Unity/Assets/Editor/CreateAssetBundles.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Unity/Assets/Editor/CreateAssetBundles.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity/Assets/Depth.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Unity/Assets/Depth.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity/Assets/Depth.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Unity/Assets/Depth.shader.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +92,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/17/99f41248/InputStatesAdv.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/9c/4dd53356/LaserLogic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/e5/76bc2ebb/Nullable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Unity/Assets/Editor/CreateAssetBundles.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/ce/5acf3184/CarVisuals.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/e4/423b94ed/KeyboardDevice.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/9c/9b173947/Teleportable.cs" root0="SKIP_HIGHLIGHTING" />
@@ -143,6 +143,7 @@
       <option value="$PROJECT_DIR$/.gitignore" />
       <option value="$PROJECT_DIR$/Unity/Assets/Depth.shader" />
       <option value="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" />
+      <option value="$PROJECT_DIR$/Unity/Assets/Editor/CreateAssetBundles.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lxTRcXRTrkYODeKxiUYPu28JO5" />
@@ -154,6 +155,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -208,7 +210,7 @@
       <workItem from="1608866385572" duration="545000" />
       <workItem from="1608866950697" duration="1627000" />
       <workItem from="1608871282525" duration="5690000" />
-      <workItem from="1608881473106" duration="104000" />
+      <workItem from="1608881473106" duration="304000" />
     </task>
     <task id="LOCAL-00001" summary="poopy">
       <created>1608881070386</created>
@@ -252,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608881382928</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="okay">
+      <created>1608881589434</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608881589434</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,9 +281,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="poopy" />
     <MESSAGE value="bruh" />
-    <option name="LAST_COMMIT_MESSAGE" value="bruh" />
+    <MESSAGE value="okay" />
+    <option name="LAST_COMMIT_MESSAGE" value="okay" />
   </component>
 </project>
