@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using Reactor.API.Storage;
+using UnityEngine;
 
 namespace Distance.Raycast {
     public class DepthCamera : MonoBehaviour {
@@ -11,6 +13,10 @@ namespace Distance.Raycast {
             Camera.cullingMask = PhysicsEx.NoCarsRayCastLayerMask_;
             Camera.depthTextureMode = DepthTextureMode.Depth;
             Camera.targetTexture = RenderTexture;
+
+            var assetBundle = (AssetBundle) new Assets("shaders").Bundle;
+            var shader = assetBundle.LoadAsset<Shader>("Depth.shader");
+            Camera.SetReplacementShader(shader, "");
 
             Texture2D = new Texture2D(RenderTexture.width, RenderTexture.height);
         }

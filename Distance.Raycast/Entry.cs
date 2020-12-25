@@ -14,6 +14,7 @@ namespace Distance.Raycast {
         }
 
         private void Awake() {
+            LOG.Info($"unity version: {Application.unityVersion}");
             gameObject.AddComponent<Stepper>();
         }
     }
