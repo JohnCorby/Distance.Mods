@@ -2,6 +2,7 @@
 <module type="RIDER_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$/../..">
+      <excludeFolder url="file://$MODULE_DIR$/../../Unity" />
       <excludeFolder url="file://$MODULE_DIR$/../../Unity/Assets" />
       <excludeFolder url="file://$MODULE_DIR$/../../Unity/Library/APIUpdater" />
       <excludeFolder url="file://$MODULE_DIR$/../../Unity/Library/Artifacts/00" />

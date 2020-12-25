@@ -1,1 +1,2 @@
-﻿Unity
+﻿/Unity/*
+!/Unity/Assets

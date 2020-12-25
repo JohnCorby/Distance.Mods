@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="bruh">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity/Assets/Depth.shader" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,8 +136,8 @@
       <option value="$PROJECT_DIR$/Distance.Raycast/packages.config" />
       <option value="$PROJECT_DIR$/Distance.Raycast/Distance.Raycast.csproj" />
       <option value="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" />
-      <option value="$PROJECT_DIR$/Unity/Assets/Depth.shader" />
       <option value="$PROJECT_DIR$/.gitignore" />
+      <option value="$PROJECT_DIR$/Unity/Assets/Depth.shader" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lxTRcXRTrkYODeKxiUYPu28JO5" />
@@ -202,7 +202,7 @@
       <workItem from="1608864242780" duration="193000" />
       <workItem from="1608866385572" duration="545000" />
       <workItem from="1608866950697" duration="1627000" />
-      <workItem from="1608871282525" duration="5410000" />
+      <workItem from="1608871282525" duration="5639000" />
     </task>
     <task id="LOCAL-00001" summary="poopy">
       <created>1608881070386</created>
@@ -225,7 +225,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608881142836</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="bruh">
+      <created>1608881154703</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608881154703</updated>
+    </task>
+    <task id="LOCAL-00005" summary="bruh">
+      <created>1608881365344</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608881365344</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
