@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="bruh">
-      <change beforePath="$PROJECT_DIR$/Unity/Assets/Depth.shader" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Unity/Assets/Depth.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity/Assets/Depth.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Unity/Assets/Depth.shader" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,9 +140,9 @@
       <option value="$PROJECT_DIR$/Distance.Raycast/Entry.cs" />
       <option value="$PROJECT_DIR$/Distance.Raycast/packages.config" />
       <option value="$PROJECT_DIR$/Distance.Raycast/Distance.Raycast.csproj" />
-      <option value="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" />
       <option value="$PROJECT_DIR$/.gitignore" />
       <option value="$PROJECT_DIR$/Unity/Assets/Depth.shader" />
+      <option value="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lxTRcXRTrkYODeKxiUYPu28JO5" />
@@ -202,7 +207,8 @@
       <workItem from="1608864242780" duration="193000" />
       <workItem from="1608866385572" duration="545000" />
       <workItem from="1608866950697" duration="1627000" />
-      <workItem from="1608871282525" duration="5639000" />
+      <workItem from="1608871282525" duration="5690000" />
+      <workItem from="1608881473106" duration="104000" />
     </task>
     <task id="LOCAL-00001" summary="poopy">
       <created>1608881070386</created>
@@ -239,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608881365344</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="bruh">
+      <created>1608881382928</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608881382928</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +260,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="poopy" />
