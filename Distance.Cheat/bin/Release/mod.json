@@ -1,0 +1,9 @@
+﻿{
+  "FriendlyName": "Cheat",
+  "Author": "JohnCorby",
+  "Contact": "JohnCorby#7053",
+  "ModuleFileName": "Distance.Cheat.dll",
+  "Dependencies": [],
+  "SkipLoad": false,
+  "Priority": 10
+}

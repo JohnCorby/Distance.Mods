@@ -1,0 +1,10 @@
+D:\Code Stuff\Distance.TestMod\Distance.TestMod\bin\Release\mod.json
+D:\Code Stuff\Distance.TestMod\Distance.TestMod\bin\Release\Distance.TestMod.dll
+D:\Code Stuff\Distance.TestMod\Distance.TestMod\obj\Release\Distance.TestMod.csprojAssemblyReference.cache
+D:\Code Stuff\Distance.TestMod\Distance.TestMod\obj\Release\Distance.TestMod.csproj.CoreCompileInputs.cache
+D:\Code Stuff\Distance.TestMod\Distance.TestMod\obj\Release\Distance.TestMod.dll
+D:\Code Stuff\Distance.Mods\Distance.TestMod\bin\Release\mod.json
+D:\Code Stuff\Distance.Mods\Distance.TestMod\bin\Release\Distance.TestMod.dll
+D:\Code Stuff\Distance.Mods\Distance.TestMod\obj\Release\Distance.TestMod.csprojAssemblyReference.cache
+D:\Code Stuff\Distance.Mods\Distance.TestMod\obj\Release\Distance.TestMod.csproj.CoreCompileInputs.cache
+D:\Code Stuff\Distance.Mods\Distance.TestMod\obj\Release\Distance.TestMod.dll

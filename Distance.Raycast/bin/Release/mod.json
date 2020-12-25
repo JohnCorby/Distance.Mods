@@ -1,0 +1,9 @@
+﻿{
+  "FriendlyName": "Raycast",
+  "Author": "JohnCorby",
+  "Contact": "JohnCorby#7053",
+  "ModuleFileName": "Distance.Raycast.dll",
+  "Dependencies": [],
+  "SkipLoad": false,
+  "Priority": 10
+}
