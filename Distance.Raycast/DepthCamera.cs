@@ -5,18 +5,23 @@ using UnityEngine;
 namespace Distance.Raycast {
     public class DepthCamera : MonoBehaviour {
         private Camera Camera;
-        private readonly RenderTexture RenderTexture = new(Screen.width / 2, Screen.height / 2, 24);
+        private readonly RenderTexture RenderTexture =
+            new(Screen.width / 2, Screen.height / 2, 24);
         private Texture2D Texture2D;
+
+        private static readonly Shader SHADER;
+
+        static DepthCamera() {
+            var assetBundle = (AssetBundle) new Assets("shaders").Bundle;
+            SHADER = assetBundle.LoadAsset<Shader>("Depth.shader");
+        }
 
         private void Awake() {
             Camera = gameObject.AddComponent<Camera>();
-            Camera.cullingMask = PhysicsEx.NoCarsRayCastLayerMask_;
+            // Camera.SetReplacementShader(SHADER, "");
+            // Camera.cullingMask = PhysicsEx.NoCarsRayCastLayerMask_;
             Camera.depthTextureMode = DepthTextureMode.Depth;
             Camera.targetTexture = RenderTexture;
-
-            var assetBundle = (AssetBundle) new Assets("shaders").Bundle;
-            var shader = assetBundle.LoadAsset<Shader>("Depth.shader");
-            Camera.SetReplacementShader(shader, "");
 
             Texture2D = new Texture2D(RenderTexture.width, RenderTexture.height);
         }
