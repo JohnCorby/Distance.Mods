@@ -16,7 +16,6 @@
       </e>
       <e p="Distance.Mods.sln" t="IncludeFlat" />
       <e p="Distance.Raycast" t="IncludeRecursive">
-        <e p=".gitignore" t="Include" />
         <e p="Assets" t="Include">
           <e p="Assets" t="Include" />
         </e>

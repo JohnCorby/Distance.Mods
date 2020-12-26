@@ -41,7 +41,6 @@
       <Compile Include="Stepper.cs" />
     </ItemGroup>
     <ItemGroup>
-      <Content Include=".gitignore" />
       <Content Include="Assets\assets">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>

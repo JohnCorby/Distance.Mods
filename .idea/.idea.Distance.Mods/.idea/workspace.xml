@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="bruh">
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Communication.cs" afterDir="false" />
+    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="fuck">
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assembly-CSharp-Editor.csproj" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.manifest" afterDir="false" />
@@ -22,19 +24,7 @@
       <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Editor.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Editor/CreateAssetBundles.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Editor/CreateAssetBundles.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Mods.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Mods.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Distance.Raycast.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Distance.Raycast.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Entry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Entry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Harmony.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Harmony.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Stepper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Stepper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Distance.Raycast.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Distance.Raycast.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Unity.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +38,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/67/c9902787/KeyCode.cs" root0="SKIP_HIGHLIGHTING" />
@@ -288,7 +279,7 @@
       <workItem from="1608932481806" duration="4901000" />
       <workItem from="1608959919675" duration="2749000" />
       <workItem from="1608962857125" duration="5444000" />
-      <workItem from="1608968492856" duration="29000" />
+      <workItem from="1608968492856" duration="606000" />
     </task>
     <task id="LOCAL-00001" summary="poopy">
       <created>1608881070386</created>
@@ -430,7 +421,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608968402531</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="in the middle of everything">
+      <created>1608968542095</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1608968542095</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fuck">
+      <created>1608969718459</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1608969718459</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,6 +467,8 @@
     <MESSAGE value="bit of refactoring" />
     <MESSAGE value="cheats are better and also hotkey enabled" />
     <MESSAGE value="bruh" />
-    <option name="LAST_COMMIT_MESSAGE" value="bruh" />
+    <MESSAGE value="in the middle of everything" />
+    <MESSAGE value="fuck" />
+    <option name="LAST_COMMIT_MESSAGE" value="fuck" />
   </component>
 </project>
