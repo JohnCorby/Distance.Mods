@@ -36,7 +36,7 @@
     <ItemGroup>
         <Compile Include="Harmony.cs" />
         <Compile Include="Entry.cs" />
-        <Compile Include="Utils.cs" />
+        <Compile Include="Hotkeys.cs" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="mod.json">
