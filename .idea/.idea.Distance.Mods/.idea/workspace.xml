@@ -1,10 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="bit of refactoring">
+    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="bruh">
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Communication.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.manifest.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets.manifest.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Depth.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Depth.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Depth.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Depth.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Editor/CreateAssetBundles.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Editor/CreateAssetBundles.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Mods.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Mods.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Distance.Raycast.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Distance.Raycast.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Entry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Entry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Harmony.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Harmony.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Stepper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Stepper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Distance.Raycast.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Distance.Raycast.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -12,30 +41,48 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/67/c9902787/KeyCode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/22/380c7207/IntroCamMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/4e/a2329913/LocalComputerContolledCar.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/c2/2c70f6fb/InternalDrawTextureArguments.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/ae/50f80d1e/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/6c/2a3d76a8/CarScreenLogic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/05/52b2c25f/Explode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/48/06792fba/Graphics.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/76/49a551b2/InputStates.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/23/fccf0e5b/DepthTextureMode.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/93/fb32b647/NetworkView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/8e/ee1a9787/QuaternionExtensionOnly.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/3a/01204d0a/AkSoundEngine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/95/eedff092/Void.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/0b/27f48f23/Death.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/34/017ca84d/RenderBuffer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/a3/1a371a54/AudioManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/e6/3966b9e1/LocalPlayerControlledCar.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/76/82e11ea4/FieldInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/825C30D4-A4CF-464C-B7EB-B8145854D1F8/48/d8bd7595/UdpClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99D2A14E-1996-4BF2-8165-CD864C4D4A93/ac/50eabafd/LineRenderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/d9/fe7db126/CarLogic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Distance.Raycast/Harmony.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/8f/4d8f4782/Vector3Ex.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2F2C92D0-8CB0-4E4A-BA0D-649517DCF946/83/46673d2f/Reflection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/17/fdd40b22/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Distance.Raycast/mod.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Distance.Raycast/Entry.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/97/a42136ed/QuaternionEx.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/0f/d35d8b33/Char.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/4c/49d55f01/Gadget.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1B380997-3330-4E70-B480-9182F1D86169/1d/1734a3f1/HarmonyAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/ac/fa45766a/AkSoundEnginePINVOKE.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2F2C92D0-8CB0-4E4A-BA0D-649517DCF946/9d/5a95219d/MessageBox.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5CE8317-6E86-4AA0-981C-F60F3B695F81/fd/fde08b5b/Version.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1B380997-3330-4E70-B480-9182F1D86169/f2/89f6becf/HarmonyPatch.cs" root0="SKIP_HIGHLIGHTING" />
@@ -46,6 +93,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/1c/505de34d/ScaleMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/3c/96be9dea/Network.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/22/9d4fedfe/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/825C30D4-A4CF-464C-B7EB-B8145854D1F8/6e/29c3ba83/Socket.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/75/23d045b9/PlayerDataLocal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/55/b3e3cfa8/Collision.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/38/acd35869/DisconnectionType.cs" root0="SKIP_HIGHLIGHTING" />
@@ -57,6 +105,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/59/95d59d63/NetworkPlayerEx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/bd/7efb2238/Assembly-CSharp.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/04/d3e6ce53/NetworkingManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/825C30D4-A4CF-464C-B7EB-B8145854D1F8/77/080b6a97/SocketInformation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/ca/88f964fb/SteamworksLeaderboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/02/b6ceaf73/PS4Leaderboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/00/33aa8f1e/AbstractCamMode.cs" root0="SKIP_HIGHLIGHTING" />
@@ -64,6 +113,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/9c/4dd53356/LaserLogic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/9c/9b173947/Teleportable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/70/36288213/Application.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/42/ebd7931b/RaceEndLogic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3337525C-3AAE-42E0-BA83-E0F75ACB0BD8/39/8dc46440/Keyboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/2f/9a0c2db8/QueryTriggerInteraction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/27/82278529/Rect.cs" root0="SKIP_HIGHLIGHTING" />
@@ -83,20 +133,23 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/8f/934474c7/CameraShake.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/43/62853b16/GameObjectEx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/61/99829210/ComponentEx.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/1d/dd1e9e88/PlayerEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/f3/66cb1c4b/Texture2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/c3/cb77f296/Renderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/0f/f5852980/RenderTexture.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/52/e7ca391e/LineRenderer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/f7/f70c66b5/Byte.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/25/ea85e6cc/IEnumerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/59/6ff91688/InterceptorCollectable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/17/ded4c914/Material.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/51/5cd5086c/InstancedEvent`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/c3/cd876294/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Distance.Cheat/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/825C30D4-A4CF-464C-B7EB-B8145854D1F8/ab/6f5ca463/IPAddress.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Distance.Cheat/mod.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Distance.Cheat/Entry.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/d1/12165a67/EchoesCollectable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/7f/894bd5f2/BoostGadget.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Unity/Assets/Editor/CreateAssetBundles.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3337525C-3AAE-42E0-BA83-E0F75ACB0BD8/75/8961ef34/Assets.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/65/871c5bf9/CarCamera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/af/7de570fc/Camera.cs" root0="SKIP_HIGHLIGHTING" />
@@ -105,25 +158,26 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/c1/1c67b2d7/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/45/e863e1b0/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/68/ab7e3014/InputDevice.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/8c/b2563259/JetsGadget.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/4a/df0fc73e/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/17/99f41248/InputStatesAdv.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/e5/76bc2ebb/Nullable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/ce/5acf3184/CarVisuals.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/e4/423b94ed/KeyboardDevice.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2F2C92D0-8CB0-4E4A-BA0D-649517DCF946/01/006e7479/GameAPI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/c4/78bea33d/Phantom.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2F2C92D0-8CB0-4E4A-BA0D-649517DCF946/3f/5d9e2dbf/KeyboardShortcutAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3337525C-3AAE-42E0-BA83-E0F75ACB0BD8/3e/4960c132/AssemblyEx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/05/6ed41b64/ChaseCamMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/55/255fe1b2/NitronicCarWheel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1B380997-3330-4E70-B480-9182F1D86169/c0/7ee70972/Harmony.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/825C30D4-A4CF-464C-B7EB-B8145854D1F8/3d/0eef5ba1/UnsafeNclNativeMethods.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/7b/395e2541/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Distance.Cheat/mod.json" />
-      <option value="$PROJECT_DIR$/Distance.Cheat/Utils.cs" />
       <option value="$PROJECT_DIR$/Distance.Cheat/TestMod.cs" />
-      <option value="$PROJECT_DIR$/Distance.Cheat/Entry.cs" />
       <option value="$PROJECT_DIR$/Distance.Cheat/Distance.Cheat.csproj" />
       <option value="$PROJECT_DIR$/Raycast/mod.json" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/e6/3966b9e1/LocalPlayerControlledCar.cs" />
@@ -134,22 +188,36 @@
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/4c/49d55f01/Gadget.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/ce/5acf3184/CarVisuals.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/65/871c5bf9/CarCamera.cs" />
-      <option value="$PROJECT_DIR$/Distance.Cheat/Harmony.cs" />
       <option value="$PROJECT_DIR$/Distance.Raycast/Raycaster.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/3c/987bd183/ManagerAbstract.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3337525C-3AAE-42E0-BA83-E0F75ACB0BD8/b4/80c5682c/RuntimePatcher.cs" />
-      <option value="$PROJECT_DIR$/Distance.Raycast/Harmony.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/00/33aa8f1e/AbstractCamMode.cs" />
-      <option value="$PROJECT_DIR$/Distance.Raycast/Stepper.cs" />
       <option value="$PROJECT_DIR$/Distance.Raycast/packages.config" />
       <option value="$PROJECT_DIR$/Distance.Raycast/Distance.Raycast.csproj" />
-      <option value="$PROJECT_DIR$/.gitignore" />
       <option value="$PROJECT_DIR$/Unity/Assets/Editor/CreateAssetBundles.cs" />
-      <option value="$PROJECT_DIR$/Distance.Raycast/Entry.cs" />
       <option value="$PROJECT_DIR$/Unity/Assets/test.shader" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/8f/934474c7/CameraShake.cs" />
       <option value="$PROJECT_DIR$/Unity/Assets/Depth.shader" />
+      <option value="$PROJECT_DIR$/Distance.Raycast/Stepper.cs" />
+      <option value="$PROJECT_DIR$/Distance.Cheat/HotKeys.cs" />
+      <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/c4/78bea33d/Phantom.cs" />
+      <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/a3/1a371a54/AudioManager.cs" />
+      <option value="$PROJECT_DIR$/Distance.Cheat/Utils.cs" />
+      <option value="$PROJECT_DIR$/Distance.Cheat/Cheat.cs" />
+      <option value="$PROJECT_DIR$/Distance.Raycast/Harmony.cs" />
+      <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/8c/b2563259/JetsGadget.cs" />
+      <option value="$PROJECT_DIR$/Distance.Cheat/Harmony.cs" />
+      <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/42/ebd7931b/RaceEndLogic.cs" />
+      <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/1d/dd1e9e88/PlayerEvents.cs" />
+      <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/6c/2a3d76a8/CarScreenLogic.cs" />
+      <option value="$PROJECT_DIR$/Distance.Cheat/Entry.cs" />
+      <option value="$PROJECT_DIR$/Distance.Cheat/Hotkeys.cs" />
+      <option value="$PROJECT_DIR$/Distance.Raycast/Entry.cs" />
+      <option value="$PROJECT_DIR$/.gitignore" />
+      <option value="$PROJECT_DIR$/Distance.Raycast/Communication.cs" />
       <option value="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" />
+      <option value="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/riderModule.iml" />
+      <option value="$PROJECT_DIR$/Distance.Raycast/.gitignore" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lxTRcXRTrkYODeKxiUYPu28JO5" />
@@ -165,7 +233,6 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
@@ -218,7 +285,10 @@
       <workItem from="1608871282525" duration="5690000" />
       <workItem from="1608881473106" duration="304000" />
       <workItem from="1608881897780" duration="4284000" />
-      <workItem from="1608932481806" duration="4855000" />
+      <workItem from="1608932481806" duration="4901000" />
+      <workItem from="1608959919675" duration="2749000" />
+      <workItem from="1608962857125" duration="5444000" />
+      <workItem from="1608968492856" duration="29000" />
     </task>
     <task id="LOCAL-00001" summary="poopy">
       <created>1608881070386</created>
@@ -318,7 +388,49 @@
       <option name="project" value="LOCAL" />
       <updated>1608934402906</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="bit of refactoring">
+      <created>1608937372197</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1608937372197</updated>
+    </task>
+    <task id="LOCAL-00016" summary="cheats are better and also hotkey enabled">
+      <created>1608964937534</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1608964937534</updated>
+    </task>
+    <task id="LOCAL-00017" summary="cheats are better and also hotkey enabled">
+      <created>1608964962808</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1608964962808</updated>
+    </task>
+    <task id="LOCAL-00018" summary="cheats are better and also hotkey enabled">
+      <created>1608964968292</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1608964968292</updated>
+    </task>
+    <task id="LOCAL-00019" summary="bruh">
+      <created>1608968364761</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1608968364761</updated>
+    </task>
+    <task id="LOCAL-00020" summary="bruh">
+      <created>1608968402531</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1608968402531</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,13 +454,14 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="poopy" />
-    <MESSAGE value="bruh" />
     <MESSAGE value="okay" />
     <MESSAGE value="build assetbundles" />
     <MESSAGE value="using correct unity version now lol" />
     <MESSAGE value="uh" />
     <MESSAGE value="finally it works" />
     <MESSAGE value="bit of refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="bit of refactoring" />
+    <MESSAGE value="cheats are better and also hotkey enabled" />
+    <MESSAGE value="bruh" />
+    <option name="LAST_COMMIT_MESSAGE" value="bruh" />
   </component>
 </project>

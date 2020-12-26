@@ -1,10 +1,13 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Distance.Raycast {
     /// allows you to advance frame by frame
     public class Stepper : MonoBehaviour {
         private bool DoStep;
+
+        private void Awake() {
+            Application.targetFrameRate = 1000;
+        }
 
         private void Update() {
             if (DoStep) {

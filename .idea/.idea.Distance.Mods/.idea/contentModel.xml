@@ -9,17 +9,19 @@
         <e p="Distance.Cheat.csproj" t="IncludeRecursive" />
         <e p="Entry.cs" t="Include" />
         <e p="Harmony.cs" t="Include" />
+        <e p="HotKeys.cs" t="Include" />
         <e p="mod.json" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
-        <e p="Utils.cs" t="Include" />
       </e>
       <e p="Distance.Mods.sln" t="IncludeFlat" />
       <e p="Distance.Raycast" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
         <e p="Assets" t="Include">
           <e p="Assets" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Communication.cs" t="Include" />
         <e p="DepthCamera.cs" t="Include" />
         <e p="Distance.Raycast.csproj" t="IncludeRecursive" />
         <e p="Entry.cs" t="Include" />
@@ -27,6 +29,7 @@
         <e p="mod.json" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
+        <e p="Python" t="Include" />
         <e p="Raycaster.cs" t="Include" />
         <e p="Stepper.cs" t="Include" />
       </e>

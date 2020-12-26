@@ -9,13 +9,17 @@ namespace Distance.Raycast {
     public class Entry : MonoBehaviour {
         public static readonly Log LOG = LogManager.GetForCurrentAssembly();
 
+        public static Communication Communication;
+        public static Stepper Stepper;
+
         public void Initialize(IManager manager) {
             RuntimePatcher.AutoPatch();
         }
 
         private void Awake() {
             LOG.Info($"unity version: {Application.unityVersion}");
-            gameObject.AddComponent<Stepper>();
+            Communication = gameObject.AddComponent<Communication>();
+            Stepper = gameObject.AddComponent<Stepper>();
         }
     }
 }

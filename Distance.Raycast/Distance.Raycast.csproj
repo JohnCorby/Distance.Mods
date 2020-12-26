@@ -33,6 +33,7 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+      <Compile Include="Communication.cs" />
       <Compile Include="DepthCamera.cs" />
       <Compile Include="Entry.cs" />
       <Compile Include="Harmony.cs" />
@@ -40,6 +41,7 @@
       <Compile Include="Stepper.cs" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include=".gitignore" />
       <Content Include="Assets\assets">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
@@ -112,6 +114,9 @@
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Python" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="RIDER_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$/../.." />
+    <content url="file://$MODULE_DIR$/../..">
+      <excludeFolder url="file://$MODULE_DIR$/../../Distance.Raycast/Unity/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Distance.Raycast/Unity/Library" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Distance.Raycast/Unity/Logs" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Distance.Raycast/Unity/Packages" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Distance.Raycast/Unity/ProjectSettings" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Distance.Raycast/Unity/obj" />
+    </content>
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
