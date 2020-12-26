@@ -1,9 +1,12 @@
-﻿using Reactor.API.Storage;
+﻿using JetBrains.Annotations;
+using Reactor.API.Storage;
 using UnityEngine;
 
 namespace Distance.Raycast {
     public class DepthCamera : MonoBehaviour {
-        private RenderTexture RenderTexture;
+        [CanBeNull]
+        public static RenderTexture RenderTexture;
+
         private Camera Camera;
 
         private static readonly Material DEPTH_MATERIAL;
@@ -14,7 +17,7 @@ namespace Distance.Raycast {
         }
 
         private void Awake() {
-            RenderTexture = new RenderTexture(256, 256, 0, RenderTextureFormat.RHalf);
+            RenderTexture = new RenderTexture(256, 256, 0);
 
             Camera = gameObject.AddComponent<Camera>();
             Camera.cullingMask = PhysicsEx.NoCarsRayCastLayerMask_;
@@ -22,14 +25,14 @@ namespace Distance.Raycast {
             Camera.targetTexture = RenderTexture;
         }
 
-        // /// apply shader to texture
+        /// apply shader to texture
         private void OnRenderImage(RenderTexture src, RenderTexture dest) {
             Graphics.Blit(src, dest, DEPTH_MATERIAL);
         }
 
         /// draw texture to screen
         private void OnGUI() {
-            GUI.DrawTexture(new Rect(0, 0, RenderTexture.width, RenderTexture.height), RenderTexture);
+            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), RenderTexture);
         }
     }
 }

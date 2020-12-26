@@ -5,26 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="fuck">
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.manifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.manifest.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets.manifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets.manifest.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Depth.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Depth.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Depth.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Depth.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Editor/CreateAssetBundles.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Editor/CreateAssetBundles.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Unity.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Python/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Python/.idea/Python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Python/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Python/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Python/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Python/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Python/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Cheat/bin/Release/Distance.Cheat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/bin/Release/Distance.Cheat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Cheat/obj/Release/Distance.Cheat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/obj/Release/Distance.Cheat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Communication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Communication.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Entry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Entry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Distance.Raycast.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Distance.Raycast.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,10 +115,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/ea/f9418de5/CockpitCamMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/99/90192385/UnityVersionSpecific.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/62/9988682a/Layers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/825C30D4-A4CF-464C-B7EB-B8145854D1F8/b4/61200918/IPEndPoint.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/f4/4e6aade8/TransformExtensionOnly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/1a/f69310d4/NGUITools.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/80/bf686b98/PrintAllEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/8f/934474c7/CameraShake.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/43/62853b16/GameObjectEx.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/6f/1594c515/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/61/99829210/ComponentEx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/1d/dd1e9e88/PlayerEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/f3/66cb1c4b/Texture2D.cs" root0="SKIP_HIGHLIGHTING" />
@@ -197,18 +196,19 @@
       <option value="$PROJECT_DIR$/Distance.Cheat/Cheat.cs" />
       <option value="$PROJECT_DIR$/Distance.Raycast/Harmony.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/8c/b2563259/JetsGadget.cs" />
-      <option value="$PROJECT_DIR$/Distance.Cheat/Harmony.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/42/ebd7931b/RaceEndLogic.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/1d/dd1e9e88/PlayerEvents.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/6c/2a3d76a8/CarScreenLogic.cs" />
-      <option value="$PROJECT_DIR$/Distance.Cheat/Entry.cs" />
       <option value="$PROJECT_DIR$/Distance.Cheat/Hotkeys.cs" />
-      <option value="$PROJECT_DIR$/Distance.Raycast/Entry.cs" />
       <option value="$PROJECT_DIR$/.gitignore" />
-      <option value="$PROJECT_DIR$/Distance.Raycast/Communication.cs" />
-      <option value="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" />
       <option value="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/riderModule.iml" />
       <option value="$PROJECT_DIR$/Distance.Raycast/.gitignore" />
+      <option value="$PROJECT_DIR$/Distance.Raycast/Entry.cs" />
+      <option value="$PROJECT_DIR$/Distance.Cheat/Entry.cs" />
+      <option value="$PROJECT_DIR$/Distance.Cheat/Harmony.cs" />
+      <option value="$PROJECT_DIR$/Distance.Raycast/Communication.cs" />
+      <option value="$PROJECT_DIR$/Distance.Raycast/Unity/.gitignore" />
+      <option value="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lxTRcXRTrkYODeKxiUYPu28JO5" />
@@ -435,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608969718459</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fuck">
+      <created>1608969771785</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1608969771785</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,5 +477,9 @@
     <MESSAGE value="in the middle of everything" />
     <MESSAGE value="fuck" />
     <option name="LAST_COMMIT_MESSAGE" value="fuck" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
