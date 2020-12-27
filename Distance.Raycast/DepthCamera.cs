@@ -1,15 +1,17 @@
-﻿using Reactor.API.Storage;
+﻿using System;
+using Reactor.API.Storage;
 using UnityEngine;
 
 namespace Distance.Raycast {
     public class DepthCamera : MonoBehaviour {
         public static readonly RenderTexture RENDER_TEXTURE = new(256, 256, 0);
         private static Camera Camera = null!;
-        private static readonly Material DEPTH_MATERIAL;
+        private static readonly Material MATERIAL, PP_MATERIAL;
 
         static DepthCamera() {
             var assetBundle = (AssetBundle) new Assets("assets").Bundle;
-            DEPTH_MATERIAL = assetBundle.LoadAsset<Material>("Depth.mat");
+            MATERIAL = new Material(Shader.Find("Standard"));
+            PP_MATERIAL = assetBundle.LoadAsset<Material>("PostProcessing.mat");
         }
 
         private void Awake() {
@@ -20,20 +22,25 @@ namespace Distance.Raycast {
             ReplaceMaterials();
         }
 
+        /// replace all materials in scene with standard one
+        /// makes post processing work for transparent stuff
         private static void ReplaceMaterials() {
-            var material = DEPTH_MATERIAL;
-
             foreach (var renderer in FindObjectsOfType<Renderer>()) {
                 var materials = new Material[renderer.materials.Length];
-                for (var i = 0; i < materials.Length; i++) materials[i] = material;
-
+                for (var i = 0; i < materials.Length; i++)
+                    materials[i] = MATERIAL;
                 renderer.materials = materials;
             }
         }
 
+        /// apply post processing
+        private void OnRenderImage(RenderTexture src, RenderTexture dest) {
+            Graphics.Blit(src, dest, PP_MATERIAL);
+        }
+
         /// draw texture to screen
         private void OnGUI() {
-            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), RENDER_TEXTURE);
+            GUI.DrawTexture(new Rect(0, 0, RENDER_TEXTURE.width, RENDER_TEXTURE.height), RENDER_TEXTURE);
         }
     }
 }
