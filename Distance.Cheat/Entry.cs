@@ -5,7 +5,6 @@ using Reactor.API.Logging;
 using Reactor.API.Runtime.Patching;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 namespace Distance.Cheat {
     [ModEntryPoint("com.github.johncorby/Cheat")]
     public class Entry : MonoBehaviour {

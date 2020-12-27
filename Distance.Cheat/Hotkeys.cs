@@ -4,15 +4,6 @@ using static Distance.Cheat.Entry;
 
 namespace Distance.Cheat {
     public class Hotkeys : MonoBehaviour {
-        static Hotkeys() {
-            Events.Car.Death.SubscribeAll((_, _) => {
-                LOG.Info("CHEATS OFF");
-
-                JetsGadget.thrusterBoostFullPowerLimit_ = 1f;
-                JetsGadget.thrusterBoostDepletedLimit_ = 0.4f;
-            });
-        }
-
         private void Update() {
             if (!Input.GetKey(KeyCode.C)) return;
 
