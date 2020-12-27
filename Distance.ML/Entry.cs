@@ -4,8 +4,8 @@ using Reactor.API.Logging;
 using Reactor.API.Runtime.Patching;
 using UnityEngine;
 
-namespace Distance.Raycast {
-    [ModEntryPoint("com.github.johncorby/Raycast")]
+namespace Distance.ML {
+    [ModEntryPoint("com.github.johncorby/ML")]
     public class Entry : MonoBehaviour {
         public static readonly Log LOG = LogManager.GetForCurrentAssembly();
 

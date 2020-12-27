@@ -1,8 +1,8 @@
 ﻿{
-  "FriendlyName": "Raycast",
+  "FriendlyName": "ML",
   "Author": "JohnCorby",
   "Contact": "JohnCorby#7053",
-  "ModuleFileName": "Distance.Raycast.dll",
+  "ModuleFileName": "Distance.ML.dll",
   "Dependencies": [],
   "SkipLoad": false,
   "Priority": 10

@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance.Cheat", "Distance.Cheat\Distance.Cheat.csproj", "{1DEB8BBD-5883-462A-B0AA-FA1708228B12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance.Raycast", "Distance.Raycast\Distance.Raycast.csproj", "{9387066A-50D3-494E-B270-6840D829AA38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance.ML", "Distance.ML\Distance.ML.csproj", "{9387066A-50D3-494E-B270-6840D829AA38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

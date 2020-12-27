@@ -4,33 +4,156 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="alright good enough">
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Standard.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Standard.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Standard.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Standard.shader.meta" afterDir="false" />
+    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="temp">
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Assets/assets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/BytesEx.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Communication.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Distance.ML.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Entry.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Harmony.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/MyCamera.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Python/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Python/.idea/Python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Python/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Python/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Python/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Python/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Python/env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Python/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Raycaster.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Stepper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Editor/CreateAssetBundles.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Editor/CreateAssetBundles.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/PostProcessing.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/PostProcessing.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/PostProcessing.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/PostProcessing.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Packages/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Packages/packages-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/AudioManager.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/ClusterInputManager.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/NetworkManager.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/PresetManager.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/TimeManager.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/VFXManager.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/ProjectSettings/XRSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Assets/assets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/mod.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/mod.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.Raycast.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.Raycast.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.Raycast.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/packages.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Cheat/bin/Release/Distance.Cheat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/bin/Release/Distance.Cheat.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Cheat/obj/Release/Distance.Cheat.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/obj/Release/Distance.Cheat.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Cheat/obj/Release/Distance.Cheat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/obj/Release/Distance.Cheat.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Assets/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Assets/assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Distance.Raycast.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Distance.Raycast.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.manifest.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.manifest.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets.manifest.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets.manifest.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Assets/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Assets/assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Distance.Raycast.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Distance.Raycast.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Mods.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Mods.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Assets/assets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/BytesEx.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Communication.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Distance.Raycast.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Entry.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Harmony.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Python/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Python/.idea/Python.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Python/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Python/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Python/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Python/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Python/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Python/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Raycaster.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Stepper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assembly-CSharp-Editor.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.manifest.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/AssetBundles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets.manifest.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/AssetBundles/assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Editor/CreateAssetBundles.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Editor/CreateAssetBundles.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/PostProcessing.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/PostProcessing.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/PostProcessing.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/PostProcessing.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Standard.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Standard.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Standard.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Standard.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Packages/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Packages/packages-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/AudioManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/ClusterInputManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/DynamicsManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/EditorSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/GraphicsSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/InputManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/NavMeshAreas.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/NetworkManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/Physics2DSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/PresetManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/ProjectSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/ProjectVersion.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/QualitySettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/TagManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/TimeManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/VFXManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/ProjectSettings/XRSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/Unity/Unity.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Assets/assets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/bin/Release/Distance.Raycast.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/bin/Release/mod.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/mod.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.csprojAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/obj/Release/Distance.Raycast.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Raycast/packages.config" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,13 +210,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99D2A14E-1996-4BF2-8165-CD864C4D4A93/ac/50eabafd/LineRenderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Code Stuff/Distance.Mods/Distance.Raycast/Unity/Assets/Depth.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/d9/fe7db126/CarLogic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Distance.Raycast/Harmony.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Distance.ML/Harmony.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/8f/4d8f4782/Vector3Ex.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2F2C92D0-8CB0-4E4A-BA0D-649517DCF946/83/46673d2f/Reflection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/17/fdd40b22/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Distance.Raycast/mod.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Distance.ML/mod.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/93/6520ad78/LayerEx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Distance.Raycast/Entry.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Distance.ML/Entry.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Code Stuff/Distance.Mods/Distance.Raycast/Entry.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/97/a42136ed/QuaternionEx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/0f/d35d8b33/Char.cs" root0="SKIP_HIGHLIGHTING" />
@@ -147,6 +270,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3337525C-3AAE-42E0-BA83-E0F75ACB0BD8/54/f0986fc0/Hotkey.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/7d/d15dd98f/Physics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Code Stuff/Distance.Mods/Distance.Raycast/Entry.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/b2/bc9ea537/OnlineLeaderboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/f3/bc6f2a5d/CrabCollectable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/48/2133ecb4/AntiTunneler.cs" root0="SKIP_HIGHLIGHTING" />
@@ -193,12 +317,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/d1/12165a67/EchoesCollectable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/7f/894bd5f2/BoostGadget.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3337525C-3AAE-42E0-BA83-E0F75ACB0BD8/75/8961ef34/Assets.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Editor/CreateAssetBundles.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Distance.ML/Unity/Assets/Editor/CreateAssetBundles.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/65/871c5bf9/CarCamera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Code Stuff/Distance.Mods/Distance.Raycast/Unity/Assets/Depth.shader.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/af/7de570fc/Camera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3337525C-3AAE-42E0-BA83-E0F75ACB0BD8/b4/80c5682c/RuntimePatcher.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Distance.ML/MyCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/c1/1c67b2d7/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/45/e863e1b0/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/68/ab7e3014/InputDevice.cs" root0="SKIP_HIGHLIGHTING" />
@@ -221,11 +345,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Distance.Raycast/CoroutineUtils.cs" />
-      <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/d9/fe7db126/CarLogic.cs" />
-      <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/4c/49d55f01/Gadget.cs" />
-      <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/ce/5acf3184/CarVisuals.cs" />
-      <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/65/871c5bf9/CarCamera.cs" />
       <option value="$PROJECT_DIR$/Distance.Raycast/Raycaster.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/3c/987bd183/ManagerAbstract.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3337525C-3AAE-42E0-BA83-E0F75ACB0BD8/b4/80c5682c/RuntimePatcher.cs" />
@@ -272,6 +391,11 @@
       <option value="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/dasd.shader" />
       <option value="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Standard.shader" />
       <option value="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/Entry.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/DepthCamera.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/MLCamera.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/mod.json" />
+      <option value="$PROJECT_DIR$/Distance.ML/MyCamera.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lxTRcXRTrkYODeKxiUYPu28JO5" />
@@ -569,7 +693,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609043830182</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="temp">
+      <created>1609052245694</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1609052245694</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +736,8 @@
     <MESSAGE value="fuck" />
     <MESSAGE value="a lot of stuff" />
     <MESSAGE value="alright good enough" />
-    <option name="LAST_COMMIT_MESSAGE" value="alright good enough" />
+    <MESSAGE value="temp" />
+    <option name="LAST_COMMIT_MESSAGE" value="temp" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

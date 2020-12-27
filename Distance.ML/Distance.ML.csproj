@@ -7,8 +7,8 @@
         <ProjectGuid>{9387066A-50D3-494E-B270-6840D829AA38}</ProjectGuid>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>Distance.Raycast</RootNamespace>
-        <AssemblyName>Distance.Raycast</AssemblyName>
+        <RootNamespace>Distance.ML</RootNamespace>
+        <AssemblyName>Distance.ML</AssemblyName>
         <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <LangVersion>default</LangVersion>
@@ -36,7 +36,7 @@
     <ItemGroup>
       <Compile Include="BytesEx.cs" />
       <Compile Include="Communication.cs" />
-      <Compile Include="DepthCamera.cs" />
+      <Compile Include="MyCamera.cs" />
       <Compile Include="Entry.cs" />
       <Compile Include="Harmony.cs" />
       <Compile Include="Raycaster.cs" />

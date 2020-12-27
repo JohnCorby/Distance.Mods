@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Distance.Raycast {
+namespace Distance.ML {
     /// shoots out a bunch of rays and collects the hit info for them
     /// also renders that info
     public class Raycaster : MonoBehaviour {

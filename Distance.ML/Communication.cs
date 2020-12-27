@@ -3,9 +3,9 @@ using System.Collections;
 using System.Net;
 using System.Net.Sockets;
 using UnityEngine;
-using static Distance.Raycast.Entry;
+using static Distance.ML.Entry;
 
-namespace Distance.Raycast {
+namespace Distance.ML {
     /// reading/writing data via ipc (so loopback and port)
     public class Communication : MonoBehaviour {
         private static readonly IPEndPoint ADDR = new(IPAddress.Loopback, 6969);

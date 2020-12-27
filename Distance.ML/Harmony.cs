@@ -1,8 +1,7 @@
-﻿using System;
-using HarmonyLib;
+﻿using HarmonyLib;
 using UnityEngine;
 
-namespace Distance.Raycast {
+namespace Distance.ML {
     // namespace LocalPlayerControlledCar_ {
     //     [HarmonyPatch(typeof(LocalPlayerControlledCar), nameof(Awake))]
     //     public static class Awake {
@@ -19,7 +18,7 @@ namespace Distance.Raycast {
         [HarmonyPatch(typeof(CarCamera), nameof(Awake))]
         public static class Awake {
             private static void Postfix(Component __instance) {
-                __instance.gameObject.AddComponent<DepthCamera>();
+                __instance.gameObject.AddComponent<MyCamera>();
             }
         }
     }

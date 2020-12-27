@@ -3,15 +3,15 @@ using System.Reflection;
 using Reactor.API.Storage;
 using UnityEngine;
 
-namespace Distance.Raycast {
-    public class DepthCamera : MonoBehaviour {
+namespace Distance.ML {
+    public class MyCamera : MonoBehaviour {
         public static readonly RenderTexture RENDER_TEXTURE = new(256, 256, 0);
         private static Camera Camera = null!;
         private static readonly Material STANDARD_MATERIAL;
         private static readonly Material PP_MATERIAL;
         private static readonly int CAR_LAYER_MASK;
 
-        static DepthCamera() {
+        static MyCamera() {
             var assetBundle = (AssetBundle) new Assets("assets").Bundle;
             STANDARD_MATERIAL = assetBundle.LoadAsset<Material>("Standard.mat");
             PP_MATERIAL = assetBundle.LoadAsset<Material>("PostProcessing.mat");

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Distance.Raycast {
+namespace Distance.ML {
     /// allows you to advance frame by frame
     public class Stepper : MonoBehaviour {
         private bool DoStep;
