@@ -19,7 +19,7 @@ namespace Distance.Cheat {
             if (Input.GetKeyDown(KeyCode.E)) { // enable cheats
                 LOG.Info("CHEATS ON");
 
-                if (Car) {
+                if (Car != null) {
                     Car.invincible_ = true;
                     Car.minInstaRespawnTriggerTime_ = 0;
                     Car.minInstaRespawnTime_ = 0;
@@ -33,7 +33,6 @@ namespace Distance.Cheat {
 
                     foreach (var gadget in Car.GetComponents<Gadget>())
                         gadget.SetAbilityEnabled(true, false);
-
                 }
             }
 
@@ -52,8 +51,9 @@ namespace Distance.Cheat {
             }
 
             if (Input.GetKeyDown(KeyCode.End)) { // tp to end
-                if (Car && End)
+                if (Car != null && End != null) {
                     Car.transform.position = End.transform.position;
+                }
             }
         }
     }

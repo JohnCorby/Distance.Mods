@@ -1,40 +1,65 @@
 ﻿using System.Net;
 using System.Net.Sockets;
-using JetBrains.Annotations;
 using UnityEngine;
 using static Distance.Raycast.Entry;
 
 namespace Distance.Raycast {
     /// reading/writing data via ipc (so loopback and port)
     public class Communication : MonoBehaviour {
-        private const int PORT = 6969;
+        private static readonly IPEndPoint ADDR = new(IPAddress.Loopback, 6969);
+        private static readonly byte[] PACKET_STEP = {0};
+        private static readonly byte[] PACKET_RESET = {1};
 
-        private static readonly UdpClient CLIENT = new();
+        private static readonly Socket SOCK = new(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
 
-        static Communication() {
-            CLIENT.Connect(new IPEndPoint(IPAddress.Loopback, PORT));
-
-            return;
+        private void Awake() {
             // handshake
-            CLIENT.Send(new byte[] {0xff}, 1);
-            IPEndPoint remoteEp = null;
-            CLIENT.Receive(ref remoteEp);
+            LOG.Info("handshake...");
+            Send("hello".Encode());
+            LOG.Info("got response " + Recv(5).Decode());
+            LOG.Info("connected!");
+        }
+
+        // private void Update() {
+        //     var packet = Recv(1);
+        //     if (packet == PACKET_STEP) {
+        //         Step();
+        //     } else if (packet == PACKET_RESET) {
+        //         Reset();
+        //     }
+        // }
+
+        private void Step() {
+            // todo
+        }
+
+        private void Reset() {
+            // todo
+        }
+
+        private static void Send(byte[] data) => SOCK.SendTo(data, ADDR);
+
+        private static byte[] Recv(int size) {
+            var data = new byte[size];
+            var remoteEp = (EndPoint) new IPEndPoint(IPAddress.Any, 0);
+            SOCK.ReceiveFrom(data, ref remoteEp);
+            return data;
         }
 
         private void LateUpdate() {
-            var renderTexture = DepthCamera.RenderTexture;
+            var renderTexture = DepthCamera.RENDER_TEXTURE;
             if (!renderTexture) return;
 
             SendObservation(renderTexture);
         }
 
-        private static void SendObservation([NotNull] RenderTexture renderTexture) {
+        private static void SendObservation(RenderTexture renderTexture) {
             var textureData = GetTextureData(renderTexture);
-            CLIENT.Send(textureData, textureData.Length);
+            Send(textureData);
         }
 
         /// get byte data from texture
-        private static byte[] GetTextureData([NotNull] RenderTexture renderTexture) {
+        private static byte[] GetTextureData(RenderTexture renderTexture) {
             var lastActive = RenderTexture.active;
             RenderTexture.active = renderTexture;
             var tex = new Texture2D(renderTexture.width, renderTexture.height);

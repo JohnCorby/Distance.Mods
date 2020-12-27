@@ -9,8 +9,8 @@ namespace Distance.Raycast {
     public class Entry : MonoBehaviour {
         public static readonly Log LOG = LogManager.GetForCurrentAssembly();
 
-        public static Communication Communication;
-        public static Stepper Stepper;
+        public static Communication Communication = null!;
+        public static Stepper Stepper = null!;
 
         public void Initialize(IManager manager) {
             RuntimePatcher.AutoPatch();

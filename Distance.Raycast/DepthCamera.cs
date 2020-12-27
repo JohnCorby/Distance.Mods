@@ -1,14 +1,10 @@
-﻿using JetBrains.Annotations;
-using Reactor.API.Storage;
+﻿using Reactor.API.Storage;
 using UnityEngine;
 
 namespace Distance.Raycast {
     public class DepthCamera : MonoBehaviour {
-        [CanBeNull]
-        public static RenderTexture RenderTexture;
-
-        private Camera Camera;
-
+        public static readonly RenderTexture RENDER_TEXTURE = new(256, 256, 0);
+        private static Camera Camera = null!;
         private static readonly Material DEPTH_MATERIAL;
 
         static DepthCamera() {
@@ -17,13 +13,22 @@ namespace Distance.Raycast {
         }
 
         private void Awake() {
-            RenderTexture = new RenderTexture(256, 256, 0);
-
             Camera = gameObject.AddComponent<Camera>();
             Camera.cullingMask = PhysicsEx.NoCarsRayCastLayerMask_;
             Camera.depthTextureMode = DepthTextureMode.Depth;
-            Camera.targetTexture = RenderTexture;
+            Camera.targetTexture = RENDER_TEXTURE;
         }
+
+        // /// replace all materials
+        // private void Start() {
+        //     var newMaterial = new Material(Shader.Find("Standard"));
+        //     foreach (Renderer renderer in FindObjectsOfType<Renderer>()) {
+        //         var newMaterials = new Material[renderer.materials.Length];
+        //         for (var i = 0; i < newMaterials.Length; i++)
+        //             newMaterials[i] = newMaterial;
+        //         renderer.materials = newMaterials;
+        //     }
+        // }
 
         /// apply shader to texture
         private void OnRenderImage(RenderTexture src, RenderTexture dest) {
@@ -32,7 +37,7 @@ namespace Distance.Raycast {
 
         /// draw texture to screen
         private void OnGUI() {
-            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), RenderTexture);
+            GUI.DrawTexture(new Rect(0, 0, RENDER_TEXTURE.width, RENDER_TEXTURE.height), RENDER_TEXTURE);
         }
     }
 }

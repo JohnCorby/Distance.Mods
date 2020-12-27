@@ -12,16 +12,16 @@ class Env(gym.Env):
     observation_space: gym.Space = None  # todo
 
     def __init__(self) -> None:
-        self.sock: socket.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.sock.bind(self.ADDR)
+        self.sock: socket.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
 
         # handshake
-        # the contents dont matter. it just needs to be length 1
-        self.send(b'0')
-        self.recv(1)
+        print("handshake...")
+        self.send(b'hello')
+        print('got response', self.recv(5))
+        print("connected!")
 
-    def send(self, data: bytes) -> int:
-        return self.sock.sendto(data, self.ADDR)
+    def send(self, data: bytes) -> None:
+        self.sock.sendto(data, self.ADDR)
 
     def recv(self, size: int) -> bytes:
         return self.sock.recvfrom(size)[0]
@@ -50,4 +50,7 @@ class Env(gym.Env):
         return observation
 
     def render(self, mode: str = 'human') -> None:
-        pass
+        raise NotImplementedError
+
+if __name__ == '__main__':
+    env = Env()

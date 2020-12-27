@@ -5,10 +5,6 @@ namespace Distance.Raycast {
     public class Stepper : MonoBehaviour {
         private bool DoStep;
 
-        private void Awake() {
-            Application.targetFrameRate = 1000;
-        }
-
         private void Update() {
             if (DoStep) {
                 Time.timeScale = 0;

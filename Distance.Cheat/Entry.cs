@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using JetBrains.Annotations;
 using Reactor.API.Attributes;
 using Reactor.API.Interfaces.Systems;
 using Reactor.API.Logging;
@@ -14,10 +13,8 @@ namespace Distance.Cheat {
 
         public static bool CheatsEnabled;
 
-        [CanBeNull]
-        public static LocalPlayerControlledCar Car;
-        [CanBeNull]
-        public static RaceEndLogic End;
+        public static LocalPlayerControlledCar? Car;
+        public static RaceEndLogic? End;
 
         public void Initialize(IManager manager) {
             RuntimePatcher.AutoPatch();
