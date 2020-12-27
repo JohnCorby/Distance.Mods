@@ -48,6 +48,11 @@
         <e p="Python" t="Include" />
         <e p="Raycaster.cs" t="Include" />
         <e p="Stepper.cs" t="Include" />
+        <e p="Unity" t="Include">
+          <e p="Assets" t="Include">
+            <e p="Depth.shader" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>

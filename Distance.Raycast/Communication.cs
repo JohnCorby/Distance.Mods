@@ -1,4 +1,6 @@
-﻿using System.Net;
+﻿using System;
+using System.Collections;
+using System.Net;
 using System.Net.Sockets;
 using UnityEngine;
 using static Distance.Raycast.Entry;
@@ -15,19 +17,19 @@ namespace Distance.Raycast {
         private void Awake() {
             // handshake
             LOG.Info("handshake...");
-            Send("hello".Encode());
-            LOG.Info("got response " + Recv(5).Decode());
+            Send("ping".Encode());
+            LOG.Info("got response " + Recv("pong".Encode().Length).Decode());
             LOG.Info("connected!");
         }
 
-        // private void Update() {
-        //     var packet = Recv(1);
-        //     if (packet == PACKET_STEP) {
-        //         Step();
-        //     } else if (packet == PACKET_RESET) {
-        //         Reset();
-        //     }
-        // }
+        private void Update() {
+            var packet = Recv(1);
+            if (packet == PACKET_STEP) {
+                Step();
+            } else if (packet == PACKET_RESET) {
+                Reset();
+            }
+        }
 
         private void Step() {
             // todo
@@ -37,20 +39,19 @@ namespace Distance.Raycast {
             // todo
         }
 
-        private static void Send(byte[] data) => SOCK.SendTo(data, ADDR);
+        private static void Send(byte[] data) {
+            LOG.Debug($"sending {data.Decode()}");
+            var size = SOCK.SendTo(data, ADDR);
+            LOG.Debug($"sent {size} bytes");
+        }
 
         private static byte[] Recv(int size) {
+            LOG.Debug($"receiving {size} bytes");
             var data = new byte[size];
             var remoteEp = (EndPoint) new IPEndPoint(IPAddress.Any, 0);
             SOCK.ReceiveFrom(data, ref remoteEp);
+            LOG.Debug($"received {data.Decode()}");
             return data;
-        }
-
-        private void LateUpdate() {
-            var renderTexture = DepthCamera.RENDER_TEXTURE;
-            if (!renderTexture) return;
-
-            SendObservation(renderTexture);
         }
 
         private static void SendObservation(RenderTexture renderTexture) {

@@ -13,18 +13,24 @@ class Env(gym.Env):
 
     def __init__(self) -> None:
         self.sock: socket.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
+        self.sock.bind(self.ADDR)
 
         # handshake
         print("handshake...")
-        self.send(b'hello')
-        print('got response', self.recv(5))
+        print('got response', self.recv(len(b'ping')))
+        self.send(b'pong')
         print("connected!")
 
     def send(self, data: bytes) -> None:
-        self.sock.sendto(data, self.ADDR)
+        print(f'sending {data}')
+        size = self.sock.sendto(data, self.ADDR)
+        print(f'sent {size} bytes')
 
     def recv(self, size: int) -> bytes:
-        return self.sock.recvfrom(size)[0]
+        print(f'receiving {size} bytes')
+        data = self.sock.recvfrom(size)[0]
+        print(f'received {data}')
+        return data
 
     def step(self, action: object) -> tuple:
         # do step with actions todo
@@ -52,5 +58,7 @@ class Env(gym.Env):
     def render(self, mode: str = 'human') -> None:
         raise NotImplementedError
 
+
 if __name__ == '__main__':
     env = Env()
+    while True: pass

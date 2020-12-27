@@ -15,29 +15,25 @@ namespace Distance.Raycast {
         private void Awake() {
             Camera = gameObject.AddComponent<Camera>();
             Camera.cullingMask = PhysicsEx.NoCarsRayCastLayerMask_;
-            Camera.depthTextureMode = DepthTextureMode.Depth;
             Camera.targetTexture = RENDER_TEXTURE;
+
+            ReplaceMaterials();
         }
 
-        // /// replace all materials
-        // private void Start() {
-        //     var newMaterial = new Material(Shader.Find("Standard"));
-        //     foreach (Renderer renderer in FindObjectsOfType<Renderer>()) {
-        //         var newMaterials = new Material[renderer.materials.Length];
-        //         for (var i = 0; i < newMaterials.Length; i++)
-        //             newMaterials[i] = newMaterial;
-        //         renderer.materials = newMaterials;
-        //     }
-        // }
+        private static void ReplaceMaterials() {
+            var material = DEPTH_MATERIAL;
 
-        /// apply shader to texture
-        private void OnRenderImage(RenderTexture src, RenderTexture dest) {
-            Graphics.Blit(src, dest, DEPTH_MATERIAL);
+            foreach (var renderer in FindObjectsOfType<Renderer>()) {
+                var materials = new Material[renderer.materials.Length];
+                for (var i = 0; i < materials.Length; i++) materials[i] = material;
+
+                renderer.materials = materials;
+            }
         }
 
         /// draw texture to screen
         private void OnGUI() {
-            GUI.DrawTexture(new Rect(0, 0, RENDER_TEXTURE.width, RENDER_TEXTURE.height), RENDER_TEXTURE);
+            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), RENDER_TEXTURE);
         }
     }
 }

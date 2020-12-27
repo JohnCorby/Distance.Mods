@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Depth
-  m_Shader: {fileID: 4800000, guid: af09d2406b5839e49ab983e46de2888c, type: 3}
+  m_Shader: {fileID: 4800000, guid: e1ded3617f3de034795883be618ca883, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
