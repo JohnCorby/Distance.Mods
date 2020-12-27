@@ -30,8 +30,7 @@
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
       </e>
-      <e p="Distance.Mods.sln" t="IncludeFlat" />
-      <e p="Distance.Raycast" t="IncludeRecursive">
+      <e p="Distance.ML" t="IncludeRecursive">
         <e p="Assets" t="Include">
           <e p="Assets" t="Include" />
         </e>
@@ -39,7 +38,7 @@
         <e p="BytesEx.cs" t="Include" />
         <e p="Communication.cs" t="Include" />
         <e p="DepthCamera.cs" t="Include" />
-        <e p="Distance.Raycast.csproj" t="IncludeRecursive" />
+        <e p="Distance.ML.csproj" t="IncludeRecursive" />
         <e p="Entry.cs" t="Include" />
         <e p="Harmony.cs" t="Include" />
         <e p="mod.json" t="Include" />
@@ -50,10 +49,11 @@
         <e p="Stepper.cs" t="Include" />
         <e p="Unity" t="Include">
           <e p="Assets" t="Include">
-            <e p="Depth.shader" t="Include" />
+            <e p="Standard.shader" t="Include" />
           </e>
         </e>
       </e>
+      <e p="Distance.Mods.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 984287186
+CRC: 836849129
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 686c4f04064bd17dc09be6ecaef6f9da
+    Hash: 2edc3c4fa5e3421428f0dd390e1a2aaf
   TypeTreeHash:
     serializedVersion: 2
     Hash: e69cf4aea34f06169d815d14bb7707cf
@@ -14,5 +14,6 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
+- Assets/Standard.mat
 - Assets/PostProcessing.mat
 Dependencies: []

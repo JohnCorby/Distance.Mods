@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Collections;
+using System.Reflection;
 using Reactor.API.Storage;
 using UnityEngine;
 
@@ -6,19 +7,27 @@ namespace Distance.Raycast {
     public class DepthCamera : MonoBehaviour {
         public static readonly RenderTexture RENDER_TEXTURE = new(256, 256, 0);
         private static Camera Camera = null!;
-        private static readonly Material MATERIAL, PP_MATERIAL;
+        private static readonly Material STANDARD_MATERIAL;
+        private static readonly Material PP_MATERIAL;
+        private static readonly int CAR_LAYER_MASK;
 
         static DepthCamera() {
             var assetBundle = (AssetBundle) new Assets("assets").Bundle;
-            MATERIAL = new Material(Shader.Find("Standard"));
+            STANDARD_MATERIAL = assetBundle.LoadAsset<Material>("Standard.mat");
             PP_MATERIAL = assetBundle.LoadAsset<Material>("PostProcessing.mat");
+
+            CAR_LAYER_MASK = (int) typeof(PhysicsEx)
+                .GetField("carLayerMask_", BindingFlags.Static | BindingFlags.NonPublic)?
+                .GetValue(null)!;
         }
 
-        private void Awake() {
+        private IEnumerator Start() {
             Camera = gameObject.AddComponent<Camera>();
-            Camera.cullingMask = PhysicsEx.NoCarsRayCastLayerMask_;
+            Camera.main.CopyFrom(Camera);
+            Camera.cullingMask = Camera.main.cullingMask & ~CAR_LAYER_MASK;
             Camera.targetTexture = RENDER_TEXTURE;
 
+            yield return new WaitForSeconds(3);
             ReplaceMaterials();
         }
 
@@ -28,15 +37,15 @@ namespace Distance.Raycast {
             foreach (var renderer in FindObjectsOfType<Renderer>()) {
                 var materials = new Material[renderer.materials.Length];
                 for (var i = 0; i < materials.Length; i++)
-                    materials[i] = MATERIAL;
+                    materials[i] = STANDARD_MATERIAL;
                 renderer.materials = materials;
             }
         }
 
-        /// apply post processing
-        private void OnRenderImage(RenderTexture src, RenderTexture dest) {
-            Graphics.Blit(src, dest, PP_MATERIAL);
-        }
+        // /// apply post processing
+        // private void OnRenderImage(RenderTexture src, RenderTexture dest) {
+        //     Graphics.Blit(src, dest, PP_MATERIAL);
+        // }
 
         /// draw texture to screen
         private void OnGUI() {

@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Editor\CreateAssetBundles.cs" />
      <None Include="Assets\PostProcessing.shader" />
+     <None Include="Assets\Standard.shader" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
