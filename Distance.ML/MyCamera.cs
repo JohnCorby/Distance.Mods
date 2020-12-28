@@ -33,21 +33,23 @@ namespace Distance.ML {
 
         /// modify the scene so that it will make sense to
         private static void PreprocessScene() {
-            void Init(Renderer renderer, Id id) {
-
+            static void Init(Renderer renderer, Id id) {
+                foreach (var material in renderer.materials) {
+                    material.shader = STANDARD_SHADER;
+                    material.SetInt("_ID", (int) id);
+                }
             }
 
             foreach (var renderer in Resources.FindObjectsOfTypeAll<Renderer>()) {
-                var id = Id.NORMAL;
-                if (renderer.HasComponentInChildren<KillGrid>() || renderer.HasComponentInChildren<KillGridBox>()) id = Id.KILL_GRID;
+                Id id;
+                if (renderer.HasComponentInChildren<KillGrid>() ||
+                    renderer.HasComponentInChildren<KillGridBox>()) id = Id.KILL_GRID;
                 else if (renderer.HasComponentInChildren<RaceEndLogic>()) id = Id.END;
                 else if (renderer.HasComponentInChildren<CheckpointLogic>()) id = Id.CHECKPOINT;
                 else if (renderer.HasComponentInChildren<TriggerCooldownLogic>()) id = Id.COOLDOWN;
+                else id = Id.NORMAL;
 
-                foreach (var material in renderer.materials) {
-                    material.shader = STANDARD_SHADER;
-                    material.SetInt("_ID", id);
-                }
+                Init(renderer, id);
             }
         }
 

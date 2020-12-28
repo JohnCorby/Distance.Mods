@@ -8,7 +8,7 @@ namespace Distance.ML {
     /// reading/writing data via ipc (so loopback and port)
     public class Communication : MonoBehaviour {
         private static readonly IPEndPoint ADDR = new(IPAddress.Loopback, 6969);
-        private static readonly Socket SOCK = new(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        private static Socket Sock = null!;
 
         private enum Packet : byte {
             STEP,
@@ -16,12 +16,15 @@ namespace Distance.ML {
         }
 
         private void Awake() {
+            if (!G.Sys.GameManager_.SoloAndNotOnline_) throw new ArgumentException("must be in solo game");
+
             gameObject.AddComponent<MyCamera>();
             gameObject.AddComponent<MyState>();
 
             LOG.Info("connecting...");
+            Sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             try {
-                SOCK.Connect(ADDR);
+                Sock.Connect(ADDR);
                 LOG.Info("connected!");
             } catch (SocketException e) {
                 LOG.Error($"error connecting: {e}");
@@ -30,13 +33,14 @@ namespace Distance.ML {
         }
 
         private void OnDestroy() {
-            SOCK.Close();
+            Sock.Close();
+            GetComponent<MyCamera>().Destroy();
+            GetComponent<MyState>().Destroy();
         }
 
         private void LateUpdate() {
             var data = Utils.PlayerDataLocal!;
-            if (data.CarLogic_.)
-            if (!data.IsCarRelevant_) return;
+            if (!data.CarInputEnabled_ || data.CarLogic_.IsDying_) return;
 
             var packet = (Packet) Recv(1)[0];
             switch (packet) {
@@ -44,42 +48,32 @@ namespace Distance.ML {
                     // todo
                     break;
                 case Packet.RESET:
-                    // todo
+                    G.Sys.GameManager_.RestartLevel();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+
+            MyState.ResetState();
         }
 
-        private static void Send(byte[] data) {
-            LOG.Debug($"sending {data.Decode()}");
-            var size = SOCK.Send(data);
-            LOG.Debug($"sent {size} bytes");
+        private void Send(byte[] data) {
+            try {
+                Sock.Send(data);
+            } catch (SocketException) {
+                this.Destroy();
+            }
         }
 
-        private static byte[] Recv(int size) {
-            LOG.Debug($"receiving {size} bytes");
-            var data = new byte[size];
-            SOCK.Receive(data);
-            LOG.Debug($"received {data.Decode()}");
-            return data;
-        }
-
-        private static void SendObservation() {
-            var textureData = GetTextureData();
-            Send(textureData);
-        }
-
-        /// get byte data from texture
-        private static byte[] GetTextureData() {
-            var lastActive = RenderTexture.active;
-            RenderTexture.active = MyCamera.RENDER_TEXTURE;
-            TEXTURE.ReadPixels(new Rect(0, 0, TEXTURE.width, TEXTURE.height), 0, 0);
-            RenderTexture.active = lastActive;
-
-            LOG.Info(TEXTURE.GetPixel(TEXTURE.width / 2, TEXTURE.height / 2));
-
-            return new byte[0];
+        private byte[] Recv(int size) {
+            try {
+                var data = new byte[size];
+                Sock.Receive(data);
+                return data;
+            } catch (SocketException) {
+                this.Destroy();
+                return null!;
+            }
         }
     }
 }

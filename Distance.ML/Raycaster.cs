@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Distance.ML {
     /// shoots out a bunch of rays and collects the hit info for them
     /// also renders that info
+    [Obsolete("todo remove")]
     public class Raycaster : MonoBehaviour {
         private const float X_SCALE = 1, Y_SCALE = 1;
         private const int NUM_XS = 10, NUM_YS = 10;

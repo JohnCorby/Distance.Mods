@@ -1,4 +1,5 @@
 from gym import *
+from gym.spaces import *
 from socket import *
 from enum import *
 from typing import *
@@ -7,8 +8,8 @@ ADDR: tuple = ('localhost', 6969)
 
 
 class Packet(Enum):
-    STEP = b'\x00'
-    RESET = b'\x01'
+    STEP = b'\00'
+    RESET = b'\01'
 
 
 class Env(Env):
@@ -17,44 +18,42 @@ class Env(Env):
 
     def __init__(self) -> None:
         print('connecting...')
-        listener: socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
-        listener.bind(ADDR)
-        listener.listen()
-        self.sock: socket = listener.accept()
+        self.listener: socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
+        self.listener.bind(ADDR)
+        self.listener.listen()
+        self.sock: socket = self.listener.accept()
         print('connected!')
 
     def send(self, data: bytes) -> None:
-        print(f'sending {data}')
-        size = self.sock.send(data)
-        print(f'sent {size} bytes')
+        self.sock.send(data)
 
     def recv(self, size: int) -> bytes:
-        print(f'receiving {size} bytes')
-        data = self.sock.recv(size)
-        print(f'received {data}')
-        return data
+        return self.sock.recv(size)
 
     def step(self, action: object) -> Tuple[object, float, bool, dict]:
-        # do step with actions todo
+        # todo do step with actions
         self.send(Packet.STEP.value)
         self.send(bytes(action))
 
-        # get all the shit back todo
+        # todo get all the shit back
         observation: object = object(self.recv(1024))
         reward: float = self.recv(4)
         done: bool = False if self.recv(1) == b'\x00' else True
         info: dict = {}
 
         if done:
-            self.reset()  # fixme this will make the level loop, so maybe remove this later
+            self.reset()  # todo this will make the level loop, so maybe remove this later
 
         return observation, reward, done, info
 
     def reset(self) -> object:
         self.send(Packet.RESET.value)
 
-        # todo
-        observation: object = object(self.recv(1024))
+        # reconnect since we close on level restart
+        self.sock: socket = self.listener.accept()
+
+        # todo initial observation
+        observation, _, _, _ = self.step(None)
         return observation
 
     def render(self, mode: str = 'human') -> None:
@@ -62,6 +61,5 @@ class Env(Env):
 
 
 if __name__ == '__main__':
-    env = Env()
-    while True:
-        env.step(None)
+    env: Env = Env()
+    while True: pass
