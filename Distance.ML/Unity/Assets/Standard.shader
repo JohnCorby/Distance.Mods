@@ -25,7 +25,7 @@
                 float4 pos : SV_POSITION;
             };
 
-            float1 _ID;
+            int _ID;
 
             v2f vert(appdata v)
             {

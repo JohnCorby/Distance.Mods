@@ -1,40 +1,42 @@
-import socket
+from gym import *
+from socket import *
+from enum import *
+from typing import *
 
-import gym
+ADDR: tuple = ('localhost', 6969)
 
 
-class Env(gym.Env):
-    ADDR: tuple = ('localhost', 6969)
-    PACKET_STEP: bytes = b'\x00'
-    PACKET_RESET: bytes = b'\x01'
+class Packet(Enum):
+    STEP = b'\x00'
+    RESET = b'\x01'
 
-    action_space: gym.Space = None  # todo
-    observation_space: gym.Space = None  # todo
+
+class Env(Env):
+    action_space: Space = None  # todo
+    observation_space: Space = None  # todo
 
     def __init__(self) -> None:
-        self.sock: socket.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
-        self.sock.bind(self.ADDR)
-
-        # handshake
-        print("handshake...")
-        print('got response', self.recv(len(b'ping')))
-        self.send(b'pong')
-        print("connected!")
+        print('connecting...')
+        listener: socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
+        listener.bind(ADDR)
+        listener.listen()
+        self.sock: socket = listener.accept()
+        print('connected!')
 
     def send(self, data: bytes) -> None:
         print(f'sending {data}')
-        size = self.sock.sendto(data, self.ADDR)
+        size = self.sock.send(data)
         print(f'sent {size} bytes')
 
     def recv(self, size: int) -> bytes:
         print(f'receiving {size} bytes')
-        data = self.sock.recvfrom(size)[0]
+        data = self.sock.recv(size)
         print(f'received {data}')
         return data
 
-    def step(self, action: object) -> tuple:
+    def step(self, action: object) -> Tuple[object, float, bool, dict]:
         # do step with actions todo
-        self.send(self.PACKET_STEP)
+        self.send(Packet.STEP.value)
         self.send(bytes(action))
 
         # get all the shit back todo
@@ -49,7 +51,7 @@ class Env(gym.Env):
         return observation, reward, done, info
 
     def reset(self) -> object:
-        self.send(self.PACKET_RESET)
+        self.send(Packet.RESET.value)
 
         # todo
         observation: object = object(self.recv(1024))
@@ -61,4 +63,5 @@ class Env(gym.Env):
 
 if __name__ == '__main__':
     env = Env()
-    while True: pass
+    while True:
+        env.step(None)

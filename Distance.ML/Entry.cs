@@ -12,10 +12,5 @@ namespace Distance.ML {
         public void Initialize(IManager manager) {
             RuntimePatcher.AutoPatch();
         }
-
-        private void Awake() {
-            // gameObject.AddComponent<Communication>();
-            gameObject.AddComponent<Stepper>();
-        }
     }
 }

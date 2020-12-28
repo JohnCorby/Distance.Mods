@@ -2,23 +2,11 @@
 using UnityEngine;
 
 namespace Distance.ML {
-    // namespace LocalPlayerControlledCar_ {
-    //     [HarmonyPatch(typeof(LocalPlayerControlledCar), nameof(Awake))]
-    //     public static class Awake {
-    //         private static void Postfix(Component __instance) {
-    //             var go = new GameObject();
-    //             go.transform.SetParent(__instance.transform, false);
-    //             go.transform.localPosition = Vector3.up;
-    //             go.AddComponent<Raycaster>();
-    //         }
-    //     }
-    // }
-
-    namespace CarCamera_ {
-        [HarmonyPatch(typeof(CarCamera), nameof(Awake))]
-        public static class Awake {
+    namespace PlayerDataLocal_ {
+        [HarmonyPatch(typeof(PlayerDataLocal), nameof(InitializeVirtual))]
+        public static class InitializeVirtual {
             private static void Postfix(Component __instance) {
-                __instance.gameObject.AddComponent<MyCamera>();
+                __instance.gameObject.AddComponent<Communication>();
             }
         }
     }

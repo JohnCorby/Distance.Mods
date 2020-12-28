@@ -35,13 +35,13 @@
           <e p="Assets" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
-        <e p="BytesEx.cs" t="Include" />
         <e p="Communication.cs" t="Include" />
         <e p="Distance.ML.csproj" t="IncludeRecursive" />
         <e p="Entry.cs" t="Include" />
         <e p="Harmony.cs" t="Include" />
         <e p="mod.json" t="Include" />
         <e p="MyCamera.cs" t="Include" />
+        <e p="MyState.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
         <e p="Python" t="Include" />
@@ -52,6 +52,7 @@
             <e p="Standard.shader" t="Include" />
           </e>
         </e>
+        <e p="Utils.cs" t="Include" />
       </e>
       <e p="Distance.Mods.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

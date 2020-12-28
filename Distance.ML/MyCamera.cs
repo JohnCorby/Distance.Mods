@@ -1,45 +1,61 @@
-﻿using System.Collections;
-using System.Reflection;
-using Reactor.API.Storage;
+﻿using Reactor.API.Storage;
 using UnityEngine;
 
 namespace Distance.ML {
     public class MyCamera : MonoBehaviour {
         public static readonly RenderTexture RENDER_TEXTURE = new(256, 256, 0);
         private static Camera Camera = null!;
-        private static readonly Material STANDARD_MATERIAL;
-        private static readonly Material PP_MATERIAL;
-        private static readonly int CAR_LAYER_MASK;
+        private static readonly Shader STANDARD_SHADER, PP_SHADER;
+
+        private enum Id : int {
+            NORMAL,
+            KILL_GRID,
+            END,
+            CHECKPOINT,
+            COOLDOWN,
+        }
 
         static MyCamera() {
             var assetBundle = (AssetBundle) new Assets("assets").Bundle;
-            STANDARD_MATERIAL = assetBundle.LoadAsset<Material>("Standard.mat");
-            PP_MATERIAL = assetBundle.LoadAsset<Material>("PostProcessing.mat");
-
-            CAR_LAYER_MASK = (int) typeof(PhysicsEx)
-                .GetField("carLayerMask_", BindingFlags.Static | BindingFlags.NonPublic)?
-                .GetValue(null)!;
+            STANDARD_SHADER = assetBundle.LoadAsset<Shader>("Standard.shader");
+            PP_SHADER = assetBundle.LoadAsset<Shader>("PostProcessing.shader");
         }
 
-        private IEnumerator Start() {
+        private void Awake() {
             Camera = gameObject.AddComponent<Camera>();
-            Camera.main.CopyFrom(Camera);
-            Camera.cullingMask = Camera.main.cullingMask & ~CAR_LAYER_MASK;
+            Camera.cullingMask = Camera.main.cullingMask & ~PhysicsEx.carLayerMask_;
             Camera.targetTexture = RENDER_TEXTURE;
-
-            yield return new WaitForSeconds(3);
-            ReplaceMaterials();
         }
 
-        /// replace all materials in scene with standard one
-        /// makes post processing work for transparent stuff
-        private static void ReplaceMaterials() {
-            foreach (var renderer in FindObjectsOfType<Renderer>()) {
-                var materials = new Material[renderer.materials.Length];
-                for (var i = 0; i < materials.Length; i++)
-                    materials[i] = STANDARD_MATERIAL;
-                renderer.materials = materials;
+        private void Start() {
+            PreprocessScene();
+        }
+
+        /// modify the scene so that it will make sense to
+        private static void PreprocessScene() {
+            void Init(Renderer renderer, Id id) {
+
             }
+
+            foreach (var renderer in Resources.FindObjectsOfTypeAll<Renderer>()) {
+                var id = Id.NORMAL;
+                if (renderer.HasComponentInChildren<KillGrid>() || renderer.HasComponentInChildren<KillGridBox>()) id = Id.KILL_GRID;
+                else if (renderer.HasComponentInChildren<RaceEndLogic>()) id = Id.END;
+                else if (renderer.HasComponentInChildren<CheckpointLogic>()) id = Id.CHECKPOINT;
+                else if (renderer.HasComponentInChildren<TriggerCooldownLogic>()) id = Id.COOLDOWN;
+
+                foreach (var material in renderer.materials) {
+                    material.shader = STANDARD_SHADER;
+                    material.SetInt("_ID", id);
+                }
+            }
+        }
+
+        /// update position based on car
+        private void Update() {
+            var parentTransform = Utils.PlayerDataLocal!.Car_.transform;
+            transform.position = parentTransform.position + parentTransform.up;
+            transform.rotation = parentTransform.rotation;
         }
 
         // /// apply post processing
@@ -49,7 +65,7 @@ namespace Distance.ML {
 
         /// draw texture to screen
         private void OnGUI() {
-            GUI.DrawTexture(new Rect(0, 0, RENDER_TEXTURE.width, RENDER_TEXTURE.height), RENDER_TEXTURE);
+            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), RENDER_TEXTURE);
         }
     }
 }
