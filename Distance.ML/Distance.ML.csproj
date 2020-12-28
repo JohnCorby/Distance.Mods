@@ -52,6 +52,7 @@
       <Content Include="mod.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+      <Content Include="Python\env.py" />
       <Content Include="Unity\Assets\Standard.shader" />
     </ItemGroup>
     <ItemGroup>
@@ -119,9 +120,6 @@
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Python" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

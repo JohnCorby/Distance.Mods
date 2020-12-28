@@ -44,7 +44,9 @@
         <e p="MyState.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
-        <e p="Python" t="Include" />
+        <e p="Python" t="Include">
+          <e p="env.py" t="Include" />
+        </e>
         <e p="Raycaster.cs" t="Include" />
         <e p="Stepper.cs" t="Include" />
         <e p="Unity" t="Include">

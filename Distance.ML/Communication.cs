@@ -36,8 +36,10 @@ namespace Distance.ML {
             Sock.Close();
             GetComponent<MyCamera>().Destroy();
             GetComponent<MyState>().Destroy();
+            LOG.Debug("communication destroyed");
         }
 
+        /// process packet and perform step
         private void LateUpdate() {
             var data = Utils.PlayerDataLocal!;
             if (!data.CarInputEnabled_ || data.CarLogic_.IsDying_) return;
@@ -45,9 +47,18 @@ namespace Distance.ML {
             var packet = (Packet) Recv(1)[0];
             switch (packet) {
                 case Packet.STEP:
-                    // todo
+                    LOG.Debug("step");
+                    // todo get action
+                    MyState.UpdateState();
+
+                    LOG.Debug($"reward: {MyState.Reward}\tdone: {MyState.Done}");
+                    // send results
+                    // todo observation
+                    Send(BitConverter.GetBytes(MyState.Reward));
+                    Send(BitConverter.GetBytes(MyState.Done));
                     break;
                 case Packet.RESET:
+                    LOG.Debug("step");
                     G.Sys.GameManager_.RestartLevel();
                     break;
                 default:
@@ -60,7 +71,8 @@ namespace Distance.ML {
         private void Send(byte[] data) {
             try {
                 Sock.Send(data);
-            } catch (SocketException) {
+            } catch (SocketException e) {
+                LOG.Error($"send error: {e}");
                 this.Destroy();
             }
         }
@@ -70,7 +82,8 @@ namespace Distance.ML {
                 var data = new byte[size];
                 Sock.Receive(data);
                 return data;
-            } catch (SocketException) {
+            } catch (SocketException e) {
+                LOG.Error($"recv error: {e}");
                 this.Destroy();
                 return null!;
             }

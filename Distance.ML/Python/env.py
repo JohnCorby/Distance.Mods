@@ -3,6 +3,7 @@ from gym.spaces import *
 from socket import *
 from enum import *
 from typing import *
+from struct import *
 
 ADDR: tuple = ('localhost', 6969)
 
@@ -12,7 +13,7 @@ class Packet(Enum):
     RESET = b'\01'
 
 
-class Env(Env):
+class MyEnv(Env):
     action_space: Space = None  # todo
     observation_space: Space = None  # todo
 
@@ -21,45 +22,57 @@ class Env(Env):
         self.listener: socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
         self.listener.bind(ADDR)
         self.listener.listen()
-        self.sock: socket = self.listener.accept()
+        self.sock: socket = self.listener.accept()[0]
         print('connected!')
 
     def send(self, data: bytes) -> None:
         self.sock.send(data)
 
     def recv(self, size: int) -> bytes:
-        return self.sock.recv(size)
+        data: bytes = self.sock.recv(size)
+        assert data, 'socked closed'
+        return data
 
     def step(self, action: object) -> Tuple[object, float, bool, dict]:
+        print('step')
+        print(f'action: {action}')
         # todo do step with actions
         self.send(Packet.STEP.value)
-        self.send(bytes(action))
+        # self.send(bytes(action))
 
         # todo get all the shit back
-        observation: object = object(self.recv(1024))
-        reward: float = self.recv(4)
-        done: bool = False if self.recv(1) == b'\x00' else True
-        info: dict = {}
+        print('step results')
+        # observation: object = object(self.recv(1024))
+        observation: object = None
+        reward: float = unpack('f', self.recv(4))[0]
+        done: bool = unpack('?', self.recv(1))[0]
+        print(f'observation: {observation}', f'reward: {reward}', f'done: {done}', sep='\t')
 
-        if done:
-            self.reset()  # todo this will make the level loop, so maybe remove this later
-
-        return observation, reward, done, info
+        return observation, reward, done, {}
 
     def reset(self) -> object:
+        print('reset')
         self.send(Packet.RESET.value)
 
         # reconnect since we close on level restart
-        self.sock: socket = self.listener.accept()
+        self.sock: socket = self.listener.accept()[0]
 
         # todo initial observation
-        observation, _, _, _ = self.step(None)
+        observation: object = self.step(None)[0]
+        print(f'initial observation: {observation}')
         return observation
 
     def render(self, mode: str = 'human') -> None:
         raise NotImplementedError
 
 
+def main():
+    env: MyEnv = MyEnv()
+    while True:
+        observation, reward, done, info = env.step(None)
+        if done:
+            break
+
+
 if __name__ == '__main__':
-    env: Env = Env()
-    while True: pass
+    main()

@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Distance.ML {
     public class MyCamera : MonoBehaviour {
+        /// internal camera render texture
         public static readonly RenderTexture RENDER_TEXTURE = new(256, 256, 0);
         private static Camera Camera = null!;
         private static readonly Shader STANDARD_SHADER, PP_SHADER;
