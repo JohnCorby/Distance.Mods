@@ -46,6 +46,7 @@
         <e p="packages.config" t="Include" />
         <e p="Python" t="Include">
           <e p="env.py" t="Include" />
+          <e p="requirements.txt" t="Include" />
         </e>
         <e p="Raycaster.cs" t="Include" />
         <e p="Stepper.cs" t="Include" />

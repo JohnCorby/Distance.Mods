@@ -45,7 +45,8 @@ namespace Distance.ML {
             events.Unsubscribe<Split.Data>(OnEventSplit);
         }
 
-        private static void OnEventFinished(Finished.Data _) {
+        private static void OnEventFinished(Finished.Data data) {
+            if (data.finishType_ != FinishType.Normal) return;
             LOG.Debug($"finish: reward {REWARD_FINISH}");
             Reward += REWARD_FINISH;
         }

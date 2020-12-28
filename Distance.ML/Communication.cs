@@ -39,10 +39,11 @@ namespace Distance.ML {
             LOG.Debug("communication destroyed");
         }
 
+        private static bool Process;
+
         /// process packet and perform step
-        private void LateUpdate() {
-            var data = Utils.PlayerDataLocal!;
-            if (!data.CarInputEnabled_ || data.CarLogic_.IsDying_) return;
+        private void Update() {
+            if (!Process) return;
 
             var packet = (Packet) Recv(1)[0];
             switch (packet) {
@@ -56,16 +57,21 @@ namespace Distance.ML {
                     // todo observation
                     Send(BitConverter.GetBytes(MyState.Reward));
                     Send(BitConverter.GetBytes(MyState.Done));
+
+                    MyState.ResetState();
                     break;
                 case Packet.RESET:
-                    LOG.Debug("step");
+                    LOG.Debug("reset");
                     G.Sys.GameManager_.RestartLevel();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
 
-            MyState.ResetState();
+        private void LateUpdate() {
+            var data = Utils.PlayerDataLocal!;
+            Process = data.CarInputEnabled_ && data.IsCarRelevant_;
         }
 
         private void Send(byte[] data) {
