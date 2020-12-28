@@ -71,7 +71,7 @@ def main():
     while True:
         observation, reward, done, info = env.step(None)
         if done:
-            break
+            env.reset()
 
 
 if __name__ == '__main__':

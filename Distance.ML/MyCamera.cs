@@ -29,7 +29,7 @@ namespace Distance.ML {
         }
 
         private void Start() {
-            PreprocessScene();
+            // PreprocessScene();
         }
 
         /// modify the scene so that it will make sense to
