@@ -25,8 +25,6 @@
                 float4 pos : SV_POSITION;
             };
 
-            int _ID;
-
             v2f vert(appdata v)
             {
                 v2f o;
@@ -34,12 +32,13 @@
                 return o;
             }
 
+            int _ID;
+
             fixed4 frag(v2f i) : SV_Target
             {
                 float depth = i.pos.z;
                 depth = Linear01Depth(depth);
                 depth = 1 - depth; // closer = higher
-
                 return fixed4(depth, _ID, 0, 1);
             }
             ENDCG

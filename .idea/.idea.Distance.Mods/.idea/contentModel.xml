@@ -52,6 +52,7 @@
         <e p="Stepper.cs" t="Include" />
         <e p="Unity" t="Include">
           <e p="Assets" t="Include">
+            <e p="PostProcessing.shader" t="Include" />
             <e p="Standard.shader" t="Include" />
           </e>
         </e>

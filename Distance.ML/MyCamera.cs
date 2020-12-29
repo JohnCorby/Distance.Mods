@@ -6,9 +6,10 @@ namespace Distance.ML {
         /// internal camera render texture
         public static readonly RenderTexture RENDER_TEXTURE = new(256, 256, 0);
         private static Camera Camera = null!;
-        private static readonly Shader STANDARD_SHADER, PP_SHADER;
+        private static readonly Shader STANDARD_SHADER;
+        private static readonly Material PP_MATERIAL;
 
-        private enum Id : int {
+        private enum Id {
             NORMAL,
             KILL_GRID,
             END,
@@ -19,20 +20,18 @@ namespace Distance.ML {
         static MyCamera() {
             var assetBundle = (AssetBundle) new Assets("assets").Bundle;
             STANDARD_SHADER = assetBundle.LoadAsset<Shader>("Standard.shader");
-            PP_SHADER = assetBundle.LoadAsset<Shader>("PostProcessing.shader");
+            PP_MATERIAL = new Material(assetBundle.LoadAsset<Shader>("PostProcessing.shader"));
         }
 
         private void Awake() {
             Camera = gameObject.AddComponent<Camera>();
             Camera.cullingMask = Camera.main.cullingMask & ~PhysicsEx.carLayerMask_;
             Camera.targetTexture = RENDER_TEXTURE;
+
+            this.DoAfterWait(1, PreprocessScene);
         }
 
-        private void Start() {
-            // PreprocessScene();
-        }
-
-        /// modify the scene so that it will make sense to
+        /// modify the scene so that it will make sense to the agent
         private static void PreprocessScene() {
             static void Init(Renderer renderer, Id id) {
                 foreach (var material in renderer.materials) {
@@ -61,10 +60,10 @@ namespace Distance.ML {
             transform.rotation = parentTransform.rotation;
         }
 
-        // /// apply post processing
-        // private void OnRenderImage(RenderTexture src, RenderTexture dest) {
-        //     Graphics.Blit(src, dest, PP_MATERIAL);
-        // }
+        /// apply post processing
+        private void OnRenderImage(RenderTexture src, RenderTexture dest) {
+            Graphics.Blit(src, dest, PP_MATERIAL);
+        }
 
         /// draw texture to screen
         private void OnGUI() {
