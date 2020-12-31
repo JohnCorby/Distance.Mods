@@ -1,16 +1,10 @@
 from gym import *
 from gym.spaces import *
 from socket import *
-from enum import *
 from typing import *
 from struct import *
 
 ADDR: tuple = ('localhost', 6969)
-
-
-class Packet(Enum):
-    STEP = b'\00'
-    RESET = b'\01'
 
 
 class MyEnv(Env):
@@ -37,7 +31,7 @@ class MyEnv(Env):
         print('step')
         print(f'action: {action}')
         # todo do step with actions
-        self.send(Packet.STEP.value)
+        self.send(pack('?', True))
         # self.send(bytes(action))
 
         # todo get all the shit back
@@ -52,7 +46,7 @@ class MyEnv(Env):
 
     def reset(self) -> object:
         print('reset')
-        self.send(Packet.RESET.value)
+        self.send(pack('?', False))
 
         # reconnect since we close on level restart
         self.sock: socket = self.listener.accept()[0]

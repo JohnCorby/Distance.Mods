@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Net;
 using System.Net.Sockets;
 using UnityEngine;
@@ -10,11 +9,6 @@ namespace Distance.ML {
     public class Communication : MonoBehaviour {
         private static readonly IPEndPoint ADDR = new(IPAddress.Loopback, 6969);
         private static Socket Sock = null!;
-
-        private enum Packet : byte {
-            STEP,
-            RESET,
-        }
 
         private void Awake() {
             if (!G.Sys.GameManager_.SoloAndNotOnline_) throw new ArgumentException("must be in solo game");
@@ -40,40 +34,46 @@ namespace Distance.ML {
             LOG.Debug("communication destroyed");
         }
 
-        private static bool Process;
+        private static bool ProcessStep, StepQueued;
 
-        /// process packet and perform step
-        /// todo if process is false this will not handle reset e.g. after winning race
+        /// process incoming directions
         private void Update() {
-            if (!Process) return;
-
-            var packet = (Packet) Recv(1)[0];
-            switch (packet) {
-                case Packet.STEP:
-                    LOG.Debug("step");
-                    // todo get action
-                    MyState.UpdateState();
-
-                    LOG.Debug($"reward: {MyState.Reward}\tdone: {MyState.Done}");
-                    // send results
-                    // todo observation
-                    Send(BitConverter.GetBytes(MyState.Reward));
-                    Send(BitConverter.GetBytes(MyState.Done));
-
-                    MyState.ResetState();
-                    break;
-                case Packet.RESET:
-                    LOG.Debug("reset");
-                    G.Sys.GameManager_.RestartLevel();
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
+            if (ProcessStep && !StepQueued) {
+                var isStep = BitConverter.ToBoolean(Recv(1), 0);
+                if (isStep) DoStep();
+                else DoReset();
+            } else if (ProcessStep && StepQueued) {
+                StepQueued = false;
+                DoStep();
+            } else if (!ProcessStep && !StepQueued && Sock.Available > 0) {
+                var isStep = BitConverter.ToBoolean(Recv(1), 0);
+                if (isStep) StepQueued = true;
+                else DoReset();
             }
+        }
+
+        private static void DoReset() {
+            LOG.Debug("reset");
+            G.Sys.GameManager_.RestartLevel();
+        }
+
+        private void DoStep() {
+            LOG.Debug("step");
+            // todo get action
+            MyState.UpdateState();
+
+            LOG.Debug($"reward: {MyState.Reward}\tdone: {MyState.Done}");
+            // send results
+            // todo observation
+            Send(BitConverter.GetBytes(MyState.Reward));
+            Send(BitConverter.GetBytes(MyState.Done));
+
+            MyState.ResetState();
         }
 
         private void LateUpdate() {
             var data = Utils.PlayerDataLocal!;
-            Process = data.CarInputEnabled_ && data.IsCarRelevant_;
+            ProcessStep = data.CarInputEnabled_ && data.IsCarRelevant_;
         }
 
         private void Send(byte[] data) {
