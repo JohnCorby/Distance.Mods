@@ -4,7 +4,8 @@ using UnityEngine;
 namespace Distance.ML {
     public class MyCamera : MonoBehaviour {
         /// internal camera render texture
-        public static readonly RenderTexture RENDER_TEXTURE = new(256, 256, 0);
+        public static readonly RenderTexture RENDER_TEXTURE = new(256, 256,
+            0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.Linear);
         private static Camera Camera = null!;
         private static readonly Shader STANDARD_SHADER;
         private static readonly Material PP_MATERIAL;
@@ -15,6 +16,7 @@ namespace Distance.ML {
             END,
             CHECKPOINT,
             COOLDOWN,
+            TELEPORTER,
         }
 
         static MyCamera() {
@@ -26,9 +28,12 @@ namespace Distance.ML {
         private void Awake() {
             Camera = gameObject.AddComponent<Camera>();
             Camera.cullingMask = Camera.main.cullingMask & ~PhysicsEx.carLayerMask_;
+            Camera.depthTextureMode = DepthTextureMode.Depth;
             Camera.targetTexture = RENDER_TEXTURE;
+        }
 
-            this.DoAfterWait(1, PreprocessScene);
+        private void Start() {
+            PreprocessScene();
         }
 
         /// modify the scene so that it will make sense to the agent
@@ -47,6 +52,8 @@ namespace Distance.ML {
                 else if (renderer.HasComponentInChildren<RaceEndLogic>()) id = Id.END;
                 else if (renderer.HasComponentInChildren<CheckpointLogic>()) id = Id.CHECKPOINT;
                 else if (renderer.HasComponentInChildren<TriggerCooldownLogic>()) id = Id.COOLDOWN;
+                else if (renderer.HasComponentInChildren<TeleporterEntrance>() ||
+                         renderer.HasComponentInChildren<TeleporterExit>()) id = Id.TELEPORTER;
                 else id = Id.NORMAL;
 
                 Init(renderer, id);

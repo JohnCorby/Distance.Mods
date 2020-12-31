@@ -5,8 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="image sanitization with post processing&#10;also wait a bit before preprocessing scene">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Assets/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Assets/assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/MyCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/MyCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/MyState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/MyState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/PostProcessing.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/PostProcessing.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/bin/Release/Assets/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Assets/assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -218,10 +234,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/28/7143958c/GUtils.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/ea/f9418de5/CockpitCamMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/99/90192385/UnityVersionSpecific.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/9b/7496724a/RenderTextureReadWrite.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/62/9988682a/Layers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/15/d9eaf657/ObjectEx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/f4/4e6aade8/TransformExtensionOnly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/1a/f69310d4/NGUITools.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/9b/818ee278/RenderTextureFormat.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/ce/e7727f14/QualitySettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/43/62853b16/GameObjectEx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/61/99829210/ComponentEx.cs" root0="SKIP_HIGHLIGHTING" />
@@ -275,7 +293,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Distance.Raycast/Unity/Assets/Standard.shader" />
       <option value="$PROJECT_DIR$/Distance.Raycast/DepthCamera.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/DepthCamera.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/MLCamera.cs" />
@@ -317,15 +334,16 @@
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/35/00e3cefb/GameManager.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/9d/bb44a04c/CarDirectives.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/4e/a2329913/LocalComputerContolledCar.cs" />
-      <option value="$PROJECT_DIR$/Distance.ML/MyState.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Python/requirements.txt" />
       <option value="$PROJECT_DIR$/Distance.ML/Python/env.py" />
       <option value="$PROJECT_DIR$/Distance.ML/Communication.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/16/1bcf9493/LevelCubeMapRendererAbstract.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Unity/PostProcessing.shader" />
+      <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/dasdasd.shader" />
+      <option value="$PROJECT_DIR$/Distance.ML/MyCamera.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/MyState.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" />
       <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/PostProcessing.shader" />
-      <option value="$PROJECT_DIR$/Distance.ML/MyCamera.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lxTRcXRTrkYODeKxiUYPu28JO5" />
@@ -345,6 +363,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Table Diff" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -450,7 +469,9 @@
       <workItem from="1609026568702" duration="16344000" />
       <workItem from="1609052687187" duration="3628000" />
       <workItem from="1609092409850" duration="40605000" />
-      <workItem from="1609232332192" duration="3507000" />
+      <workItem from="1609232332192" duration="3765000" />
+      <workItem from="1609280608645" duration="11251000" />
+      <workItem from="1609372268710" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="poopy">
       <created>1608881070386</created>
@@ -697,7 +718,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609235810080</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="image sanitization with post processing&#10;also wait a bit before preprocessing scene">
+      <created>1609236098018</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1609236098018</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

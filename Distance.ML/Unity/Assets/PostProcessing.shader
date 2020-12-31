@@ -1,7 +1,4 @@
-﻿Shader "Hidden/PostProcessing" {
-    Properties {
-        _MainTex ("Texture", 2D) = "white" {}
-    }
+﻿Shader "PostProcessing" {
     SubShader {
         Cull Off ZWrite Off ZTest Always
 
@@ -33,12 +30,14 @@
             }
 
             sampler2D _MainTex;
+            sampler2D _CameraDepthTexture;
 
             fixed4 frag(v2f i) : SV_Target
             {
-                fixed4 col = tex2D(_MainTex, i.uv);
-                if (col.b != 0 || col.a != 1) return fixed4(0, 0, 0, 1);
-                return fixed4(col.r, col.g, 0, 1);
+                float depth = tex2D(_CameraDepthTexture, i.uv).r;
+                depth = 1 - Linear01Depth(depth);
+                int id = tex2D(_MainTex, i.uv).r;
+                return fixed4(depth, id, 0, 1);
             }
             ENDCG
         }

@@ -1,7 +1,4 @@
 ﻿Shader "Standard" {
-    Properties {
-        _ID ("ID", Int) = 0
-    }
     SubShader {
         Tags {
             "RenderType"="Opaque"
@@ -36,12 +33,10 @@
 
             fixed4 frag(v2f i) : SV_Target
             {
-                float depth = i.pos.z;
-                depth = Linear01Depth(depth);
-                depth = 1 - depth; // closer = higher
-                return fixed4(depth, _ID, 0, 1);
+                return 7;
             }
             ENDCG
         }
+        UsePass "Legacy Shaders/VertexLit/SHADOWCASTER"
     }
 }

@@ -1,12 +1,12 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Events.Car;
 using Events.Player;
 using static Distance.ML.Entry;
 
 namespace Distance.ML {
     public class MyState : MonoBehaviour {
-        private static readonly Texture2D TEXTURE = new(MyCamera.RENDER_TEXTURE.width, MyCamera.RENDER_TEXTURE.height);
+        private static readonly Texture2D TEXTURE = new(MyCamera.RENDER_TEXTURE.width, MyCamera.RENDER_TEXTURE.height,
+            TextureFormat.RGBA32, false, true);
 
         /// texture data in form (depth, id)
         public static readonly float[,,] TEXTURE_DATA = new float[TEXTURE.width, TEXTURE.height, 2];
