@@ -10,7 +10,7 @@ namespace Distance.ML {
         private static Camera Camera = null!;
         private static readonly Shader STANDARD_SHADER, INVISIBLE_SHADER;
 
-        private enum ID {
+        private enum ID : uint {
             NORMAL,
             KILL_GRID,
             END,
@@ -19,12 +19,14 @@ namespace Distance.ML {
             TELEPORTER,
         }
 
-        public static readonly int NUM_IDS = Enum.GetNames(typeof(ID)).Length;
+        public static readonly uint NUM_IDS = (uint) Enum.GetNames(typeof(ID)).Length;
 
         static MyCamera() {
             var assetBundle = (AssetBundle) new Assets("assets").Bundle;
             STANDARD_SHADER = assetBundle.LoadAsset<Shader>("Standard.shader");
             INVISIBLE_SHADER = assetBundle.LoadAsset<Shader>("Invisible.shader");
+
+            Shader.SetGlobalInt("_NumIDs", (int) NUM_IDS);
         }
 
         private void Awake() {
@@ -46,7 +48,6 @@ namespace Distance.ML {
                 foreach (var material in renderer.materials) {
                     material.shader = STANDARD_SHADER;
                     material.SetInt("_ID", (int) id);
-                    material.SetInt("_NumIDs", NUM_IDS);
                 }
             }
 

@@ -1,7 +1,6 @@
 ﻿Shader "Standard" {
     Properties {
         _ID ("ID", Int) = 0
-        _NumIDs ("Number of IDs", Int) = 0
     }
     SubShader {
         Tags {
@@ -35,8 +34,8 @@
                 return o;
             }
 
-            int _ID;
-            int _NumIDs;
+            unsigned int _ID;
+            unsigned int _NumIDs;
 
             fixed4 frag(v2f i) : SV_Target
             {

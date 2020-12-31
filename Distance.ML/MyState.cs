@@ -8,8 +8,13 @@ namespace Distance.ML {
         private static readonly Texture2D TEXTURE = new(MyCamera.RENDER_TEXTURE.width, MyCamera.RENDER_TEXTURE.height,
             TextureFormat.RGBAFloat, false, true);
 
+        public struct Pixel {
+            public float Depth;
+            public uint ID;
+        }
+
         /// texture data in form (depth, id)
-        public static readonly float[,,] TEXTURE_DATA = new float[TEXTURE.width, TEXTURE.height, 2];
+        public static readonly Pixel[,] TEXTURE_DATA = new Pixel[TEXTURE.width, TEXTURE.height];
         /// reward value
         public static float Reward;
 
@@ -78,28 +83,20 @@ namespace Distance.ML {
 
         /// update state stuff
         public static void UpdateState() {
-            UpdateTexture();
-
-            for (var x = 0; x < TEXTURE.width; x++) {
-                for (var y = 0; y < TEXTURE.height; y++) {
-                    var pixel = TEXTURE.GetPixel(x, y);
-                    TEXTURE_DATA[x, y, 0] = pixel.r;
-                    TEXTURE_DATA[x, y, 1] = Mathf.RoundToInt(pixel.g * MyCamera.NUM_IDS);
-                }
-            }
-        }
-
-        /// copy render texture to cpu-readable texture
-        private static void UpdateTexture() {
             var lastActive = RenderTexture.active;
             RenderTexture.active = MyCamera.RENDER_TEXTURE;
             TEXTURE.ReadPixels(new Rect(0, 0, TEXTURE.width, TEXTURE.height), 0, 0);
             RenderTexture.active = lastActive;
 
-            var pixel = TEXTURE.GetPixel(TEXTURE.width / 2, TEXTURE.height / 2);
-            var depth = pixel.r;
-            var id = Mathf.RoundToInt(pixel.g * MyCamera.NUM_IDS);
-            LOG.Info($"depth: {depth}\t\tid: {id}");
+            for (var x = 0; x < TEXTURE.width; x++) {
+                for (var y = 0; y < TEXTURE.height; y++) {
+                    var color = TEXTURE.GetPixel(x, y);
+                    TEXTURE_DATA[x, y] = new Pixel {
+                        Depth = color.r,
+                        ID = (uint) Mathf.RoundToInt(color.g * MyCamera.NUM_IDS)
+                    };
+                }
+            }
         }
 
         /// reset state for next step

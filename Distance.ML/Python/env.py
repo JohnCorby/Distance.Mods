@@ -34,13 +34,14 @@ class MyEnv(Env):
         self.send(pack('?', True))
         # self.send(bytes(action))
 
-        # todo get all the shit back
+        # get all the shit back
         print('step results')
-        # observation: object = object(self.recv(1024))
-        observation: object = None
+        observation: List[Tuple[float, int]] = []
+        for i in range(256 * 256):
+            observation.append(unpack('=fI', self.recv(8)))
         reward: float = unpack('f', self.recv(4))[0]
         done: bool = unpack('?', self.recv(1))[0]
-        print(f'observation: {observation}', f'reward: {reward}', f'done: {done}', sep='\t')
+        # print(f'observation: {observation}', f'reward: {reward}', f'done: {done}', sep='\t')
 
         return observation, reward, done, {}
 

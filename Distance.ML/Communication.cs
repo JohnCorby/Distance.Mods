@@ -62,9 +62,9 @@ namespace Distance.ML {
             // todo get action
             MyState.UpdateState();
 
-            LOG.Debug($"reward: {MyState.Reward}\tdone: {MyState.Done}");
             // send results
-            // todo observation
+            foreach (var pixel in MyState.TEXTURE_DATA)
+                Send(BitConverter.GetBytes(pixel.Depth).Concat(BitConverter.GetBytes(pixel.ID)));
             Send(BitConverter.GetBytes(MyState.Reward));
             Send(BitConverter.GetBytes(MyState.Done));
 
