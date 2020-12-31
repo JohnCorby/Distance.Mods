@@ -18,7 +18,7 @@ Material:
     m_Floats:
     - first:
         name: _ID
-      second: 8
+      second: 9
     - first:
         name: _NumIDs
       second: 10

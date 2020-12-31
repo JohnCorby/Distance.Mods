@@ -8,7 +8,7 @@ namespace Distance.ML {
         public static readonly RenderTexture RENDER_TEXTURE = new(256, 256,
             0, RenderTextureFormat.ARGBFloat, RenderTextureReadWrite.Linear);
         private static Camera Camera = null!;
-        private static readonly Shader STANDARD_SHADER;
+        private static readonly Shader STANDARD_SHADER, INVISIBLE_SHADER;
 
         private enum ID {
             NORMAL,
@@ -24,6 +24,7 @@ namespace Distance.ML {
         static MyCamera() {
             var assetBundle = (AssetBundle) new Assets("assets").Bundle;
             STANDARD_SHADER = assetBundle.LoadAsset<Shader>("Standard.shader");
+            INVISIBLE_SHADER = assetBundle.LoadAsset<Shader>("Invisible.shader");
         }
 
         private void Awake() {
@@ -51,15 +52,25 @@ namespace Distance.ML {
                 }
             }
 
+            static void Invisible(Renderer renderer) {
+                foreach (var material in renderer.materials) {
+                    material.shader = INVISIBLE_SHADER;
+                }
+            }
+
             foreach (var renderer in Resources.FindObjectsOfTypeAll<Renderer>()) {
+                // if (!renderer.HasAnyComponent(typeof(Collider))) {
+                    // Invisible(renderer);
+                    // continue;
+                // }
+
                 ID id;
-                if (renderer.HasComponentInChildren<KillGrid>() ||
-                    renderer.HasComponentInChildren<KillGridBox>()) id = ID.KILL_GRID;
-                else if (renderer.HasComponentInChildren<RaceEndLogic>()) id = ID.END;
-                else if (renderer.HasComponentInChildren<CheckpointLogic>()) id = ID.CHECKPOINT;
-                else if (renderer.HasComponentInChildren<TriggerCooldownLogic>()) id = ID.COOLDOWN;
-                else if (renderer.HasComponentInChildren<TeleporterEntrance>() ||
-                         renderer.HasComponentInChildren<TeleporterExit>()) id = ID.TELEPORTER;
+                if (renderer.HasAnyComponent(typeof(KillGrid), typeof(KillGridBox), typeof(KillGridFollower)))
+                    id = ID.KILL_GRID;
+                else if (renderer.HasAnyComponent(typeof(RaceEndLogic))) id = ID.END;
+                else if (renderer.HasAnyComponent(typeof(CheckpointLogicBase))) id = ID.CHECKPOINT;
+                else if (renderer.HasAnyComponent(typeof(TriggerCooldownLogic))) id = ID.COOLDOWN;
+                else if (renderer.HasAnyComponent(typeof(TeleporterEntrance), typeof(TeleporterExit))) id = ID.TELEPORTER;
                 else id = ID.NORMAL;
 
                 Init(renderer, id);
