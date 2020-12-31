@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Net;
 using System.Net.Sockets;
 using UnityEngine;
@@ -40,14 +41,9 @@ namespace Distance.ML {
         }
 
         private static bool Process;
-        // private static Packet? CurrentPacket;
-        // private static byte[] CurrentResponse;
 
         /// process packet and perform step
         private void Update() {
-            // if (Sock.Available > 1)
-            // CurrentPacket = Sock.R
-
             if (!Process) return;
 
             var packet = (Packet) Recv(1)[0];

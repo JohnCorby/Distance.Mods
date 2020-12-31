@@ -4,22 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="okay dividing worked lol. its just a bit more cpu consumption having to multiply and round.&#10;also made test scene/script for unity to hopefully make things easier if i need to go back to that.">
+    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="bruh momentum">
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Invisible.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Invisible.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Invisible.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Invisible.mat.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Assets/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Assets/assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/Communication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Communication.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Entry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Entry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Harmony.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Harmony.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/MyCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/MyCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Standard.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Standard.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Utils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Utils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/bin/Release/Assets/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Assets/assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/MyState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/MyState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -224,12 +220,17 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/48/756e8459/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/3c/987bd183/ManagerAbstract.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/825C30D4-A4CF-464C-B7EB-B8145854D1F8/77/080b6a97/SocketInformation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/29/507bb767/UIntPtr.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/20/8d5a4139/WaitUntil.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/07/04237417/WaitForEndOfFrame.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/9c/4dd53356/LaserLogic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/9c/9b173947/Teleportable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/70/36288213/Application.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/bb/2bb49805/Globals.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/66/b8fc0c3f/YieldInstruction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/49/8d4fcaa0/TeleporterExit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/2f/9a0c2db8/QueryTriggerInteraction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/ed/d9ae369a/LayoutKind.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/4e/931f2714/TeleporterExitCheckpoint.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/c3/683e438b/SerialLevelEditorListener.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/7d/d15dd98f/Physics.cs" root0="SKIP_HIGHLIGHTING" />
@@ -320,8 +321,6 @@
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/34/26b72d6f/GameMode.cs" />
       <option value="$PROJECT_DIR$/Distance.Cheat/Harmony.cs" />
       <option value="$PROJECT_DIR$/Distance.Cheat/Entry.cs" />
-      <option value="$PROJECT_DIR$/Distance.ML/Entry.cs" />
-      <option value="$PROJECT_DIR$/Distance.ML/Harmony.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/State.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/ML.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Comm.cs" />
@@ -343,15 +342,17 @@
       <option value="$PROJECT_DIR$/Distance.ML/Unity/PostProcessing.shader" />
       <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/dasdasd.shader" />
       <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/PostProcessing.shader" />
-      <option value="$PROJECT_DIR$/Distance.ML/Communication.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/PostProcessing.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Test.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" />
-      <option value="$PROJECT_DIR$/Distance.ML/MyState.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/28/7143958c/GUtils.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Utils.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/sd.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/MyCamera.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/Entry.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/Harmony.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/MyState.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/Communication.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lxTRcXRTrkYODeKxiUYPu28JO5" />
@@ -483,7 +484,7 @@
       <workItem from="1609375780617" duration="2101000" />
       <workItem from="1609383789949" duration="1316000" />
       <workItem from="1609387045067" duration="5896000" />
-      <workItem from="1609393988298" duration="360000" />
+      <workItem from="1609393988298" duration="4187000" />
     </task>
     <task id="LOCAL-00001" summary="poopy">
       <created>1608881070386</created>
@@ -751,7 +752,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609389223598</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="bruh momentum">
+      <created>1609394365346</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1609394365346</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -797,18 +805,8 @@
     <MESSAGE value="image sanitization with post processing&#10;also wait a bit before preprocessing scene" />
     <MESSAGE value="literally in the middle of a thing. nice." />
     <MESSAGE value="okay dividing worked lol. its just a bit more cpu consumption having to multiply and round.&#10;also made test scene/script for unity to hopefully make things easier if i need to go back to that." />
-    <option name="LAST_COMMIT_MESSAGE" value="okay dividing worked lol. its just a bit more cpu consumption having to multiply and round.&#10;also made test scene/script for unity to hopefully make things easier if i need to go back to that." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Distance.ML/Python/env.py</url>
-          <line>76</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="bruh momentum" />
+    <option name="LAST_COMMIT_MESSAGE" value="bruh momentum" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

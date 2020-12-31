@@ -38,9 +38,7 @@ namespace Distance.ML {
             Camera.targetTexture = RENDER_TEXTURE;
         }
 
-        private void Start() {
-            PreprocessScene();
-        }
+        private void Start() => PreprocessScene();
 
         /// modify the scene so that it will make sense to the agent
         private static void PreprocessScene() {
@@ -60,8 +58,8 @@ namespace Distance.ML {
 
             foreach (var renderer in Resources.FindObjectsOfTypeAll<Renderer>()) {
                 // if (!renderer.HasAnyComponent(typeof(Collider))) {
-                    // Invisible(renderer);
-                    // continue;
+                // Invisible(renderer);
+                // continue;
                 // }
 
                 ID id;
@@ -85,8 +83,6 @@ namespace Distance.ML {
         }
 
         /// draw texture to screen
-        private void OnGUI() {
-            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), RENDER_TEXTURE);
-        }
+        private void OnGUI() => GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), RENDER_TEXTURE);
     }
 }

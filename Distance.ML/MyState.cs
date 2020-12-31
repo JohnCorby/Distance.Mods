@@ -103,8 +103,7 @@ namespace Distance.ML {
         }
 
         /// reset state for next step
-        public static void ResetState() {
+        public static void ResetState() =>
             Reward = 0;
-        }
     }
 }
