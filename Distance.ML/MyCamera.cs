@@ -57,12 +57,8 @@ namespace Distance.ML {
             }
 
             foreach (var renderer in Resources.FindObjectsOfTypeAll<Renderer>()) {
-                // if (!renderer.HasAnyComponent(typeof(Collider))) {
-                // Invisible(renderer);
-                // continue;
-                // }
-
                 ID id;
+                // todo add more specific things and planes with the IDs instead of just assigning them like this
                 if (renderer.HasAnyComponent(typeof(KillGrid), typeof(KillGridBox), typeof(KillGridFollower)))
                     id = ID.KILL_GRID;
                 else if (renderer.HasAnyComponent(typeof(RaceEndLogic))) id = ID.END;
@@ -70,6 +66,11 @@ namespace Distance.ML {
                 else if (renderer.HasAnyComponent(typeof(TriggerCooldownLogic))) id = ID.COOLDOWN;
                 else if (renderer.HasAnyComponent(typeof(TeleporterEntrance), typeof(TeleporterExit))) id = ID.TELEPORTER;
                 else id = ID.NORMAL;
+
+                if (!renderer.HasAnyComponent(typeof(Collider))) {
+                    Invisible(renderer);
+                    continue;
+                }
 
                 Init(renderer, id);
             }

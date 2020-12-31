@@ -43,6 +43,7 @@ namespace Distance.ML {
         private static bool Process;
 
         /// process packet and perform step
+        /// todo if process is false this will not handle reset e.g. after winning race
         private void Update() {
             if (!Process) return;
 

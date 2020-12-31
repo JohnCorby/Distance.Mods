@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="bruh momentum">
-      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Invisible.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Invisible.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Invisible.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Invisible.mat.meta" afterDir="false" />
+    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="agh fuck it this &quot;cant reset when no processing&quot; bug is annoying ill try to fix it later or maybe not">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/Communication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Communication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Entry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Entry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Harmony.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Harmony.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/MyCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/MyCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/MyState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/MyState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,6 +181,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/95/eedff092/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/0b/27f48f23/Death.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/d6/a88958fc/CamModeWithInputRotation2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/94/9c1fd000/CarScreenWidgetBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/52/be1c9709/CamModeWithInputRotation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2F2C92D0-8CB0-4E4A-BA0D-649517DCF946/0a/c6ae6073/Utilities.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/cb/57a59e7f/CaptureFrame.cs" root0="SKIP_HIGHLIGHTING" />
@@ -240,9 +232,11 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/18/15fda0d4/PhysicsEx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/ec/c6949c3f/LevelCubeMapUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/28/7143958c/GUtils.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/5d/2cee644e/JumpCircleWidget.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/ea/f9418de5/CockpitCamMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/99/90192385/UnityVersionSpecific.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/9b/7496724a/RenderTextureReadWrite.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/d7/816af0a8/JumpLightLogic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/62/9988682a/Layers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/15/d9eaf657/ObjectEx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/f4/4e6aade8/TransformExtensionOnly.cs" root0="SKIP_HIGHLIGHTING" />
@@ -302,7 +296,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Distance.ML/mod.json" />
       <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test.compute" />
       <option value="$PROJECT_DIR$/Distance.Cheat/Hotkeys.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Bruh.cs" />
@@ -348,10 +341,11 @@
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/28/7143958c/GUtils.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Utils.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/sd.cs" />
-      <option value="$PROJECT_DIR$/Distance.ML/MyCamera.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Entry.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Harmony.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/MyState.cs" />
+      <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/94/9c1fd000/CarScreenWidgetBase.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/MyCamera.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Communication.cs" />
     </changedPaths>
   </component>
@@ -484,7 +478,7 @@
       <workItem from="1609375780617" duration="2101000" />
       <workItem from="1609383789949" duration="1316000" />
       <workItem from="1609387045067" duration="5896000" />
-      <workItem from="1609393988298" duration="4187000" />
+      <workItem from="1609393988298" duration="5001000" />
     </task>
     <task id="LOCAL-00001" summary="poopy">
       <created>1608881070386</created>
@@ -759,7 +753,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609394365346</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="agh fuck it this &quot;cant reset when no processing&quot; bug is annoying ill try to fix it later or maybe not">
+      <created>1609398276549</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1609398276549</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -806,7 +807,8 @@
     <MESSAGE value="literally in the middle of a thing. nice." />
     <MESSAGE value="okay dividing worked lol. its just a bit more cpu consumption having to multiply and round.&#10;also made test scene/script for unity to hopefully make things easier if i need to go back to that." />
     <MESSAGE value="bruh momentum" />
-    <option name="LAST_COMMIT_MESSAGE" value="bruh momentum" />
+    <MESSAGE value="agh fuck it this &quot;cant reset when no processing&quot; bug is annoying ill try to fix it later or maybe not" />
+    <option name="LAST_COMMIT_MESSAGE" value="agh fuck it this &quot;cant reset when no processing&quot; bug is annoying ill try to fix it later or maybe not" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
