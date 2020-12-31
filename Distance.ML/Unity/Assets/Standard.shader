@@ -1,4 +1,8 @@
 ﻿Shader "Standard" {
+    Properties {
+        _ID ("ID", Int) = 0
+        _NumIDs ("Number of IDs", Int) = 0
+    }
     SubShader {
         Tags {
             "RenderType"="Opaque"
@@ -14,29 +18,31 @@
 
             struct appdata
             {
-                float4 pos : POSITION;
+                float4 vertex : POSITION;
             };
 
             struct v2f
             {
-                float4 pos : SV_POSITION;
+                float4 vertex : SV_POSITION;
+                float depth : TEXCOORD0;
             };
 
             v2f vert(appdata v)
             {
                 v2f o;
-                o.pos = UnityObjectToClipPos(v.pos);
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.depth = 1 - COMPUTE_DEPTH_01;
                 return o;
             }
 
             int _ID;
+            int _NumIDs;
 
             fixed4 frag(v2f i) : SV_Target
             {
-                return 7;
+                return fixed4(i.depth, (float) _ID / _NumIDs, 0, 1);
             }
             ENDCG
         }
-        UsePass "Legacy Shaders/VertexLit/SHADOWCASTER"
     }
 }

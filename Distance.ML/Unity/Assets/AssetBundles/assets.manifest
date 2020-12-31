@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 303645007
+CRC: 2832266741
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d40cd20f4f82b869777f99481865c734
+    Hash: a10e8a34a78139336e1f63e740b6c124
   TypeTreeHash:
     serializedVersion: 2
     Hash: 7bd39743cce4d37940997ab4332a0cd7
@@ -12,6 +12,5 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/PostProcessing.shader
 - Assets/Standard.shader
 Dependencies: []

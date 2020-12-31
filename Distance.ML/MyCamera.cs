@@ -1,16 +1,16 @@
-﻿using Reactor.API.Storage;
+﻿using System;
+using Reactor.API.Storage;
 using UnityEngine;
 
 namespace Distance.ML {
     public class MyCamera : MonoBehaviour {
         /// internal camera render texture
         public static readonly RenderTexture RENDER_TEXTURE = new(256, 256,
-            0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.Linear);
+            0, RenderTextureFormat.ARGBFloat, RenderTextureReadWrite.Linear);
         private static Camera Camera = null!;
         private static readonly Shader STANDARD_SHADER;
-        private static readonly Material PP_MATERIAL;
 
-        private enum Id {
+        private enum ID {
             NORMAL,
             KILL_GRID,
             END,
@@ -19,42 +19,48 @@ namespace Distance.ML {
             TELEPORTER,
         }
 
+        public static readonly int NUM_IDS = Enum.GetNames(typeof(ID)).Length;
+
         static MyCamera() {
             var assetBundle = (AssetBundle) new Assets("assets").Bundle;
             STANDARD_SHADER = assetBundle.LoadAsset<Shader>("Standard.shader");
-            PP_MATERIAL = new Material(assetBundle.LoadAsset<Shader>("PostProcessing.shader"));
         }
 
         private void Awake() {
             Camera = gameObject.AddComponent<Camera>();
+
             Camera.cullingMask = Camera.main.cullingMask & ~PhysicsEx.carLayerMask_;
-            Camera.depthTextureMode = DepthTextureMode.Depth;
+
+            Camera.clearFlags = CameraClearFlags.SolidColor;
+            Camera.backgroundColor = Color.black;
+
             Camera.targetTexture = RENDER_TEXTURE;
         }
 
         private void Start() {
-            // PreprocessScene();
+            PreprocessScene();
         }
 
         /// modify the scene so that it will make sense to the agent
         private static void PreprocessScene() {
-            static void Init(Renderer renderer, Id id) {
+            static void Init(Renderer renderer, ID id) {
                 foreach (var material in renderer.materials) {
                     material.shader = STANDARD_SHADER;
                     material.SetInt("_ID", (int) id);
+                    material.SetInt("_NumIDs", NUM_IDS);
                 }
             }
 
             foreach (var renderer in Resources.FindObjectsOfTypeAll<Renderer>()) {
-                Id id;
+                ID id;
                 if (renderer.HasComponentInChildren<KillGrid>() ||
-                    renderer.HasComponentInChildren<KillGridBox>()) id = Id.KILL_GRID;
-                else if (renderer.HasComponentInChildren<RaceEndLogic>()) id = Id.END;
-                else if (renderer.HasComponentInChildren<CheckpointLogic>()) id = Id.CHECKPOINT;
-                else if (renderer.HasComponentInChildren<TriggerCooldownLogic>()) id = Id.COOLDOWN;
+                    renderer.HasComponentInChildren<KillGridBox>()) id = ID.KILL_GRID;
+                else if (renderer.HasComponentInChildren<RaceEndLogic>()) id = ID.END;
+                else if (renderer.HasComponentInChildren<CheckpointLogic>()) id = ID.CHECKPOINT;
+                else if (renderer.HasComponentInChildren<TriggerCooldownLogic>()) id = ID.COOLDOWN;
                 else if (renderer.HasComponentInChildren<TeleporterEntrance>() ||
-                         renderer.HasComponentInChildren<TeleporterExit>()) id = Id.TELEPORTER;
-                else id = Id.NORMAL;
+                         renderer.HasComponentInChildren<TeleporterExit>()) id = ID.TELEPORTER;
+                else id = ID.NORMAL;
 
                 Init(renderer, id);
             }
@@ -65,11 +71,6 @@ namespace Distance.ML {
             var parentTransform = Utils.PlayerDataLocal!.Car_.transform;
             transform.position = parentTransform.position + parentTransform.up;
             transform.rotation = parentTransform.rotation;
-        }
-
-        /// apply post processing
-        private void OnRenderImage(RenderTexture src, RenderTexture dest) {
-            Graphics.Blit(src, dest, PP_MATERIAL);
         }
 
         /// draw texture to screen

@@ -54,7 +54,6 @@
       </Content>
       <Content Include="Python\env.py" />
       <Content Include="Python\requirements.txt" />
-      <Content Include="Unity\Assets\PostProcessing.shader" />
       <Content Include="Unity\Assets\Standard.shader" />
     </ItemGroup>
     <ItemGroup>

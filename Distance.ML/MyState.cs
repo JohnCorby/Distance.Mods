@@ -6,7 +6,7 @@ using static Distance.ML.Entry;
 namespace Distance.ML {
     public class MyState : MonoBehaviour {
         private static readonly Texture2D TEXTURE = new(MyCamera.RENDER_TEXTURE.width, MyCamera.RENDER_TEXTURE.height,
-            TextureFormat.RGBA32, false, true);
+            TextureFormat.RGBAFloat, false, true);
 
         /// texture data in form (depth, id)
         public static readonly float[,,] TEXTURE_DATA = new float[TEXTURE.width, TEXTURE.height, 2];
@@ -84,7 +84,7 @@ namespace Distance.ML {
                 for (var y = 0; y < TEXTURE.height; y++) {
                     var pixel = TEXTURE.GetPixel(x, y);
                     TEXTURE_DATA[x, y, 0] = pixel.r;
-                    TEXTURE_DATA[x, y, 1] = pixel.g;
+                    TEXTURE_DATA[x, y, 1] = Mathf.RoundToInt(pixel.g * MyCamera.NUM_IDS);
                 }
             }
         }
@@ -96,7 +96,10 @@ namespace Distance.ML {
             TEXTURE.ReadPixels(new Rect(0, 0, TEXTURE.width, TEXTURE.height), 0, 0);
             RenderTexture.active = lastActive;
 
-            LOG.Info(TEXTURE.GetPixel(TEXTURE.width / 2, TEXTURE.height / 2));
+            var pixel = TEXTURE.GetPixel(TEXTURE.width / 2, TEXTURE.height / 2);
+            var depth = pixel.r;
+            var id = Mathf.RoundToInt(pixel.g * MyCamera.NUM_IDS);
+            LOG.Info($"depth: {depth}\t\tid: {id}");
         }
 
         /// reset state for next step
