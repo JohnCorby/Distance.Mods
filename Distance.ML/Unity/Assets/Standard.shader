@@ -1,4 +1,4 @@
-﻿Shader "Standard" {
+﻿Shader "Custom/Standard" {
     Properties {
         _ID ("ID", Int) = 0
     }
@@ -7,6 +7,7 @@
             "RenderType"="Opaque"
             "Queue"="Geometry"
         }
+        LOD 100
 
         Pass {
             CGPROGRAM
@@ -39,9 +40,10 @@
 
             fixed4 frag(v2f i) : SV_Target
             {
-                return fixed4(i.depth, (float) _ID / _NumIDs, 0, 1);
+                return fixed4(i.depth, (float)_ID / _NumIDs, 0, 1);
             }
             ENDCG
         }
     }
+    Fallback "Standard"
 }

@@ -13,12 +13,12 @@
     <e p="C:\Users\willi\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
     <e p="C:\Users\willi\AppData\Local\JetBrains\Rider2020.3\python_stubs\152262123" t="IncludeRecursive" />
     <e p="C:\Users\willi\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Distance.Mods.-1567057353.00" t="ExcludeRecursive" />
-    <e p="C:\Users\willi\AppData\Local\JetBrains\Toolbox\apps\Rider\ch-0\203.5981.141.plugins\python-ce\helpers\python-skeletons" t="IncludeRecursive" />
-    <e p="C:\Users\willi\AppData\Local\JetBrains\Toolbox\apps\Rider\ch-0\203.5981.141.plugins\python-ce\helpers\typeshed\stdlib\2and3" t="IncludeRecursive" />
-    <e p="C:\Users\willi\AppData\Local\JetBrains\Toolbox\apps\Rider\ch-0\203.5981.141.plugins\python-ce\helpers\typeshed\stdlib\3" t="IncludeRecursive" />
-    <e p="C:\Users\willi\AppData\Local\JetBrains\Toolbox\apps\Rider\ch-0\203.5981.141.plugins\python-ce\helpers\typeshed\stdlib\3.7" t="IncludeRecursive" />
-    <e p="C:\Users\willi\AppData\Local\JetBrains\Toolbox\apps\Rider\ch-0\203.5981.141.plugins\python-ce\helpers\typeshed\third_party\2and3" t="IncludeRecursive" />
-    <e p="C:\Users\willi\AppData\Local\JetBrains\Toolbox\apps\Rider\ch-0\203.5981.141.plugins\python-ce\helpers\typeshed\third_party\3" t="IncludeRecursive" />
+    <e p="C:\Users\willi\AppData\Local\JetBrains\Toolbox\apps\Rider\ch-0\203.6682.21.plugins\python-ce\helpers\python-skeletons" t="IncludeRecursive" />
+    <e p="C:\Users\willi\AppData\Local\JetBrains\Toolbox\apps\Rider\ch-0\203.6682.21.plugins\python-ce\helpers\typeshed\stdlib\2and3" t="IncludeRecursive" />
+    <e p="C:\Users\willi\AppData\Local\JetBrains\Toolbox\apps\Rider\ch-0\203.6682.21.plugins\python-ce\helpers\typeshed\stdlib\3" t="IncludeRecursive" />
+    <e p="C:\Users\willi\AppData\Local\JetBrains\Toolbox\apps\Rider\ch-0\203.6682.21.plugins\python-ce\helpers\typeshed\stdlib\3.7" t="IncludeRecursive" />
+    <e p="C:\Users\willi\AppData\Local\JetBrains\Toolbox\apps\Rider\ch-0\203.6682.21.plugins\python-ce\helpers\typeshed\third_party\2and3" t="IncludeRecursive" />
+    <e p="C:\Users\willi\AppData\Local\JetBrains\Toolbox\apps\Rider\ch-0\203.6682.21.plugins\python-ce\helpers\typeshed\third_party\3" t="IncludeRecursive" />
     <e p="D:\Code Stuff\Distance.Mods" t="IncludeFlat">
       <e p="Distance.Cheat" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />

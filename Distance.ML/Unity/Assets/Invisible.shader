@@ -1,11 +1,13 @@
-﻿Shader "Invisible" {
+﻿Shader "Custom/Invisible" {
     SubShader {
         Tags {
             "RenderType"="Transparent"
             "Queue"="Transparent"
         }
-        Blend SrcAlpha OneMinusSrcAlpha
+        LOD 100
+
         ZWrite Off
+        Blend SrcAlpha OneMinusSrcAlpha
 
         Pass {
             CGPROGRAM
@@ -38,4 +40,5 @@
             ENDCG
         }
     }
+    Fallback "Standard"
 }

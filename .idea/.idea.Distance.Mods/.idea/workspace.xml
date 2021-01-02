@@ -4,22 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="i fixed the communication bug lets go">
+    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="send observations (slow)">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Assets/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Assets/assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Communication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Communication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/MyCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/MyCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/MyState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/MyState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Python/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Python/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Editor/CreateAssetBundles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Editor/CreateAssetBundles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Invisible.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Invisible.shader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/bin/Release/Assets/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Assets/assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Mods.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Mods.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Standard.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Standard.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Test.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +74,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/d9/fe7db126/CarLogic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/8f/4d8f4782/Vector3Ex.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/17/fdd40b22/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Code Stuff/Distance.Mods/Distance.ML/Unity/Assets/Editor/CreateAssetBundles.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/3d/35ed955a/DisableLocalCarWarnings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/9e/43b6aad6/CreateNewPrefabObjectAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/97/a42136ed/QuaternionEx.cs" root0="SKIP_HIGHLIGHTING" />
@@ -100,6 +104,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/ab/2c234786/GUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/5a/8cfe78f0/NetworkPlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/b0/79bfff96/NetworkTransceiver.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Code Stuff/Distance.Mods/Distance.ML/Unity/Assets/AssetBundles.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/59/95d59d63/NetworkPlayerEx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/39/ce5cb39d/CarExploder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/bd/7efb2238/Assembly-CSharp.cs" root0="SKIP_HIGHLIGHTING" />
@@ -134,6 +139,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3337525C-3AAE-42E0-BA83-E0F75ACB0BD8/7a/d014770b/LogManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/d9/d424c19a/StoryIntroCutsceneLogicV2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/cc/d9ef887a/InfiniteCooldownTrigger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Distance.ML/Unity/Assets/Editor/CreateAssetBundles.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/1d/dd1e9e88/PlayerEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/16/a41903c9/CheckpointLogic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/9b/240ccd61/G.cs" root0="SKIP_HIGHLIGHTING" />
@@ -167,7 +173,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/be/e96e967c/TrickComplete.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/32/6a9b9483/ArrayEx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/ba/94aa1750/Finished.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Distance.ML/Unity/Assets/Editor/CreateAssetBundles.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/be/d5311eeb/Resource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/65/871c5bf9/CarCamera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/81/bce5575d/UnmanagedType.cs" root0="SKIP_HIGHLIGHTING" />
@@ -310,7 +315,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test.compute" />
       <option value="$PROJECT_DIR$/Distance.Cheat/Hotkeys.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Bruh.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/be/d5311eeb/Resource.cs" />
@@ -355,12 +359,13 @@
       <option value="$PROJECT_DIR$/Distance.ML/Entry.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Harmony.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/94/9c1fd000/CarScreenWidgetBase.cs" />
-      <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" />
-      <option value="$PROJECT_DIR$/Distance.ML/MyCamera.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Python/env.py" />
       <option value="$PROJECT_DIR$/Distance.ML/MyState.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Communication.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Utils.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/MyCamera.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" />
+      <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/Invisible.shader" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lxTRcXRTrkYODeKxiUYPu28JO5" />
@@ -493,7 +498,11 @@
       <workItem from="1609383789949" duration="1316000" />
       <workItem from="1609387045067" duration="5896000" />
       <workItem from="1609393988298" duration="5279000" />
-      <workItem from="1609448517726" duration="8964000" />
+      <workItem from="1609448517726" duration="9593000" />
+      <workItem from="1609463365309" duration="202000" />
+      <workItem from="1609468489207" duration="93000" />
+      <workItem from="1609477118947" duration="6000" />
+      <workItem from="1609544128594" duration="119000" />
     </task>
     <task id="LOCAL-00001" summary="poopy">
       <created>1608881070386</created>
@@ -789,7 +798,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609454714652</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="send observations (slow)">
+      <created>1609458984869</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1609458984869</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -812,7 +828,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="build assetbundles" />
     <MESSAGE value="using correct unity version now lol" />
     <MESSAGE value="finally it works" />
     <MESSAGE value="bit of refactoring" />
@@ -837,7 +852,8 @@
     <MESSAGE value="agh fuck it this &quot;cant reset when no processing&quot; bug is annoying ill try to fix it later or maybe not" />
     <MESSAGE value="i stop for today" />
     <MESSAGE value="i fixed the communication bug lets go" />
-    <option name="LAST_COMMIT_MESSAGE" value="i fixed the communication bug lets go" />
+    <MESSAGE value="send observations (slow)" />
+    <option name="LAST_COMMIT_MESSAGE" value="send observations (slow)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
