@@ -36,14 +36,12 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
     <ItemGroup>
+      <Compile Include="PointsState.cs" />
       <Compile Include="Utils.cs" />
       <Compile Include="Communication.cs" />
-      <Compile Include="MyCamera.cs" />
       <Compile Include="Entry.cs" />
       <Compile Include="Harmony.cs" />
-      <Compile Include="Raycaster.cs" />
-      <Compile Include="MyState.cs" />
-      <Compile Include="Stepper.cs" />
+      <Compile Include="State.cs" />
     </ItemGroup>
     <ItemGroup>
       <Content Include="Assets\assets">

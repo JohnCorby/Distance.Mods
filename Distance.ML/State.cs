@@ -2,21 +2,17 @@
 using Events.Car;
 using Events.Player;
 using static Distance.ML.Entry;
+using static Distance.ML.PointsState;
 
 namespace Distance.ML {
-    public class MyState : MonoBehaviour {
-        private static readonly Texture2D TEXTURE = new(MyCamera.RENDER_TEXTURE.width, MyCamera.RENDER_TEXTURE.height,
-            TextureFormat.RGBAFloat, false, true);
+    /// holds all state of the network
+    public class State : MonoBehaviour {
+        private PointsState PointsState = null!;
 
-        public struct Pixel {
-            public float Depth;
-            public uint ID;
-        }
-
-        /// texture data in form (depth, id)
-        public static readonly Pixel[,] TEXTURE_DATA = new Pixel[TEXTURE.width, TEXTURE.height];
+        /// array of points in byte form so we won't have to allocate/convert more
+        public byte[] PointsBytes = null!;
         /// reward value
-        public static float Reward;
+        public float Reward;
 
         /// if env is done
         public static bool Done => Utils.PlayerDataLocal!.Finished_;
@@ -31,6 +27,9 @@ namespace Distance.ML {
         private const float REWARD_BACKWARD_SCALE = -10;
 
         private void Awake() {
+            PointsState = gameObject.AddComponent<PointsState>();
+            PointsBytes = new byte[PointsState.Buffer.count * PointsState.Buffer.stride];
+
             var events = Utils.PlayerDataLocal!.Events_;
             events.Subscribe<Finished.Data>(OnEventFinished);
             events.Subscribe<Death.Data>(OnEventDeath);
@@ -41,6 +40,8 @@ namespace Distance.ML {
         }
 
         private void OnDestroy() {
+            PointsState.Destroy();
+
             var events = Utils.PlayerDataLocal!.Events_;
             events.Unsubscribe<Finished.Data>(OnEventFinished);
             events.Unsubscribe<Death.Data>(OnEventDeath);
@@ -50,57 +51,45 @@ namespace Distance.ML {
             events.Unsubscribe<Split.Data>(OnEventSplit);
         }
 
-        private static void OnEventFinished(Finished.Data data) {
+        private void OnEventFinished(Finished.Data data) {
             if (data.finishType_ != FinishType.Normal) return;
             LOG.Debug($"finish: reward {REWARD_FINISH}");
             Reward += REWARD_FINISH;
         }
 
-        private static void OnEventDeath(Death.Data _) {
+        private void OnEventDeath(Death.Data _) {
             LOG.Debug($"death: reward {REWARD_DEATH}");
             Reward += REWARD_DEATH;
         }
 
-        private static void OnEventCheckpoint(CheckpointHit.Data _) {
+        private void OnEventCheckpoint(CheckpointHit.Data _) {
             LOG.Debug($"checkpoint: reward {REWARD_CHECKPOINT}");
             Reward += REWARD_CHECKPOINT;
         }
 
-        private static void OnEventCooldown(Cooldown.Data data) {
+        private void OnEventCooldown(Cooldown.Data data) {
             LOG.Debug($"cooldown: reward {data.cooldownAmount * REWARD_COOLDOWN_SCALE}");
             Reward += data.cooldownAmount * REWARD_COOLDOWN_SCALE;
         }
 
-        private static void OnEventTrick(TrickComplete.Data data) {
+        private void OnEventTrick(TrickComplete.Data data) {
             LOG.Debug($"cooldown: reward {data.cooldownAmount_ * REWARD_TRICK}");
             Reward += data.cooldownAmount_ * REWARD_TRICK;
         }
 
-        private static void OnEventSplit(Split.Data _) {
+        private void OnEventSplit(Split.Data _) {
             LOG.Debug($"split: reward {REWARD_SPLIT}");
             Reward += REWARD_SPLIT;
         }
 
         /// update state stuff
-        public static void UpdateState() {
-            var lastActive = RenderTexture.active;
-            RenderTexture.active = MyCamera.RENDER_TEXTURE;
-            TEXTURE.ReadPixels(new Rect(0, 0, TEXTURE.width, TEXTURE.height), 0, 0);
-            RenderTexture.active = lastActive;
-
-            for (var x = 0; x < TEXTURE.width; x++) {
-                for (var y = 0; y < TEXTURE.height; y++) {
-                    var color = TEXTURE.GetPixel(x, y);
-                    TEXTURE_DATA[x, y] = new Pixel {
-                        Depth = color.r,
-                        ID = (uint) Mathf.RoundToInt(color.g * MyCamera.NUM_IDS)
-                    };
-                }
-            }
+        public void UpdateState() {
+            PointsState.UpdateState();
+            PointsState.Buffer.GetData(PointsBytes);
         }
 
         /// reset state for next step
-        public static void ResetState() =>
+        public void ResetState() =>
             Reward = 0;
     }
 }

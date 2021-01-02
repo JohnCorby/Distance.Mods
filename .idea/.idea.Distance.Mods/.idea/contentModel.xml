@@ -40,16 +40,14 @@
         <e p="Entry.cs" t="Include" />
         <e p="Harmony.cs" t="Include" />
         <e p="mod.json" t="Include" />
-        <e p="MyCamera.cs" t="Include" />
-        <e p="MyState.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
+        <e p="PointsState.cs" t="Include" />
         <e p="Python" t="Include">
           <e p="env.py" t="Include" />
           <e p="requirements.txt" t="Include" />
         </e>
-        <e p="Raycaster.cs" t="Include" />
-        <e p="Stepper.cs" t="Include" />
+        <e p="State.cs" t="Include" />
         <e p="Unity" t="Include">
           <e p="Assets" t="Include">
             <e p="Standard.shader" t="Include" />

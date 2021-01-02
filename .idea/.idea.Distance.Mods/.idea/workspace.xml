@@ -4,25 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="send observations (slow)">
+    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="remade unity project, added compute shader to unity project">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/shelf/Uncommitted_changes_before_Update_at_12_30_2020_4_54_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/shelf/Uncommitted_changes_before_Update_at_12_30_2020_4_54_PM__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.manifest.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/AssetBundles.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.manifest.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/AssetBundles/assets.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Editor.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Editor/CreateAssetBundles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Editor/CreateAssetBundles.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Invisible.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Invisible.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Standard.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Standard.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Test.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Cheat/bin/Release/Distance.Cheat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/bin/Release/Distance.Cheat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Cheat/obj/Release/Distance.Cheat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/obj/Release/Distance.Cheat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Assets/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Assets/assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Communication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Communication.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Distance.ML.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Distance.ML.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Harmony.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Harmony.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/MyCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/PointsState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/MyState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/State.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Raycaster.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Stepper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/bin/Release/Assets/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Assets/assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +46,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/bf/fdf42a95/LocalPlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/67/c9902787/KeyCode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/22/380c7207/IntroCamMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/e3/8b501266/BehaviourEx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/c2/2c70f6fb/InternalDrawTextureArguments.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Distance.ML/MyState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Distance.ML/State.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/ae/50f80d1e/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/6f/b2df8862/CheckpointHit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/48/06792fba/Graphics.cs" root0="SKIP_HIGHLIGHTING" />
@@ -74,7 +83,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/d9/fe7db126/CarLogic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/8f/4d8f4782/Vector3Ex.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/17/fdd40b22/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Code Stuff/Distance.Mods/Distance.ML/Unity/Assets/Editor/CreateAssetBundles.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/3d/35ed955a/DisableLocalCarWarnings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/9e/43b6aad6/CreateNewPrefabObjectAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/97/a42136ed/QuaternionEx.cs" root0="SKIP_HIGHLIGHTING" />
@@ -104,7 +112,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/ab/2c234786/GUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/5a/8cfe78f0/NetworkPlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/b0/79bfff96/NetworkTransceiver.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Code Stuff/Distance.Mods/Distance.ML/Unity/Assets/AssetBundles.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/59/95d59d63/NetworkPlayerEx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/39/ce5cb39d/CarExploder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/bd/7efb2238/Assembly-CSharp.cs" root0="SKIP_HIGHLIGHTING" />
@@ -159,7 +166,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/69/6591a031/Go.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/33/3728c9ec/KillGrid.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/39/98f34562/StartMode.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Test.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/59/6ff91688/InterceptorCollectable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/19/0fcd1b4f/InputState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/51/5cd5086c/InstancedEvent`1.cs" root0="SKIP_HIGHLIGHTING" />
@@ -245,7 +251,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/4e/931f2714/TeleporterExitCheckpoint.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/c3/683e438b/SerialLevelEditorListener.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/7d/d15dd98f/Physics.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/48/2133ecb4/AntiTunneler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/e7/56f0aa77/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/18/15fda0d4/PhysicsEx.cs" root0="SKIP_HIGHLIGHTING" />
@@ -272,6 +277,7 @@
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Rider2020.3/python_stubs/152262123/_socket.py" root0="SKIP_INSPECTION" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/95/614ddc1d/AssetBundle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Distance.Cheat/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/49/609b1043/ChallengeMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/825C30D4-A4CF-464C-B7EB-B8145854D1F8/6a/444ac020/EndPoint.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/9b/7d85c990/PlayerDataFake.cs" root0="SKIP_HIGHLIGHTING" />
@@ -279,6 +285,7 @@
     <setting file="file://$PROJECT_DIR$/Distance.Cheat/Entry.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/9d/1a0a85aa/CarRespawn.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/bf/1ebfd71e/LevelEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Test.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/7f/894bd5f2/BoostGadget.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3337525C-3AAE-42E0-BA83-E0F75ACB0BD8/75/8961ef34/Assets.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/0d/f280ac94/AddComponentMenu.cs" root0="SKIP_HIGHLIGHTING" />
@@ -287,15 +294,16 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/af/7de570fc/Camera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/c0/a935dfb9/FinishType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/9c/8755c4ce/Vector4Ex.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Distance.ML/MyCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/6b/1458da6a/CheckpointHoloLogic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/68/ab7e3014/InputDevice.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/8c/b2563259/JetsGadget.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/6e/84f8f2b8/HideInInspector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/17/99f41248/InputStatesAdv.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/bc/4b0f900c/PlayerManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/ce/5acf3184/CarVisuals.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/e4/423b94ed/KeyboardDevice.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/96/ecd6c396/TriggerCooldownLogic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/39/74d00abe/ComputeBuffer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/57/86b3689d/CheckpointLogicBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2F2C92D0-8CB0-4E4A-BA0D-649517DCF946/01/006e7479/GameAPI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5061A1D2-0EFF-40A6-BE16-A6C17523D809/19/33d76e61/BuiltinRenderTextureType.cs" root0="SKIP_HIGHLIGHTING" />
@@ -315,7 +323,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Distance.Cheat/Hotkeys.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Bruh.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/be/d5311eeb/Resource.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/c3/683e438b/SerialLevelEditorListener.cs" />
@@ -332,7 +339,6 @@
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/34/26b72d6f/GameMode.cs" />
       <option value="$PROJECT_DIR$/Distance.Cheat/Harmony.cs" />
       <option value="$PROJECT_DIR$/Distance.Cheat/Entry.cs" />
-      <option value="$PROJECT_DIR$/Distance.ML/State.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/ML.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Comm.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/32/6a9b9483/ArrayEx.cs" />
@@ -356,16 +362,18 @@
       <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/Test/Test.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/28/7143958c/GUtils.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/sd.cs" />
-      <option value="$PROJECT_DIR$/Distance.ML/Entry.cs" />
-      <option value="$PROJECT_DIR$/Distance.ML/Harmony.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/94/9c1fd000/CarScreenWidgetBase.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Python/env.py" />
-      <option value="$PROJECT_DIR$/Distance.ML/MyState.cs" />
-      <option value="$PROJECT_DIR$/Distance.ML/Communication.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Utils.cs" />
-      <option value="$PROJECT_DIR$/Distance.ML/MyCamera.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" />
       <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/Invisible.shader" />
+      <option value="$PROJECT_DIR$/Distance.ML/Entry.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/Harmony.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/MyState.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/MyCamera.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/Communication.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/PointsState.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/State.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lxTRcXRTrkYODeKxiUYPu28JO5" />
@@ -503,6 +511,7 @@
       <workItem from="1609468489207" duration="93000" />
       <workItem from="1609477118947" duration="6000" />
       <workItem from="1609544128594" duration="119000" />
+      <workItem from="1609552449843" duration="3151000" />
     </task>
     <task id="LOCAL-00001" summary="poopy">
       <created>1608881070386</created>
@@ -805,7 +814,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609458984869</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="remade unity project, added compute shader to unity project">
+      <created>1609552481423</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1609552481423</updated>
+    </task>
+    <task id="LOCAL-00045" summary="remade unity project, added compute shader to unity project">
+      <created>1609552502253</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1609552502253</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -828,7 +851,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="using correct unity version now lol" />
     <MESSAGE value="finally it works" />
     <MESSAGE value="bit of refactoring" />
     <MESSAGE value="cheats are better and also hotkey enabled" />
@@ -853,7 +875,8 @@
     <MESSAGE value="i stop for today" />
     <MESSAGE value="i fixed the communication bug lets go" />
     <MESSAGE value="send observations (slow)" />
-    <option name="LAST_COMMIT_MESSAGE" value="send observations (slow)" />
+    <MESSAGE value="remade unity project, added compute shader to unity project" />
+    <option name="LAST_COMMIT_MESSAGE" value="remade unity project, added compute shader to unity project" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

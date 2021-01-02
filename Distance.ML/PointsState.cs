@@ -3,12 +3,13 @@ using Reactor.API.Storage;
 using UnityEngine;
 
 namespace Distance.ML {
-    public class MyCamera : MonoBehaviour {
-        /// internal camera render texture
-        public static readonly RenderTexture RENDER_TEXTURE = new(256, 256,
-            0, RenderTextureFormat.ARGBFloat, RenderTextureReadWrite.Linear);
-        private static Camera Camera = null!;
-        private static readonly Shader STANDARD_SHADER, INVISIBLE_SHADER;
+    /// holds state for points data
+    public class PointsState : MonoBehaviour {
+        private Camera Camera = null!;
+        private RenderTexture Texture = null!;
+
+        /// buffer that holds points data
+        public ComputeBuffer Buffer = null!;
 
         private enum ID : uint {
             NORMAL,
@@ -19,25 +20,41 @@ namespace Distance.ML {
             TELEPORTER,
         }
 
-        public static readonly uint NUM_IDS = (uint) Enum.GetNames(typeof(ID)).Length;
+        private static readonly uint NUM_IDS = (uint) Enum.GetNames(typeof(ID)).Length;
 
-        static MyCamera() {
+        private static readonly Shader STANDARD_SHADER, INVISIBLE_SHADER;
+        private static readonly ComputeShader PROCESS_SHADER;
+
+        /// first called only on level start, so we good in terms of asset loading
+        static PointsState() {
             var assetBundle = (AssetBundle) new Assets("assets").Bundle;
             STANDARD_SHADER = assetBundle.LoadAsset<Shader>("Standard.shader");
             INVISIBLE_SHADER = assetBundle.LoadAsset<Shader>("Invisible.shader");
+            PROCESS_SHADER = assetBundle.LoadAsset<ComputeShader>("Process.compute");
 
             Shader.SetGlobalInt("_NumIDs", (int) NUM_IDS);
+            PROCESS_SHADER.SetInt("NumIDs", (int) NUM_IDS);
         }
 
         private void Awake() {
             Camera = gameObject.AddComponent<Camera>();
-
-            Camera.cullingMask = Camera.main.cullingMask & ~PhysicsEx.carLayerMask_;
-
+            Camera.cullingMask = Camera.main!.cullingMask & ~PhysicsEx.carLayerMask_;
             Camera.clearFlags = CameraClearFlags.SolidColor;
             Camera.backgroundColor = Color.black;
 
-            Camera.targetTexture = RENDER_TEXTURE;
+            Texture = new RenderTexture(256, 256, 0, RenderTextureFormat.ARGBFloat, RenderTextureReadWrite.Linear);
+            Camera.targetTexture = Texture;
+            Buffer = new ComputeBuffer(Texture.width * Texture.height, sizeof(float) + sizeof(uint));
+
+            PROCESS_SHADER.SetTexture(0, "Input", Texture);
+            PROCESS_SHADER.SetBuffer(0, "Output", Buffer);
+        }
+
+        private void OnDestroy() {
+            Camera.Destroy();
+
+            Texture.Release();
+            Buffer.Release();
         }
 
         private void Start() => PreprocessScene();
@@ -85,6 +102,11 @@ namespace Distance.ML {
         }
 
         /// draw texture to screen
-        private void OnGUI() => GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), RENDER_TEXTURE);
+        private void OnGUI() =>
+            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), Texture);
+
+        /// update state stuff
+        public void UpdateState() =>
+            PROCESS_SHADER.Dispatch(0, Texture.width / 8, Texture.height / 8, 1);
     }
 }

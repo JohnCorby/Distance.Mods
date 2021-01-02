@@ -8,13 +8,12 @@ namespace Distance.ML {
     /// reading/writing data via ipc (so loopback and port)
     public class Communication : MonoBehaviour {
         private static readonly IPEndPoint ADDR = new(IPAddress.Loopback, 6969);
-        private static Socket Sock = null!;
+        private Socket Sock = null!;
+
+        public State State = null!;
 
         private void Awake() {
-            if (!G.Sys.GameManager_.SoloAndNotOnline_) throw new ArgumentException("must be in solo game");
-
-            gameObject.AddComponent<MyCamera>();
-            gameObject.AddComponent<MyState>();
+            State = gameObject.AddComponent<State>();
 
             LOG.Info("connecting...");
             Sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -29,8 +28,7 @@ namespace Distance.ML {
 
         private void OnDestroy() {
             Sock.Close();
-            GetComponent<MyCamera>().Destroy();
-            GetComponent<MyState>().Destroy();
+            State.Destroy();
             LOG.Debug("communication destroyed");
         }
 
@@ -59,16 +57,16 @@ namespace Distance.ML {
 
         private void DoStep() {
             LOG.Debug("step");
+
             // todo get action
-            MyState.UpdateState();
+            State.UpdateState();
 
             // send results
-            foreach (var pixel in MyState.TEXTURE_DATA)
-                Send(BitConverter.GetBytes(pixel.Depth).Concat(BitConverter.GetBytes(pixel.ID)));
-            Send(BitConverter.GetBytes(MyState.Reward));
-            Send(BitConverter.GetBytes(MyState.Done));
+            Send(State.PointsBytes);
+            Send(BitConverter.GetBytes(State.Reward));
+            Send(BitConverter.GetBytes(State.Done));
 
-            MyState.ResetState();
+            State.ResetState();
         }
 
         private void LateUpdate() {
