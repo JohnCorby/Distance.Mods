@@ -42,6 +42,7 @@ namespace Distance.ML {
             MainCamera.enabled = false;
 
             Camera = gameObject.AddComponent<Camera>();
+            Camera.enabled = false;
             Camera.cullingMask = MainCamera.cullingMask & ~PhysicsEx.carLayerMask_;
             Camera.clearFlags = CameraClearFlags.SolidColor;
             Camera.backgroundColor = Color.black;
@@ -63,10 +64,8 @@ namespace Distance.ML {
             Buffer.Release();
         }
 
-        private void Start() => PreprocessScene();
-
         /// modify the scene so that it will make sense to the agent
-        private static void PreprocessScene() {
+        private void Start() {
             static void Init(Renderer renderer, ID id) {
                 foreach (var material in renderer.materials) {
                     material.shader = STANDARD_SHADER;
@@ -100,19 +99,18 @@ namespace Distance.ML {
             }
         }
 
-        /// update position based on car
-        private void Update() {
-            var parentTransform = Utils.PlayerDataLocal!.Car_.transform;
-            transform.position = parentTransform.position + parentTransform.up;
-            transform.rotation = parentTransform.rotation;
-        }
-
         /// draw texture to screen
         private void OnGUI() =>
             GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), Texture);
 
         /// update state stuff
-        public void UpdateState() =>
+        public void UpdateState() {
+            var parentTransform = Utils.PlayerDataLocal!.Car_.transform;
+            transform.position = parentTransform.position + parentTransform.up;
+            transform.rotation = parentTransform.rotation;
+
+            Camera.Render();
             PROCESS_SHADER.Dispatch(0, Texture.width / 8, Texture.height / 8, 1);
+        }
     }
 }

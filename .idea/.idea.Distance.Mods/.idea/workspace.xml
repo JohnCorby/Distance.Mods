@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="tested and wow it is faster">
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Communication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Communication.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Python/env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Python/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Distance.ML.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Distance.ML.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/PointsState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/PointsState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Python/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Python/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -351,11 +360,11 @@
       <option value="$PROJECT_DIR$/Distance.ML/Entry.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/MyState.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/MyCamera.cs" />
-      <option value="$PROJECT_DIR$/Distance.ML/Python/env.py" />
       <option value="$PROJECT_DIR$/Distance.ML/Harmony.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/State.cs" />
-      <option value="$PROJECT_DIR$/Distance.ML/PointsState.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Communication.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/Python/env.py" />
+      <option value="$PROJECT_DIR$/Distance.ML/PointsState.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lxTRcXRTrkYODeKxiUYPu28JO5" />
@@ -495,13 +504,7 @@
       <workItem from="1609544128594" duration="119000" />
       <workItem from="1609552449843" duration="5293000" />
       <workItem from="1609569878766" duration="887000" />
-    </task>
-    <task id="LOCAL-00001" summary="poopy">
-      <created>1608881070386</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1608881070386</updated>
+      <workItem from="1609572221784" duration="350000" />
     </task>
     <task id="LOCAL-00002" summary="poopy">
       <created>1608881081774</created>
@@ -839,7 +842,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609571479383</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="tested and wow it is faster">
+      <created>1609571526669</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1609571526669</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

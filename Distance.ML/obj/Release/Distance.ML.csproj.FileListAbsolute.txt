@@ -4,3 +4,5 @@ D:\Code Stuff\Distance.Mods\Distance.ML\bin\Release\Distance.ML.dll
 D:\Code Stuff\Distance.Mods\Distance.ML\obj\Release\Distance.ML.csprojAssemblyReference.cache
 D:\Code Stuff\Distance.Mods\Distance.ML\obj\Release\Distance.ML.csproj.CoreCompileInputs.cache
 D:\Code Stuff\Distance.Mods\Distance.ML\obj\Release\Distance.ML.dll
+D:\Code Stuff\Distance.Mods\Distance.ML\bin\Release\Python\env.py
+D:\Code Stuff\Distance.Mods\Distance.ML\bin\Release\Python\requirements.txt
