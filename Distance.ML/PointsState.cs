@@ -5,6 +5,7 @@ using UnityEngine;
 namespace Distance.ML {
     /// holds state for points data
     public class PointsState : MonoBehaviour {
+        private Camera MainCamera = null!;
         private Camera Camera = null!;
         private RenderTexture Texture = null!;
 
@@ -37,8 +38,11 @@ namespace Distance.ML {
         }
 
         private void Awake() {
+            MainCamera = Camera.main!;
+            MainCamera.enabled = false;
+
             Camera = gameObject.AddComponent<Camera>();
-            Camera.cullingMask = Camera.main!.cullingMask & ~PhysicsEx.carLayerMask_;
+            Camera.cullingMask = MainCamera.cullingMask & ~PhysicsEx.carLayerMask_;
             Camera.clearFlags = CameraClearFlags.SolidColor;
             Camera.backgroundColor = Color.black;
 
@@ -48,9 +52,12 @@ namespace Distance.ML {
 
             PROCESS_SHADER.SetTexture(0, "Input", Texture);
             PROCESS_SHADER.SetBuffer(0, "Output", Buffer);
+
         }
 
         private void OnDestroy() {
+            MainCamera.enabled = true;
+
             Camera.Destroy();
 
             Texture.Release();

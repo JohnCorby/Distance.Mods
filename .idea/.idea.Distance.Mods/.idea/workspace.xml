@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="remade unity project, added compute shader to unity project">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/shelf/Uncommitted_changes_before_Update_at_12_30_2020_4_54_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/shelf/Uncommitted_changes_before_Update_at_12_30_2020_4_54_PM__Default_Changelist_.xml" beforeDir="false" />
+    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="now using compute shaders (untested)">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Cheat/bin/Release/Distance.Cheat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/bin/Release/Distance.Cheat.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Cheat/obj/Release/Distance.Cheat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/obj/Release/Distance.Cheat.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Assets/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Assets/assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Communication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Communication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Distance.ML.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Distance.ML.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Harmony.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Harmony.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/MyCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/PointsState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/MyState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Raycaster.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Stepper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/bin/Release/Assets/assets" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Assets/assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/PointsState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/PointsState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/Python/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Python/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/State.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -363,7 +350,6 @@
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/28/7143958c/GUtils.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/sd.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/94/9c1fd000/CarScreenWidgetBase.cs" />
-      <option value="$PROJECT_DIR$/Distance.ML/Python/env.py" />
       <option value="$PROJECT_DIR$/Distance.ML/Utils.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/Standard.shader" />
       <option value="$PROJECT_DIR$/Distance.ML/Unity/Assets/Invisible.shader" />
@@ -371,9 +357,10 @@
       <option value="$PROJECT_DIR$/Distance.ML/Harmony.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/MyState.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/MyCamera.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/State.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/Python/env.py" />
       <option value="$PROJECT_DIR$/Distance.ML/Communication.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/PointsState.cs" />
-      <option value="$PROJECT_DIR$/Distance.ML/State.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lxTRcXRTrkYODeKxiUYPu28JO5" />
@@ -511,7 +498,7 @@
       <workItem from="1609468489207" duration="93000" />
       <workItem from="1609477118947" duration="6000" />
       <workItem from="1609544128594" duration="119000" />
-      <workItem from="1609552449843" duration="3151000" />
+      <workItem from="1609552449843" duration="4122000" />
     </task>
     <task id="LOCAL-00001" summary="poopy">
       <created>1608881070386</created>
@@ -828,7 +815,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609552502253</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="now using compute shaders (untested)">
+      <created>1609555645277</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1609555645277</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -851,7 +845,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="finally it works" />
     <MESSAGE value="bit of refactoring" />
     <MESSAGE value="cheats are better and also hotkey enabled" />
     <MESSAGE value="bruh" />
@@ -876,7 +869,8 @@
     <MESSAGE value="i fixed the communication bug lets go" />
     <MESSAGE value="send observations (slow)" />
     <MESSAGE value="remade unity project, added compute shader to unity project" />
-    <option name="LAST_COMMIT_MESSAGE" value="remade unity project, added compute shader to unity project" />
+    <MESSAGE value="now using compute shaders (untested)" />
+    <option name="LAST_COMMIT_MESSAGE" value="now using compute shaders (untested)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
