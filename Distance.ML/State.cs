@@ -40,7 +40,7 @@ namespace Distance.ML {
         }
 
         private void OnDestroy() {
-            PointsState.Destroy();
+            Destroy(PointsState);
 
             var events = Utils.PlayerDataLocal!.Events_;
             events.Unsubscribe<Finished.Data>(OnEventFinished);
@@ -73,7 +73,7 @@ namespace Distance.ML {
         }
 
         private void OnEventTrick(TrickComplete.Data data) {
-            LOG.Debug($"cooldown: reward {data.cooldownAmount_ * REWARD_TRICK}");
+            LOG.Debug($"trick: reward {data.cooldownAmount_ * REWARD_TRICK}");
             Reward += data.cooldownAmount_ * REWARD_TRICK;
         }
 

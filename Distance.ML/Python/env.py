@@ -30,29 +30,29 @@ class MyEnv(Env):
     def step(self, action: object) -> Tuple[object, float, bool, dict]:
         print('step')
         print(f'action: {action}')
-        # todo do step with actions
-        self.send(pack('?', True))
+        self.send(pack('=?', True))
+        # todo send actions
         # self.send(bytes(action))
 
         # get all the shit back
-        print('step results')
-        observation: List[Tuple[float, int]] = []
-        for i in range(256 * 256):
-            observation.append(unpack('=fI', self.recv(8)))
-        reward: float = unpack('f', self.recv(4))[0]
-        done: bool = unpack('?', self.recv(1))[0]
+        # observation: List[Tuple[float, int]] = []
+        # for i in range(256 * 256):
+        #     observation.append(unpack('=fI', self.recv(8)))
+        observation: bytes = self.recv(256 * 256 * calcsize('=fI'))
+        reward: float = unpack('=f', self.recv(4))[0]
+        done: bool = unpack('=?', self.recv(1))[0]
         # print(f'observation: {observation}', f'reward: {reward}', f'done: {done}', sep='\t')
 
         return observation, reward, done, {}
 
     def reset(self) -> object:
         print('reset')
-        self.send(pack('?', False))
+        self.send(pack('=?', False))
 
         # reconnect since we close on level restart
         self.sock: socket = self.listener.accept()[0]
 
-        # todo initial observation
+        # initial observation
         observation: object = self.step(None)[0]
         print(f'initial observation: {observation}')
         return observation

@@ -10,10 +10,14 @@ namespace Distance.ML {
         private static readonly IPEndPoint ADDR = new(IPAddress.Loopback, 6969);
         private Socket Sock = null!;
 
-        public State State = null!;
+        private State State = null!;
 
         private void Awake() {
-            State = gameObject.AddComponent<State>();
+            if (!G.Sys.GameManager_.SoloAndNotOnline_) {
+                LOG.Error("must be in solo game");
+                Destroy(this);
+                return;
+            }
 
             LOG.Info("connecting...");
             Sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -22,13 +26,16 @@ namespace Distance.ML {
                 LOG.Info("connected!");
             } catch (SocketException e) {
                 LOG.Error($"error connecting: {e}");
-                this.Destroy();
+                Destroy(this);
+                return;
             }
+
+            State = gameObject.AddComponent<State>();
         }
 
         private void OnDestroy() {
             Sock.Close();
-            State.Destroy();
+            Destroy(State);
             LOG.Debug("communication destroyed");
         }
 
@@ -79,7 +86,7 @@ namespace Distance.ML {
                 Sock.Send(data);
             } catch (SocketException e) {
                 LOG.Error($"send error: {e}");
-                this.Destroy();
+                Destroy(this);
             }
         }
 
@@ -90,7 +97,7 @@ namespace Distance.ML {
                 return data;
             } catch (SocketException e) {
                 LOG.Error($"recv error: {e}");
-                this.Destroy();
+                Destroy(this);
                 return null!;
             }
         }
