@@ -30,9 +30,9 @@ namespace Distance.Cheat {
                 LOG.Info(s);
             }
 
-            if (Input.GetKeyDown(KeyCode.End)) { // tp to end
-                if (End != null) {
-                    Cheats.PlayerDataLocal.transform.position = End.transform.position;
+            if (Cheats.CheatsEnabled && Input.GetKeyDown(KeyCode.End)) { // tp to end
+                if (Cheats.RaceEndLogic != null) {
+                    Cheats.PlayerDataLocal.transform.position = Cheats.RaceEndLogic.transform.position;
                 }
             }
         }

@@ -1,13 +1,21 @@
-﻿using Events.Player;
+﻿using Events;
+using Events.Local;
+using Events.Player;
 using UnityEngine;
 using static Distance.Cheat.Entry;
 
 namespace Distance.Cheat {
     public class Cheats : MonoBehaviour {
+        public static Cheats? Instance;
+
         public PlayerDataLocal PlayerDataLocal = null!;
+        public RaceEndLogic? RaceEndLogic;
 
         private void Awake() {
+            Instance = this;
+
             PlayerDataLocal = GetComponent<PlayerDataLocal>();
+            RaceEndLogic = FindObjectOfType<RaceEndLogic>();
 
             var events = PlayerDataLocal.Events_;
             // events.Subscribe<AbilityStateChanged.Data>(OnAbilityStateChanged);
@@ -20,6 +28,8 @@ namespace Distance.Cheat {
             var events = PlayerDataLocal.Events_;
             // events.Unsubscribe<AbilityStateChanged.Data>(OnAbilityStateChanged);
             events.Unsubscribe<CarInstantiate.Data>(OnCarInstantiate);
+
+            Instance = null;
         }
 
         // private static void OnAbilityStateChanged(AbilityStateChanged.Data data) { }
@@ -30,21 +40,16 @@ namespace Distance.Cheat {
         }
 
 
-        private bool CheatsEnabled;
+        public bool CheatsEnabled, CheatsEverEnabled;
 
-        /// toggles cheats
         public void ToggleCheats() {
             CheatsEnabled = !CheatsEnabled;
             LOG.Info($"CHEATS {(CheatsEnabled ? "ON" : "OFF")}");
 
-            // to prevent leaderboard times and other bad stuff
-            var flags = new CheatFlags();
-            flags.Set(ECheat.DeathProof, CheatsEnabled);
-            G.Sys.CheatsManager_.UpdateCheats(flags);
-
-            if (CheatsEnabled)
+            if (CheatsEnabled) {
+                CheatsEverEnabled = true;
                 EnableCheats(true);
-            else
+            } else
                 DisableCheats(true);
         }
 
@@ -65,6 +70,12 @@ namespace Distance.Cheat {
 
             foreach (var gadget in localCar.GetComponents<Gadget>())
                 gadget.SetAbilityEnabled(true, false);
+
+            if (byToggle) {
+                // send the funny chat message
+                const string MESSAGE = "I just turned cheats on. My leaderboard stuff wont be submitted. Make fun of me :)";
+                StaticEvent<ChatSubmitMessage.Data>.Broadcast(new ChatSubmitMessage.Data(MESSAGE));
+            }
         }
 
         private void DisableCheats(bool byToggle) {
