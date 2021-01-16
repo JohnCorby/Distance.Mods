@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="tested and wow it is faster">
-      <change afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Python/env.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Python/requirements.txt" afterDir="false" />
+    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="update cheats to hopefully work a bit nicer and not goof up on respawn">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Distance.ML.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Distance.ML.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/PointsState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/PointsState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/Python/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/Python/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Cheat/Cheats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/Cheats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Cheat/Hotkeys.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/Hotkeys.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Cheat/bin/Release/Distance.Cheat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/bin/Release/Distance.Cheat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.Cheat/obj/Release/Distance.Cheat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/obj/Release/Distance.Cheat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.ML/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/State.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/bin/Release/Distance.ML.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.ML/obj/Release/Distance.ML.dll" afterDir="false" />
     </list>
@@ -314,9 +313,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Distance.ML/Bruh.cs" />
-      <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/be/d5311eeb/Resource.cs" />
-      <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/c3/683e438b/SerialLevelEditorListener.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/bb/479e2739/ISerializable.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/67/11ce36d6/PlayerDataBase.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/MyLocalCarLogic.cs" />
@@ -328,8 +324,6 @@
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/6f/303d1d3c/PlayerDataNet.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/31/fa1c0164/ClientLogic.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/34/26b72d6f/GameMode.cs" />
-      <option value="$PROJECT_DIR$/Distance.Cheat/Harmony.cs" />
-      <option value="$PROJECT_DIR$/Distance.Cheat/Entry.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/ML.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Comm.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/32/6a9b9483/ArrayEx.cs" />
@@ -361,14 +355,20 @@
       <option value="$PROJECT_DIR$/Distance.ML/MyState.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/MyCamera.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Harmony.cs" />
-      <option value="$PROJECT_DIR$/Distance.ML/State.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Communication.cs" />
       <option value="$PROJECT_DIR$/Distance.ML/Python/env.py" />
       <option value="$PROJECT_DIR$/Distance.ML/PointsState.cs" />
+      <option value="$PROJECT_DIR$/Distance.Cheat/Utils.cs" />
+      <option value="$PROJECT_DIR$/Distance.Cheat/Harmony.cs" />
+      <option value="$PROJECT_DIR$/Distance.Cheat/Entry.cs" />
+      <option value="$PROJECT_DIR$/Distance.Cheat/Hotkeys.cs" />
+      <option value="$PROJECT_DIR$/Distance.ML/State.cs" />
+      <option value="$PROJECT_DIR$/Distance.Cheat/Cheats.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lxTRcXRTrkYODeKxiUYPu28JO5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -504,21 +504,8 @@
       <workItem from="1609544128594" duration="119000" />
       <workItem from="1609552449843" duration="5293000" />
       <workItem from="1609569878766" duration="887000" />
-      <workItem from="1609572221784" duration="350000" />
-    </task>
-    <task id="LOCAL-00002" summary="poopy">
-      <created>1608881081774</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1608881081774</updated>
-    </task>
-    <task id="LOCAL-00003" summary="bruh">
-      <created>1608881142836</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1608881142836</updated>
+      <workItem from="1609572221784" duration="448000" />
+      <workItem from="1610784074581" duration="1775000" />
     </task>
     <task id="LOCAL-00004" summary="bruh">
       <created>1608881154703</created>
@@ -849,7 +836,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609571526669</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="move stuff to UpdateState function so we dont do it if we dont need to">
+      <created>1609572576623</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1609572576623</updated>
+    </task>
+    <task id="LOCAL-00052" summary="update cheats">
+      <created>1610785698705</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1610785698705</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -872,8 +873,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="cheats are better and also hotkey enabled" />
-    <MESSAGE value="bruh" />
     <MESSAGE value="in the middle of everything" />
     <MESSAGE value="fuck" />
     <MESSAGE value="a lot of stuff" />
@@ -897,7 +896,9 @@
     <MESSAGE value="remade unity project, added compute shader to unity project" />
     <MESSAGE value="now using compute shaders (untested)" />
     <MESSAGE value="tested and wow it is faster" />
-    <option name="LAST_COMMIT_MESSAGE" value="tested and wow it is faster" />
+    <MESSAGE value="move stuff to UpdateState function so we dont do it if we dont need to" />
+    <MESSAGE value="update cheats to hopefully work a bit nicer and not goof up on respawn" />
+    <option name="LAST_COMMIT_MESSAGE" value="update cheats to hopefully work a bit nicer and not goof up on respawn" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

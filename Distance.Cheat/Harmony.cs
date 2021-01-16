@@ -1,23 +1,11 @@
 ﻿using HarmonyLib;
-using static Distance.Cheat.Entry;
 
 namespace Distance.Cheat {
-    namespace LocalPlayerControlledCar_ {
-        [HarmonyPatch(typeof(LocalPlayerControlledCar), nameof(Start))]
-        public static class Start {
-            private static void Postfix(LocalPlayerControlledCar __instance) {
-                Car = __instance;
-            }
-        }
-
-        [HarmonyPatch(typeof(LocalPlayerControlledCar), nameof(OnDisable))]
-        public static class OnDisable {
-            private static void Postfix() {
-                LOG.Info("CHEATS OFF");
-
-                JetsGadget.thrusterBoostFullPowerLimit_ = 1f;
-                JetsGadget.thrusterBoostDepletedLimit_ = 0.4f;
-            }
+    namespace PlayerDataLocal_ {
+        [HarmonyPatch(typeof(PlayerDataLocal), nameof(InitializeVirtual))]
+        public static class InitializeVirtual {
+            private static void Postfix(PlayerDataLocal __instance) =>
+                __instance.gameObject.AddComponent<Cheats>();
         }
     }
 }

@@ -36,6 +36,7 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
     <ItemGroup>
+        <Compile Include="Cheats.cs" />
         <Compile Include="Harmony.cs" />
         <Compile Include="Entry.cs" />
         <Compile Include="Hotkeys.cs" />

@@ -2,7 +2,6 @@
 using Events.Car;
 using Events.Player;
 using static Distance.ML.Entry;
-using static Distance.ML.PointsState;
 
 namespace Distance.ML {
     /// holds all state of the network
