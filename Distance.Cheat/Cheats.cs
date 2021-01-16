@@ -37,6 +37,11 @@ namespace Distance.Cheat {
             CheatsEnabled = !CheatsEnabled;
             LOG.Info($"CHEATS {(CheatsEnabled ? "ON" : "OFF")}");
 
+            // to prevent leaderboard times and other bad stuff
+            var flags = new CheatFlags();
+            flags.Set(ECheat.DeathProof, CheatsEnabled);
+            G.Sys.CheatsManager_.UpdateCheats(flags);
+
             if (CheatsEnabled)
                 EnableCheats(true);
             else

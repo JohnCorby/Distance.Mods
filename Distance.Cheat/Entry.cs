@@ -19,11 +19,8 @@ namespace Distance.Cheat {
         public void Initialize(IManager manager) =>
             RuntimePatcher.AutoPatch();
 
-        private void Awake() {
+        private void Awake() =>
             PostLoad.Subscribe(OnLevelPostLoad);
-
-            gameObject.AddComponent<Hotkeys>();
-        }
 
         private void OnDestroy() =>
             PostLoad.Unsubscribe(OnLevelPostLoad);
