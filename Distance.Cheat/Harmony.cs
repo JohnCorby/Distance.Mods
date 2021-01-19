@@ -23,4 +23,19 @@ namespace Distance.Cheat {
             }
         }
     }
+
+    namespace MyNamespace {
+        [HarmonyPatch(typeof(CheatsManager), nameof(OnEventSceneLoadFinished))]
+        public static class OnEventSceneLoadFinished {
+            /// copied from the original, accept always sets gameplayCheatsRecognized_ to true so they always work
+            private static bool Prefix(CheatsManager __instance) {
+                __instance.gameplayCheatsRecognized_ = true;
+                __instance.UpdateEnabledFlags();
+                __instance.anyGameplayCheatsUsedThisLevel_ = __instance.AnyGameplayCheatsCurrentlyUsed_;
+
+                // always skip the method so this is the replacement method
+                return false;
+            }
+        }
+    }
 }

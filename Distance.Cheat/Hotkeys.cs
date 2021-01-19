@@ -5,9 +5,13 @@ using static Distance.Cheat.Entry;
 namespace Distance.Cheat {
     public class Hotkeys : MonoBehaviour {
         private Cheats Cheats = null!;
+        public RaceEndLogic? RaceEndLogic;
 
-        private void Awake() =>
+        private void Awake() {
             Cheats = GetComponent<Cheats>();
+            RaceEndLogic = FindObjectOfType<RaceEndLogic>();
+        }
+
 
         private void Update() {
             if (!Input.GetKey(KeyCode.F)) return;
@@ -31,8 +35,11 @@ namespace Distance.Cheat {
             }
 
             if (Cheats.CheatsEnabled && Input.GetKeyDown(KeyCode.End)) { // tp to end
-                if (Cheats.RaceEndLogic != null) {
-                    Cheats.PlayerDataLocal.transform.position = Cheats.RaceEndLogic.transform.position;
+                if (RaceEndLogic != null) {
+                    LOG.Info("teleporting to end");
+                    Cheats.PlayerDataLocal.LocalCar_.transform.position = RaceEndLogic.transform.position;
+                } else {
+                    LOG.Info("cant tp to end because it is null (ie it wasnt found)");
                 }
             }
         }

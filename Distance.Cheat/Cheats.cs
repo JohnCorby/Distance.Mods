@@ -9,13 +9,11 @@ namespace Distance.Cheat {
         public static Cheats? Instance;
 
         public PlayerDataLocal PlayerDataLocal = null!;
-        public RaceEndLogic? RaceEndLogic;
 
         private void Awake() {
             Instance = this;
 
             PlayerDataLocal = GetComponent<PlayerDataLocal>();
-            RaceEndLogic = FindObjectOfType<RaceEndLogic>();
 
             var events = PlayerDataLocal.Events_;
             // events.Subscribe<AbilityStateChanged.Data>(OnAbilityStateChanged);
