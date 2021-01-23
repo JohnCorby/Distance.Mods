@@ -20,6 +20,10 @@ namespace Distance.Cheat {
             events.Subscribe<CarInstantiate.Data>(OnCarInstantiate);
 
             gameObject.AddComponent<Hotkeys>();
+
+            // reset static fields
+            JetsGadget.thrusterBoostFullPowerLimit_ = 1f;
+            JetsGadget.thrusterBoostDepletedLimit_ = 0.4f;
         }
 
         private void OnDestroy() {

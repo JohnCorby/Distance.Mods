@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="actually dont upload leaderboard stuff, and print message on cheat enable :)">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Distance.Mods/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="08e1b2fb-c5cb-4661-b0bd-d41e594f6841" name="Default Changelist" comment="disable cheats on spawn to reset static fields">
       <change beforePath="$PROJECT_DIR$/Distance.Cheat/Cheats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/Cheats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Cheat/Entry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/Entry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Cheat/Harmony.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/Harmony.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Cheat/Hotkeys.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/Hotkeys.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Cheat/bin/Release/Distance.Cheat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/bin/Release/Distance.Cheat.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.Cheat/obj/Release/Distance.Cheat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Distance.Cheat/obj/Release/Distance.Cheat.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -391,10 +385,10 @@
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/d2/c6886d34/CheatFlags.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/7d/b47d4947/SuperMenu.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ACC5DB1-7BA2-44CF-BAE7-0A9ACF90BF67/42/6e3b0494/LoadFinish.cs" />
-      <option value="$PROJECT_DIR$/Distance.Cheat/Cheats.cs" />
-      <option value="$PROJECT_DIR$/Distance.Cheat/Entry.cs" />
       <option value="$PROJECT_DIR$/Distance.Cheat/Harmony.cs" />
       <option value="$PROJECT_DIR$/Distance.Cheat/Hotkeys.cs" />
+      <option value="$PROJECT_DIR$/Distance.Cheat/Entry.cs" />
+      <option value="$PROJECT_DIR$/Distance.Cheat/Cheats.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lxTRcXRTrkYODeKxiUYPu28JO5" />
@@ -540,20 +534,7 @@
       <workItem from="1610832067909" duration="4864000" />
       <workItem from="1610876286930" duration="7000" />
       <workItem from="1611034671866" duration="2490000" />
-    </task>
-    <task id="LOCAL-00008" summary="build assetbundles">
-      <created>1608882006632</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1608882006632</updated>
-    </task>
-    <task id="LOCAL-00009" summary="build assetbundles">
-      <created>1608882014521</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1608882014521</updated>
+      <workItem from="1611428750117" duration="166000" />
     </task>
     <task id="LOCAL-00010" summary="using correct unity version now lol">
       <created>1608883615457</created>
@@ -884,7 +865,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610836460562</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="disable cheats on spawn to reset static fields">
+      <created>1611428810185</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1611428810185</updated>
+    </task>
+    <task id="LOCAL-00058" summary="disable cheats on spawn to reset static fields">
+      <created>1611428895382</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1611428895382</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -907,7 +902,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="temp" />
     <MESSAGE value="rename" />
     <MESSAGE value="shhhhh" />
     <MESSAGE value="uh" />
@@ -932,7 +926,8 @@
     <MESSAGE value="now leaderboard times dont get fucked LETS GOOOO" />
     <MESSAGE value="bruh" />
     <MESSAGE value="actually dont upload leaderboard stuff, and print message on cheat enable :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="actually dont upload leaderboard stuff, and print message on cheat enable :)" />
+    <MESSAGE value="disable cheats on spawn to reset static fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="disable cheats on spawn to reset static fields" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
