@@ -1,5 +1,0 @@
-D:\Code Stuff\Distance.Mods\Distance.Cheat\bin\Release\mod.json
-D:\Code Stuff\Distance.Mods\Distance.Cheat\bin\Release\Distance.Cheat.dll
-D:\Code Stuff\Distance.Mods\Distance.Cheat\obj\Release\Distance.Cheat.csprojAssemblyReference.cache
-D:\Code Stuff\Distance.Mods\Distance.Cheat\obj\Release\Distance.Cheat.csproj.CoreCompileInputs.cache
-D:\Code Stuff\Distance.Mods\Distance.Cheat\obj\Release\Distance.Cheat.dll

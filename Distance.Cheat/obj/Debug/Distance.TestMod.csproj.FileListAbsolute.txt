@@ -1,7 +1,0 @@
-D:\Code Stuff\Distance.Mods\Distance.TestMod\bin\Debug\mod.json
-D:\Code Stuff\Distance.Mods\Distance.TestMod\bin\Debug\Distance.TestMod.dll
-D:\Code Stuff\Distance.Mods\Distance.TestMod\bin\Debug\Distance.TestMod.pdb
-D:\Code Stuff\Distance.Mods\Distance.TestMod\obj\Debug\Distance.TestMod.csprojAssemblyReference.cache
-D:\Code Stuff\Distance.Mods\Distance.TestMod\obj\Debug\Distance.TestMod.csproj.CoreCompileInputs.cache
-D:\Code Stuff\Distance.Mods\Distance.TestMod\obj\Debug\Distance.TestMod.dll
-D:\Code Stuff\Distance.Mods\Distance.TestMod\obj\Debug\Distance.TestMod.pdb

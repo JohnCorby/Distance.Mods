@@ -1,7 +1,0 @@
-D:\Code Stuff\Distance.Mods\Distance.Cheat\bin\Debug\mod.json
-D:\Code Stuff\Distance.Mods\Distance.Cheat\bin\Debug\Distance.Cheat.dll
-D:\Code Stuff\Distance.Mods\Distance.Cheat\bin\Debug\Distance.Cheat.pdb
-D:\Code Stuff\Distance.Mods\Distance.Cheat\obj\Debug\Distance.Cheat.csprojAssemblyReference.cache
-D:\Code Stuff\Distance.Mods\Distance.Cheat\obj\Debug\Distance.Cheat.csproj.CoreCompileInputs.cache
-D:\Code Stuff\Distance.Mods\Distance.Cheat\obj\Debug\Distance.Cheat.dll
-D:\Code Stuff\Distance.Mods\Distance.Cheat\obj\Debug\Distance.Cheat.pdb
