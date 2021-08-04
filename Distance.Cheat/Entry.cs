@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Distance.Cheat {
-    [ModEntryPoint("com.github.johncorby/Cheat")]
+    [ModEntryPoint("com.github.johncorby/Distance.Cheat")]
     public class Entry : MonoBehaviour {
         public static readonly Log LOG = LogManager.GetForCurrentAssembly();
 

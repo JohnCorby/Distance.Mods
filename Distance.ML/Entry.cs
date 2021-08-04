@@ -5,7 +5,7 @@ using Reactor.API.Runtime.Patching;
 using UnityEngine;
 
 namespace Distance.ML {
-    [ModEntryPoint("com.github.johncorby/ML")]
+    [ModEntryPoint("com.github.johncorby/Distance.ML")]
     public class Entry : MonoBehaviour {
         public static readonly Log LOG = LogManager.GetForCurrentAssembly();
         public void Initialize(IManager manager) => RuntimePatcher.AutoPatch();
