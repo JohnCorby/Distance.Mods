@@ -59,16 +59,16 @@
       <Content Include="Unity\Assets\Standard.shader" />
     </ItemGroup>
     <ItemGroup>
-      <Reference Include="0Harmony, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>..\packages\HarmonyX.2.0.6\lib\net35\0Harmony.dll</HintPath>
+      <Reference Include="0Harmony, Version=2.5.3.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\packages\HarmonyX.2.5.3\lib\net35\0Harmony.dll</HintPath>
         <Private>False</Private>
       </Reference>
       <Reference Include="Assembly-CSharp, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>..\packages\Centrifuge.GameSupport.Distance.2.1.1\lib\net35\Assembly-CSharp.dll</HintPath>
+        <HintPath>..\packages\Centrifuge.GameSupport.Distance.3.0.7868.41513\lib\net35\Assembly-CSharp.dll</HintPath>
         <Private>False</Private>
       </Reference>
-      <Reference Include="Centrifuge.Distance, Version=2.1.1.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>..\packages\Centrifuge.GameSupport.Distance.2.1.1\lib\net35\Centrifuge.Distance.dll</HintPath>
+      <Reference Include="Centrifuge.Distance, Version=3.0.7868.41513, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\packages\Centrifuge.GameSupport.Distance.3.0.7868.41513\lib\net35\Centrifuge.Distance.dll</HintPath>
         <Private>False</Private>
       </Reference>
       <Reference Include="Mono.Cecil, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e">
@@ -87,16 +87,16 @@
         <HintPath>..\packages\Mono.Cecil.0.10.4\lib\net35\Mono.Cecil.Rocks.dll</HintPath>
         <Private>False</Private>
       </Reference>
-      <Reference Include="MonoMod.RuntimeDetour, Version=20.5.21.5, Culture=neutral, PublicKeyToken=null">
-        <HintPath>..\packages\MonoMod.RuntimeDetour.20.5.21.5\lib\net35\MonoMod.RuntimeDetour.dll</HintPath>
+      <Reference Include="MonoMod.RuntimeDetour, Version=21.7.22.3, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\packages\MonoMod.RuntimeDetour.21.7.22.3\lib\net35\MonoMod.RuntimeDetour.dll</HintPath>
         <Private>False</Private>
       </Reference>
-      <Reference Include="MonoMod.Utils, Version=20.5.21.5, Culture=neutral, PublicKeyToken=null">
-        <HintPath>..\packages\MonoMod.Utils.20.5.21.5\lib\net35\MonoMod.Utils.dll</HintPath>
+      <Reference Include="MonoMod.Utils, Version=21.7.22.3, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\packages\MonoMod.Utils.21.7.22.3\lib\net35\MonoMod.Utils.dll</HintPath>
         <Private>False</Private>
       </Reference>
       <Reference Include="NAudio, Version=1.7.3.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>..\packages\Centrifuge.GameSupport.Distance.2.1.1\lib\net35\NAudio.dll</HintPath>
+        <HintPath>..\packages\Centrifuge.GameSupport.Distance.3.0.7868.41513\lib\net35\NAudio.dll</HintPath>
         <Private>False</Private>
       </Reference>
       <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -109,15 +109,15 @@
       </Reference>
       <Reference Include="System" />
       <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>..\packages\Centrifuge.GameSupport.Distance.2.1.1\lib\net35\UnityEngine.dll</HintPath>
+        <HintPath>..\packages\Centrifuge.GameSupport.Distance.3.0.7868.41513\lib\net35\UnityEngine.dll</HintPath>
         <Private>False</Private>
       </Reference>
       <Reference Include="UnityEngine.Networking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>..\packages\Centrifuge.GameSupport.Distance.2.1.1\lib\net35\UnityEngine.Networking.dll</HintPath>
+        <HintPath>..\packages\Centrifuge.GameSupport.Distance.3.0.7868.41513\lib\net35\UnityEngine.Networking.dll</HintPath>
         <Private>False</Private>
       </Reference>
       <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>..\packages\Centrifuge.GameSupport.Distance.2.1.1\lib\net35\UnityEngine.UI.dll</HintPath>
+        <HintPath>..\packages\Centrifuge.GameSupport.Distance.3.0.7868.41513\lib\net35\UnityEngine.UI.dll</HintPath>
         <Private>False</Private>
       </Reference>
     </ItemGroup>

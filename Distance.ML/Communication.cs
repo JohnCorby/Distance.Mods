@@ -39,7 +39,7 @@ namespace Distance.ML {
             LOG.Debug("communication destroyed");
         }
 
-        private static bool ProcessStep, StepQueued;
+        private bool ProcessStep, StepQueued;
 
         /// process incoming directions
         private void Update() {

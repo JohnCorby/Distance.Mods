@@ -23,14 +23,13 @@ namespace Distance.ML {
 
         private static readonly uint NUM_IDS = (uint) Enum.GetNames(typeof(ID)).Length;
 
-        private static readonly Shader STANDARD_SHADER, INVISIBLE_SHADER;
+        private static readonly Shader STANDARD_SHADER;
         private static readonly ComputeShader PROCESS_SHADER;
 
         /// first called only on level start, so we good in terms of asset loading
         static PointsState() {
             var assetBundle = (AssetBundle) new Assets("assets").Bundle;
             STANDARD_SHADER = assetBundle.LoadAsset<Shader>("Standard.shader");
-            INVISIBLE_SHADER = assetBundle.LoadAsset<Shader>("Invisible.shader");
             PROCESS_SHADER = assetBundle.LoadAsset<ComputeShader>("Process.compute");
 
             Shader.SetGlobalInt("_NumIDs", (int) NUM_IDS);
@@ -73,11 +72,7 @@ namespace Distance.ML {
                 }
             }
 
-            static void Invisible(Renderer renderer) {
-                foreach (var material in renderer.materials) {
-                    material.shader = INVISIBLE_SHADER;
-                }
-            }
+            static void Invisible(Renderer renderer) => renderer.enabled = false;
 
             foreach (var renderer in Resources.FindObjectsOfTypeAll<Renderer>()) {
                 ID id;
