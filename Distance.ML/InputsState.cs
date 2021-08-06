@@ -1,11 +1,12 @@
-﻿using System.Text;
+﻿using System.Linq;
+using System.Text;
 using UnityEngine;
 using static Distance.ML.Entry;
 
 namespace Distance.ML {
     /// stuff for handling car input
     public class InputsState : MonoBehaviour {
-        public object Actions = null!;
+        public uint Actions;
 
         // private void Awake() {
         // throw new NotImplementedException();
@@ -14,11 +15,16 @@ namespace Distance.ML {
         /// update state stuff
         public void UpdateState() {
             var states = Utils.PlayerDataLocal!.InputStates_;
-            var s = new StringBuilder();
-            for (var i = 0; i < states.states_.Length; i++) {
-                s.AppendLine($"{(InputAction)i}: {states.states_[i]}");
+            // override
+            if (states.states_.Any(state => state.isPressed_)) return;
+
+            static void Press(InputState state) {
+                state.isPressed_ = true;
+                state.isTriggered_ = true;
+                state.isReleased_ = false;
+                state.value_ = 1;
             }
-            LOG.Debug(s);
+            Press(states.GetState(InputAction.Jump));
         }
     }
 }

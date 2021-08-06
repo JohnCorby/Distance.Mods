@@ -66,7 +66,7 @@ namespace Distance.ML {
             LOG.Debug("step");
 
             // todo get action
-            State.InputsState.Actions = null!;
+            // State.InputsState.Actions = 0;
             State.UpdateState();
 
             // send results
