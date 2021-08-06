@@ -66,10 +66,11 @@ namespace Distance.ML {
             LOG.Debug("step");
 
             // todo get action
+            State.InputsState.Actions = null!;
             State.UpdateState();
 
             // send results
-            Send(State.PointsBytes);
+            Send(State.PointsState.Bytes);
             Send(BitConverter.GetBytes(State.Reward));
             Send(BitConverter.GetBytes(State.Done));
 

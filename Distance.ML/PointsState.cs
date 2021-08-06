@@ -10,7 +10,9 @@ namespace Distance.ML {
         private RenderTexture Texture = null!;
 
         /// buffer that holds points data
-        public ComputeBuffer Buffer = null!;
+        private ComputeBuffer Buffer = null!;
+        /// array of points in byte form so we won't have to allocate/convert more
+        public byte[] Bytes = null!;
 
         private enum ID : uint {
             NORMAL,
@@ -21,19 +23,20 @@ namespace Distance.ML {
             TELEPORTER,
         }
 
-        private static readonly uint NUM_IDS = (uint) Enum.GetNames(typeof(ID)).Length;
+        private static readonly uint NUM_IDS = (uint)Enum.GetNames(typeof(ID)).Length;
 
-        private static readonly Shader STANDARD_SHADER;
+        private static readonly Shader STANDARD_SHADER, INVISIBLE_SHADER;
         private static readonly ComputeShader PROCESS_SHADER;
 
         /// first called only on level start, so we good in terms of asset loading
         static PointsState() {
-            var assetBundle = (AssetBundle) new Assets("assets").Bundle;
+            var assetBundle = (AssetBundle)new Assets("assets").Bundle;
             STANDARD_SHADER = assetBundle.LoadAsset<Shader>("Standard.shader");
+            INVISIBLE_SHADER = assetBundle.LoadAsset<Shader>("Invisible.shader");
             PROCESS_SHADER = assetBundle.LoadAsset<ComputeShader>("Process.compute");
 
-            Shader.SetGlobalInt("_NumIDs", (int) NUM_IDS);
-            PROCESS_SHADER.SetInt("NumIDs", (int) NUM_IDS);
+            Shader.SetGlobalInt("_NumIDs", (int)NUM_IDS);
+            PROCESS_SHADER.SetInt("NumIDs", (int)NUM_IDS);
         }
 
         private void Awake() {
@@ -49,6 +52,7 @@ namespace Distance.ML {
             Texture = new RenderTexture(256, 256, 0, RenderTextureFormat.ARGBFloat, RenderTextureReadWrite.Linear);
             Camera.targetTexture = Texture;
             Buffer = new ComputeBuffer(Texture.width * Texture.height, sizeof(float) + sizeof(uint));
+            Bytes = new byte[Buffer.count * Buffer.stride];
 
             PROCESS_SHADER.SetTexture(0, "Input", Texture);
             PROCESS_SHADER.SetBuffer(0, "Output", Buffer);
@@ -68,11 +72,15 @@ namespace Distance.ML {
             static void Init(Renderer renderer, ID id) {
                 foreach (var material in renderer.materials) {
                     material.shader = STANDARD_SHADER;
-                    material.SetInt("_ID", (int) id);
+                    material.SetInt("_ID", (int)id);
                 }
             }
 
-            static void Invisible(Renderer renderer) => renderer.enabled = false;
+            static void Invisible(Renderer renderer) {
+                foreach (var material in renderer.materials) {
+                    material.shader = INVISIBLE_SHADER;
+                }
+            }
 
             foreach (var renderer in Resources.FindObjectsOfTypeAll<Renderer>()) {
                 ID id;
@@ -94,9 +102,22 @@ namespace Distance.ML {
             }
         }
 
+        private bool DrawOverlay = true;
+
+        private void Update() {
+            // overlay toggle
+            if (Input.GetKeyDown(KeyCode.G)) {
+                DrawOverlay = !DrawOverlay;
+                MainCamera.enabled = !DrawOverlay;
+            }
+        }
+
         /// draw texture to screen
-        private void OnGUI() =>
-            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), Texture);
+        private void OnGUI() {
+            if (DrawOverlay)
+                GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), Texture);
+        }
+
 
         /// update state stuff
         public void UpdateState() {
@@ -106,6 +127,7 @@ namespace Distance.ML {
 
             Camera.Render();
             PROCESS_SHADER.Dispatch(0, Texture.width / 8, Texture.height / 8, 1);
+            Buffer.GetData(Bytes);
         }
     }
 }

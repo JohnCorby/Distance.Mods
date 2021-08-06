@@ -6,10 +6,9 @@ using static Distance.ML.Entry;
 namespace Distance.ML {
     /// holds all state of the network
     public class State : MonoBehaviour {
-        private PointsState PointsState = null!;
+        public PointsState PointsState = null!;
+        public InputsState InputsState = null!;
 
-        /// array of points in byte form so we won't have to allocate/convert more
-        public byte[] PointsBytes = null!;
         /// reward value
         public float Reward;
 
@@ -27,7 +26,7 @@ namespace Distance.ML {
 
         private void Awake() {
             PointsState = gameObject.AddComponent<PointsState>();
-            PointsBytes = new byte[PointsState.Buffer.count * PointsState.Buffer.stride];
+            InputsState = gameObject.AddComponent<InputsState>();
 
             var events = Utils.PlayerDataLocal!.Events_;
             events.Subscribe<Finished.Data>(OnEventFinished);
@@ -83,8 +82,8 @@ namespace Distance.ML {
 
         /// update state stuff
         public void UpdateState() {
+            InputsState.UpdateState();
             PointsState.UpdateState();
-            PointsState.Buffer.GetData(PointsBytes);
         }
 
         /// reset state for next step
