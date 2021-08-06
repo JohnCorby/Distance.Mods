@@ -87,9 +87,6 @@ namespace Distance.ML {
         }
 
         /// reset state for next step
-        public void ResetState() {
-            InputsState.Actions = 0;
-            Reward = 0;
-        }
+        public void ResetState() => Reward = 0;
     }
 }

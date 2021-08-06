@@ -66,7 +66,8 @@ namespace Distance.ML {
             LOG.Debug("step");
 
             // todo get action
-            // State.InputsState.Actions = 0;
+            // State.InputsState.Actions = (InputsState.Action)BitConverter.ToUInt16(Recv(2), 0);
+            State.InputsState.Actions = InputsState.Action.STEER_LEFT;
             State.UpdateState();
 
             // send results
