@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Reactor.API.Storage;
 using UnityEngine;
 using static Distance.ML.Entry;
@@ -86,17 +87,21 @@ namespace Distance.ML {
                     }
                 }
 
+                bool Has(params Type[] types) => types.Any(type =>
+                    renderer!.GetComponentInParent(type) | renderer.GetComponentInChildren(type));
+
+
                 // todo add more specific things and planes with the IDs instead of just assigning them like this
-                if (renderer.HasAnyComponent(typeof(KillGridBox), typeof(KillGridFollower)))
+                if (Has(typeof(KillGridBox), typeof(KillGridFollower)))
                     Init(ID.KILL_GRID);
-                else if (renderer.HasAnyComponent(typeof(RaceEndLogic))) Init(ID.END);
-                else if (renderer.HasAnyComponent(typeof(LaserLogic))) Init(ID.LASER);
-                else if (renderer.HasAnyComponent(typeof(SharpObject))) Init(ID.SAW);
-                else if (renderer.HasAnyComponent(typeof(CheckpointLogicBase))) Init(ID.CHECKPOINT);
-                else if (renderer.HasAnyComponent(typeof(TriggerCooldownLogic))) Init(ID.COOLDOWN);
-                else if (renderer.HasAnyComponent(typeof(TeleporterEntrance), typeof(TeleporterExit)))
+                else if (Has(typeof(RaceEndLogic))) Init(ID.END);
+                else if (Has(typeof(LaserLogic))) Init(ID.LASER);
+                else if (Has(typeof(SharpObject))) Init(ID.SAW);
+                else if (Has(typeof(CheckpointLogicBase))) Init(ID.CHECKPOINT);
+                else if (Has(typeof(TriggerCooldownLogic))) Init(ID.COOLDOWN);
+                else if (Has(typeof(TeleporterEntrance), typeof(TeleporterExit)))
                     Init(ID.TELEPORTER);
-                else if (!renderer.HasAnyComponent(typeof(Collider))) Invisible();
+                else if (!Has(typeof(Collider))) Invisible();
                 else Init(ID.NORMAL);
             }
         }
