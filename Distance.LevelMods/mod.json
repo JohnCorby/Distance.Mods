@@ -1,0 +1,12 @@
+﻿{
+  "FriendlyName": "Level Mods",
+  "Author": "JohnCorby",
+  "Contact": "JohnCorby#7053",
+  "ModuleFileName": "Distance.LevelMods.dll",
+  "Dependencies": [],
+  "RequiredGSLs": [
+    "com.github.reherc/Centrifuge.Distance"
+  ],
+  "SkipLoad": false,
+  "Priority": 10
+}

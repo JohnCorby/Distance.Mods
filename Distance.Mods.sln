@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance.Cheat", "Distance.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance.ML", "Distance.ML\Distance.ML.csproj", "{9387066A-50D3-494E-B270-6840D829AA38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance.LevelMods", "Distance.LevelMods\Distance.LevelMods.csproj", "{01580DEA-0A5E-4977-900A-7A0EA544CF9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{9387066A-50D3-494E-B270-6840D829AA38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9387066A-50D3-494E-B270-6840D829AA38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9387066A-50D3-494E-B270-6840D829AA38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01580DEA-0A5E-4977-900A-7A0EA544CF9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01580DEA-0A5E-4977-900A-7A0EA544CF9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01580DEA-0A5E-4977-900A-7A0EA544CF9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01580DEA-0A5E-4977-900A-7A0EA544CF9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -36,10 +36,10 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
     <ItemGroup>
-        <Compile Include="Cheats.cs"/>
-        <Compile Include="Harmony.cs"/>
-        <Compile Include="Entry.cs"/>
-        <Compile Include="Hotkeys.cs"/>
+        <Compile Include="Cheats.cs" />
+        <Compile Include="Harmony.cs" />
+        <Compile Include="Entry.cs" />
+        <Compile Include="Hotkeys.cs" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="mod.json">
@@ -60,20 +60,20 @@
             <Private>False</Private>
         </Reference>
         <Reference Include="Mono.Cecil, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e">
-            <HintPath>..\packages\Mono.Cecil.0.10.4\lib\net35\Mono.Cecil.dll</HintPath>
-            <Private>False</Private>
+          <HintPath>..\packages\Mono.Cecil.0.10.4\lib\net35\Mono.Cecil.dll</HintPath>
+          <Private>False</Private>
         </Reference>
         <Reference Include="Mono.Cecil.Mdb, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e">
-            <HintPath>..\packages\Mono.Cecil.0.10.4\lib\net35\Mono.Cecil.Mdb.dll</HintPath>
-            <Private>False</Private>
+          <HintPath>..\packages\Mono.Cecil.0.10.4\lib\net35\Mono.Cecil.Mdb.dll</HintPath>
+          <Private>False</Private>
         </Reference>
         <Reference Include="Mono.Cecil.Pdb, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e">
-            <HintPath>..\packages\Mono.Cecil.0.10.4\lib\net35\Mono.Cecil.Pdb.dll</HintPath>
-            <Private>False</Private>
+          <HintPath>..\packages\Mono.Cecil.0.10.4\lib\net35\Mono.Cecil.Pdb.dll</HintPath>
+          <Private>False</Private>
         </Reference>
         <Reference Include="Mono.Cecil.Rocks, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e">
-            <HintPath>..\packages\Mono.Cecil.0.10.4\lib\net35\Mono.Cecil.Rocks.dll</HintPath>
-            <Private>False</Private>
+          <HintPath>..\packages\Mono.Cecil.0.10.4\lib\net35\Mono.Cecil.Rocks.dll</HintPath>
+          <Private>False</Private>
         </Reference>
         <Reference Include="MonoMod.RuntimeDetour, Version=21.8.5.1, Culture=neutral, PublicKeyToken=null">
             <HintPath>..\packages\MonoMod.RuntimeDetour.21.8.5.1\lib\net35\MonoMod.RuntimeDetour.dll</HintPath>
@@ -95,7 +95,7 @@
             <HintPath>..\packages\Centrifuge.Mod.SDK.3.2.0\lib\net35\Reactor.API.dll</HintPath>
             <Private>False</Private>
         </Reference>
-        <Reference Include="System"/>
+        <Reference Include="System" />
         <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <HintPath>..\packages\Centrifuge.GameSupport.Distance.3.0.7868.41513\lib\net35\UnityEngine.dll</HintPath>
             <Private>False</Private>
@@ -109,10 +109,7 @@
             <Private>False</Private>
         </Reference>
     </ItemGroup>
-    <ItemGroup>
-        <None Include="packages.config"/>
-    </ItemGroup>
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
          Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">
