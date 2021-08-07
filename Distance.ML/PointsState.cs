@@ -18,6 +18,8 @@ namespace Distance.ML {
         private enum ID : uint {
             NORMAL,
             KILL_GRID,
+            LASER,
+            SAW,
             END,
             CHECKPOINT,
             COOLDOWN,
@@ -70,36 +72,32 @@ namespace Distance.ML {
 
         /// modify the scene so that it will make sense to the agent
         private void Start() {
-            static void Init(Renderer renderer, ID id) {
-                foreach (var material in renderer.materials) {
-                    material.shader = STANDARD_SHADER;
-                    material.SetInt("_ID", (int)id);
-                }
-            }
-
-            static void Invisible(Renderer renderer) {
-                foreach (var material in renderer.materials) {
-                    material.shader = INVISIBLE_SHADER;
-                }
-            }
-
             foreach (var renderer in Resources.FindObjectsOfTypeAll<Renderer>()) {
-                if (!renderer.HasAnyComponent(typeof(Collider))) {
-                    Invisible(renderer);
-                    continue;
+                void Init(ID id) {
+                    foreach (var material in renderer.materials) {
+                        material.shader = STANDARD_SHADER;
+                        material.SetInt("_ID", (int)id);
+                    }
                 }
 
-                ID id;
-                // todo add more specific things and planes with the IDs instead of just assigning them like this
-                if (renderer.HasAnyComponent(typeof(KillGrid), typeof(KillGridBox), typeof(KillGridFollower)))
-                    id = ID.KILL_GRID;
-                else if (renderer.HasAnyComponent(typeof(RaceEndLogic))) id = ID.END;
-                else if (renderer.HasAnyComponent(typeof(CheckpointLogicBase))) id = ID.CHECKPOINT;
-                else if (renderer.HasAnyComponent(typeof(TriggerCooldownLogic))) id = ID.COOLDOWN;
-                else if (renderer.HasAnyComponent(typeof(TeleporterEntrance), typeof(TeleporterExit))) id = ID.TELEPORTER;
-                else id = ID.NORMAL;
+                void Invisible() {
+                    foreach (var material in renderer!.materials) {
+                        material.shader = INVISIBLE_SHADER;
+                    }
+                }
 
-                Init(renderer, id);
+                // todo add more specific things and planes with the IDs instead of just assigning them like this
+                if (renderer.HasAnyComponent(typeof(KillGridBox), typeof(KillGridFollower)))
+                    Init(ID.KILL_GRID);
+                else if (renderer.HasAnyComponent(typeof(RaceEndLogic))) Init(ID.END);
+                else if (renderer.HasAnyComponent(typeof(LaserLogic))) Init(ID.LASER);
+                else if (renderer.HasAnyComponent(typeof(SharpObject))) Init(ID.SAW);
+                else if (renderer.HasAnyComponent(typeof(CheckpointLogicBase))) Init(ID.CHECKPOINT);
+                else if (renderer.HasAnyComponent(typeof(TriggerCooldownLogic))) Init(ID.COOLDOWN);
+                else if (renderer.HasAnyComponent(typeof(TeleporterEntrance), typeof(TeleporterExit)))
+                    Init(ID.TELEPORTER);
+                else if (!renderer.HasAnyComponent(typeof(Collider))) Invisible();
+                else Init(ID.NORMAL);
             }
         }
 

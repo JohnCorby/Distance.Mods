@@ -15,6 +15,6 @@ namespace Distance.ML {
         public static PlayerDataLocal? PlayerDataLocal => G.Sys.PlayerManager_.Current_?.playerData_;
 
         public static bool HasAnyComponent(this Component @this, params Type[] types) =>
-            types.Any(type => @this.GetComponentInChildren(type, true));
+            types.Any(type => @this.GetComponentInParent(type) | @this.GetComponentInChildren(type));
     }
 }
