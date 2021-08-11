@@ -96,6 +96,9 @@
           <Private>False</Private>
         </Reference>
         <Reference Include="System" />
+        <Reference Include="System.Windows.Forms">
+          <Private>True</Private>
+        </Reference>
         <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
           <HintPath>..\packages\Centrifuge.GameSupport.Distance.3.0.7868.41513\lib\net35\UnityEngine.dll</HintPath>
           <Private>False</Private>
@@ -117,5 +120,7 @@
     <Target Name="AfterBuild">
     </Target>
     -->
-
+    <Target Name="AfterBuild">
+        <Move SourceFiles="$(OutDir)System.Windows.Forms.dll" DestinationFolder="$(OutDir)Dependencies"/>
+    </Target>
 </Project>

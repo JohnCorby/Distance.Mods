@@ -3,7 +3,9 @@
   "Author": "JohnCorby",
   "Contact": "JohnCorby#7053",
   "ModuleFileName": "Distance.LevelMods.dll",
-  "Dependencies": [],
+  "Dependencies": [
+    "System.Windows.Forms.dll"
+  ],
   "RequiredGSLs": [
     "com.github.reherc/Centrifuge.Distance"
   ],
