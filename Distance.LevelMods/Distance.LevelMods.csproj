@@ -36,6 +36,7 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
     <ItemGroup>
+        <Compile Include="AssetBundleLoader.cs" />
         <Compile Include="Entry.cs" />
     </ItemGroup>
     <ItemGroup>
