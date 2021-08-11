@@ -3,6 +3,7 @@ using Events.Level;
 using Reactor.API.Attributes;
 using Reactor.API.Interfaces.Systems;
 using Reactor.API.Logging;
+using Reactor.API.Runtime.Patching;
 using Reactor.API.Storage;
 using UnityEngine;
 
@@ -18,6 +19,8 @@ namespace Distance.LevelMods {
             ModsFolder = Path.Combine(fileSystem.RootDirectory, "Mods");
 
             PostLoad.Subscribe(OnLevelPostLoad);
+
+            RuntimePatcher.AutoPatch();
         }
 
         private static void OnLevelPostLoad(PostLoad.Data data) {

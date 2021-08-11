@@ -38,6 +38,8 @@
     <ItemGroup>
         <Compile Include="AssetBundleLoader.cs" />
         <Compile Include="Entry.cs" />
+        <Compile Include="Harmony.cs" />
+        <Compile Include="Proxy.cs" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="mod.json">
