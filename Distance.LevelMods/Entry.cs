@@ -1,10 +1,9 @@
-﻿using System.IO;
-using Events.Level;
+﻿using Events.Level;
 using Reactor.API.Attributes;
 using Reactor.API.Interfaces.Systems;
 using Reactor.API.Logging;
 using Reactor.API.Runtime.Patching;
-using Reactor.API.Storage;
+using Serializers;
 using UnityEngine;
 
 namespace Distance.LevelMods {
@@ -12,13 +11,10 @@ namespace Distance.LevelMods {
     public class Entry : MonoBehaviour {
         public static readonly Log LOG = LogManager.GetForCurrentAssembly();
 
-        public static string ModsFolder = null!;
-
         public void Initialize(IManager manager) {
-            var fileSystem = new FileSystem();
-            ModsFolder = Path.Combine(fileSystem.RootDirectory, "Mods");
-
             PostLoad.Subscribe(OnLevelPostLoad);
+
+            BinaryDeserializer.idToSerializableTypeMap_.Add(Proxy.ID, typeof(Proxy));
 
             RuntimePatcher.AutoPatch();
         }
