@@ -6,16 +6,16 @@ using static Distance.Cheat.Entry;
 
 namespace Distance.Cheat {
     public class Cheats : MonoBehaviour {
-        public static Cheats? Instance;
+        public static Cheats? instance;
 
-        public PlayerDataLocal PlayerDataLocal = null!;
+        public PlayerDataLocal playerDataLocal = null!;
 
         private void Awake() {
-            Instance = this;
+            instance = this;
 
-            PlayerDataLocal = GetComponent<PlayerDataLocal>();
+            playerDataLocal = GetComponent<PlayerDataLocal>();
 
-            var events = PlayerDataLocal.Events_;
+            var events = playerDataLocal.Events_;
             // events.Subscribe<AbilityStateChanged.Data>(OnAbilityStateChanged);
             events.Subscribe<CarInstantiate.Data>(OnCarInstantiate);
 
@@ -27,36 +27,36 @@ namespace Distance.Cheat {
         }
 
         private void OnDestroy() {
-            var events = PlayerDataLocal.Events_;
+            var events = playerDataLocal.Events_;
             // events.Unsubscribe<AbilityStateChanged.Data>(OnAbilityStateChanged);
             events.Unsubscribe<CarInstantiate.Data>(OnCarInstantiate);
 
-            Instance = null;
+            instance = null;
         }
 
         // private static void OnAbilityStateChanged(AbilityStateChanged.Data data) { }
 
         private void OnCarInstantiate(CarInstantiate.Data data) {
-            if (CheatsEnabled)
+            if (cheatsEnabled)
                 EnableCheats(false);
         }
 
 
-        public bool CheatsEnabled, CheatsEverEnabled;
+        public bool cheatsEnabled, cheatsEverEnabled;
 
         public void ToggleCheats() {
-            CheatsEnabled = !CheatsEnabled;
-            LOG.Info($"CHEATS {(CheatsEnabled ? "ON" : "OFF")}");
+            cheatsEnabled = !cheatsEnabled;
+            log.Info($"CHEATS {(cheatsEnabled ? "ON" : "OFF")}");
 
-            if (CheatsEnabled) {
-                CheatsEverEnabled = true;
+            if (cheatsEnabled) {
+                cheatsEverEnabled = true;
                 EnableCheats(true);
             } else
                 DisableCheats(true);
         }
 
         private void EnableCheats(bool byToggle) {
-            var localCar = PlayerDataLocal.localCar_;
+            var localCar = playerDataLocal.localCar_;
             localCar.invincible_ = true;
             localCar.minInstaRespawnTriggerTime_ = 0;
             localCar.minInstaRespawnTime_ = 0;
@@ -75,13 +75,13 @@ namespace Distance.Cheat {
 
             if (byToggle) {
                 // send the funny chat message
-                const string MESSAGE = "I just turned cheats on. My leaderboard stuff wont be submitted. Make fun of me :)";
-                StaticEvent<ChatSubmitMessage.Data>.Broadcast(new ChatSubmitMessage.Data(MESSAGE));
+                const string message = "I just turned cheats on. My leaderboard stuff wont be submitted. Make fun of me :)";
+                StaticEvent<ChatSubmitMessage.Data>.Broadcast(new ChatSubmitMessage.Data(message));
             }
         }
 
         private void DisableCheats(bool byToggle) {
-            var localCar = PlayerDataLocal!.localCar_;
+            var localCar = playerDataLocal!.localCar_;
             localCar.invincible_ = false;
             localCar.minInstaRespawnTriggerTime_ = 0.05f;
             localCar.minInstaRespawnTime_ = 0.35f;

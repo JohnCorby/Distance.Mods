@@ -4,12 +4,12 @@ using static Distance.Cheat.Entry;
 
 namespace Distance.Cheat {
     public class Hotkeys : MonoBehaviour {
-        private Cheats Cheats = null!;
-        public RaceEndLogic? RaceEndLogic;
+        private Cheats cheats = null!;
+        public RaceEndLogic? raceEndLogic;
 
         private void Awake() {
-            Cheats = GetComponent<Cheats>();
-            RaceEndLogic = FindObjectOfType<RaceEndLogic>();
+            cheats = GetComponent<Cheats>();
+            raceEndLogic = FindObjectOfType<RaceEndLogic>();
         }
 
 
@@ -17,7 +17,7 @@ namespace Distance.Cheat {
             if (!Input.GetKey(KeyCode.F)) return;
 
             if (Input.GetKeyDown(KeyCode.E)) { // toggle cheats
-                Cheats.ToggleCheats();
+                cheats.ToggleCheats();
             }
 
             if (Input.GetKeyDown(KeyCode.D)) { // dump objects
@@ -31,15 +31,15 @@ namespace Distance.Cheat {
                 }
 
                 s.AppendLine("############# END DumpObjects #############");
-                LOG.Info(s);
+                log.Info(s);
             }
 
-            if (Cheats.CheatsEnabled && Input.GetKeyDown(KeyCode.End)) { // tp to end
-                if (RaceEndLogic != null) {
-                    LOG.Info("teleporting to end");
-                    Cheats.PlayerDataLocal.LocalCar_.transform.position = RaceEndLogic.transform.position;
+            if (cheats.cheatsEnabled && Input.GetKeyDown(KeyCode.End)) { // tp to end
+                if (raceEndLogic != null) {
+                    log.Info("teleporting to end");
+                    cheats.playerDataLocal.LocalCar_.transform.position = raceEndLogic.transform.position;
                 } else {
-                    LOG.Info("cant tp to end because it is null (ie it wasnt found)");
+                    log.Info("cant tp to end because it is null (ie it wasnt found)");
                 }
             }
         }

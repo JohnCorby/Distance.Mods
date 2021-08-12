@@ -1,10 +1,8 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using HarmonyLib;
-using Serializers;
 using UnityEngine;
 using static Distance.LevelMods.Entry;
 
@@ -12,14 +10,14 @@ namespace Distance.LevelMods {
     public static class AssetBundleLoader {
         public class Error : SystemException {
             public enum Type {
-                NOT_A_DLL,
-                NOT_A_BUNDLE,
-                NO_ENTRY_TYPE,
-                MULTIPLE_ENTRY_TYPES,
-                NO_ENTRY_PREFAB
+                NotADll,
+                NotABundle,
+                NoEntryType,
+                MultipleEntryTypes,
+                NoEntryPrefab
             }
 
-            public Type Type;
+            public Type type;
 
             public Error(Type type) {
                 this.type = type;
@@ -27,15 +25,15 @@ namespace Distance.LevelMods {
         }
 
         /// the name that we look for as the main thing to load
-        private const string ENTRY_NAME = "Entry";
+        private const string entryName = "Entry";
 
         /// treat data as dll, load entry script
-        public static GameObject LoadScriptFromDll(byte[] data, string entryName = ENTRY_NAME) {
+        public static GameObject LoadScriptFromDll(byte[] data, string entryName = entryName) {
             Assembly dll;
             try {
                 dll = Assembly.Load(data);
             } catch (BadImageFormatException) {
-                throw new NotDll();
+                throw new Error(Error.Type.NotADll);
             }
 
             var entryTypes = dll.GetExportedTypes().Where(type => type.Name == entryName).ToArray();
@@ -50,11 +48,11 @@ namespace Distance.LevelMods {
             var entryType = entryTypes[0];
 
             if (!typeof(MonoBehaviour).IsAssignableFrom(entryType)) {
-                LOG.Error($"script {entryType.FullName} in dll {dll} is not a MonoBehaviour");
+                log.Error($"script {entryType.FullName} in dll {dll} is not a MonoBehaviour");
             }
 
             if (!typeof(SerialComponent).IsAssignableFrom(entryType)) {
-                LOG.Warning($"script {entryType.FullName} in dll {dll} is not a SerialComponent");
+                log.Warning($"script {entryType.FullName} in dll {dll} is not a SerialComponent");
             }
 
 
@@ -62,7 +60,7 @@ namespace Distance.LevelMods {
         }
 
         /// treat data as bundle, load dlls, find entry script
-        public static GameObject LoadScriptFromBundle(byte[] data, string entryName = ENTRY_NAME) {
+        public static GameObject LoadScriptFromBundle(byte[] data, string entryName = entryName) {
             var bundle = AssetBundle.LoadFromMemory(data) ??
                          throw new BadImageFormatException("data not an assetbundle");
 
@@ -83,18 +81,18 @@ namespace Distance.LevelMods {
             var entryType = entryTypes[0];
 
             if (!typeof(MonoBehaviour).IsAssignableFrom(entryType)) {
-                LOG.Error($"entry type {entryType} in bundle {bundle} is not a MonoBehaviour");
+                log.Error($"entry type {entryType} in bundle {bundle} is not a MonoBehaviour");
             }
 
             if (!typeof(SerialComponent).IsAssignableFrom(entryType)) {
-                LOG.Warning($"entry type {entryType} in bundle {bundle} is not a SerialComponent");
+                log.Warning($"entry type {entryType} in bundle {bundle} is not a SerialComponent");
             }
 
             return new GameObject(entryType.FullName, entryType);
         }
 
         /// treat data as bundle, load dlls, find entry script, find entry prefab
-        public static GameObject LoadPrefab(byte[] data, string entryName = ENTRY_NAME) {
+        public static GameObject LoadPrefab(byte[] data, string entryName = entryName) {
             var bundle = AssetBundle.LoadFromMemory(data) ??
                          throw new BadImageFormatException("data not an assetbundle");
 
@@ -116,11 +114,11 @@ namespace Distance.LevelMods {
             var entryType = entryTypes[0];
 
             if (!typeof(MonoBehaviour).IsAssignableFrom(entryType)) {
-                LOG.Error($"entry type {entryType.FullName} in bundle {bundle.name} is not a MonoBehaviour");
+                log.Error($"entry type {entryType.FullName} in bundle {bundle.name} is not a MonoBehaviour");
             }
 
             if (!typeof(SerialComponent).IsAssignableFrom(entryType)) {
-                LOG.Warning($"entry type {entryType.FullName} in bundle {bundle.name} is not a SerialComponent");
+                log.Warning($"entry type {entryType.FullName} in bundle {bundle.name} is not a SerialComponent");
             }
 
             // then load the prefab
@@ -133,7 +131,7 @@ namespace Distance.LevelMods {
             var entryPrefab = bundle.LoadAsset<GameObject>(asset);
 
             if (!entryPrefab.GetComponent(entryType)) {
-                LOG.Error(
+                log.Error(
                     $"entry prefab {entryPrefab} in bundle {bundle.name} does not have entry component {entryType.FullName}");
             }
 

@@ -7,87 +7,87 @@ using static Distance.ML.Entry;
 namespace Distance.ML {
     /// reading/writing data via ipc (so loopback and port)
     public class Communication : MonoBehaviour {
-        private static readonly IPEndPoint ADDR = new(IPAddress.Loopback, 6969);
-        private Socket Sock = null!;
+        private static readonly IPEndPoint addr = new(IPAddress.Loopback, 6969);
+        private Socket sock = null!;
 
-        private State State = null!;
+        private State state = null!;
 
         private void Awake() {
             if (!G.Sys.GameManager_.SoloAndNotOnline_) {
-                LOG.Error("must be in solo game");
+                log.Error("must be in solo game");
                 Destroy(this);
                 return;
             }
 
-            LOG.Info("connecting...");
-            Sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            log.Info("connecting...");
+            sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             try {
-                Sock.Connect(ADDR);
-                LOG.Info("connected!");
+                sock.Connect(addr);
+                log.Info("connected!");
             } catch (SocketException e) {
-                LOG.Error($"error connecting: {e}");
+                log.Error($"error connecting: {e}");
                 Destroy(this);
                 return;
             }
 
-            State = gameObject.AddComponent<State>();
+            state = gameObject.AddComponent<State>();
         }
 
         private void OnDestroy() {
-            Sock.Close();
-            Destroy(State);
-            LOG.Debug("communication destroyed");
+            sock.Close();
+            Destroy(state);
+            log.Debug("communication destroyed");
         }
 
-        private bool ProcessStep, StepQueued;
+        private bool processStep, stepQueued;
 
         /// process incoming directions
         private void Update() {
-            if (ProcessStep && !StepQueued) {
+            if (processStep && !stepQueued) {
                 var isStep = BitConverter.ToBoolean(Recv(1), 0);
                 if (isStep) DoStep();
                 else DoReset();
-            } else if (ProcessStep && StepQueued) {
-                StepQueued = false;
+            } else if (processStep && stepQueued) {
+                stepQueued = false;
                 DoStep();
-            } else if (!ProcessStep && !StepQueued && Sock.Available > 0) {
+            } else if (!processStep && !stepQueued && sock.Available > 0) {
                 var isStep = BitConverter.ToBoolean(Recv(1), 0);
-                if (isStep) StepQueued = true;
+                if (isStep) stepQueued = true;
                 else DoReset();
             }
         }
 
         private static void DoReset() {
-            LOG.Debug("reset");
+            log.Debug("reset");
             G.Sys.GameManager_.RestartLevel();
         }
 
         private void DoStep() {
-            LOG.Debug("step");
+            log.Debug("step");
 
             // todo get action
             // State.InputsState.Actions = (InputsState.Action)BitConverter.ToUInt16(Recv(2), 0);
-            State.InputsState.Actions = InputsState.Action.STEER_LEFT;
-            State.UpdateState();
+            state.inputsState.actions = InputsState.Action.SteerLeft;
+            state.UpdateState();
 
             // send results
-            Send(State.PointsState.Bytes);
-            Send(BitConverter.GetBytes(State.Reward));
-            Send(BitConverter.GetBytes(State.Done));
+            Send(state.pointsState.bytes);
+            Send(BitConverter.GetBytes(state.reward));
+            Send(BitConverter.GetBytes(State.done));
 
-            State.ResetState();
+            state.ResetState();
         }
 
         private void LateUpdate() {
-            var data = Utils.PlayerDataLocal!;
-            ProcessStep = data.CarInputEnabled_ && data.IsCarRelevant_;
+            var data = Utils.playerDataLocal!;
+            processStep = data.CarInputEnabled_ && data.IsCarRelevant_;
         }
 
         private void Send(byte[] data) {
             try {
-                Sock.Send(data);
+                sock.Send(data);
             } catch (SocketException e) {
-                LOG.Error($"send error: {e}");
+                log.Error($"send error: {e}");
                 Destroy(this);
             }
         }
@@ -95,10 +95,10 @@ namespace Distance.ML {
         private byte[] Recv(int size) {
             try {
                 var data = new byte[size];
-                Sock.Receive(data);
+                sock.Receive(data);
                 return data;
             } catch (SocketException e) {
-                LOG.Error($"recv error: {e}");
+                log.Error($"recv error: {e}");
                 Destroy(this);
                 return null!;
             }

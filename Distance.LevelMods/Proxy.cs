@@ -5,14 +5,14 @@ using UnityEngine;
 namespace Distance.LevelMods {
     /// placeholder for custom objects that will be loaded in
     public class Proxy : SerialLevelEditorListener {
-        public const ComponentID ID = (ComponentID)1337;
-        public override ComponentID ID_ => ID;
+        public const ComponentID id = (ComponentID)1337;
+        public override ComponentID ID_ => id;
 
-        public const string DISPLAY_NAME = "LevelMods Proxy";
-        public override string DisplayName_ => DISPLAY_NAME;
+        public const string displayName = "LevelMods Proxy";
+        public override string DisplayName_ => displayName;
         public override string ComponentDescription_ => "Replaced with custom LevelMods object on load";
 
-        private GameObject Prefab = null!;
+        private GameObject prefab = null!;
 
         public override void LevelEditorSpawned() {
             using var dialog = new OpenFileDialog {
@@ -22,17 +22,17 @@ namespace Distance.LevelMods {
             try {
                 var bundle = AssetBundle.LoadFromFile(dialog.FileName);
                 try {
-                    Prefab = bundle.LoadPrefab();
+                    prefab = bundle.LoadPrefab();
                 } catch (ArgumentException) {
                     try {
                         var script = bundle.LoadScript();
-                        Prefab = new GameObject(script.Name, script);
+                        prefab = new GameObject(script.Name, script);
                     } catch (ArgumentException) {
                         throw new ArgumentException($"can't load prefab or script form assetbundle at {dialog.FileName}");
                     }
                 }
             } catch (Exception e) {
-                Entry.LOG.Error($"error loading assetbundle at {dialog.FileName}: {e}");
+                Entry.log.Error($"error loading assetbundle at {dialog.FileName}: {e}");
             }
         }
 

@@ -6,29 +6,29 @@ using static Distance.ML.Entry;
 namespace Distance.ML {
     /// holds all state of the network
     public class State : MonoBehaviour {
-        public PointsState PointsState = null!;
-        public InputsState InputsState = null!;
+        public PointsState pointsState = null!;
+        public InputsState inputsState = null!;
 
         /// reward value
-        public float Reward;
+        public float reward;
 
         /// if env is done
-        public static bool Done => Utils.PlayerDataLocal!.Finished_;
+        public static bool done => Utils.playerDataLocal!.Finished_;
 
-        private const float REWARD_FINISH = 100;
-        private const float REWARD_DEATH = -100;
-        private const float REWARD_CHECKPOINT = 50;
-        private const float REWARD_COOLDOWN_SCALE = 20;
-        private const float REWARD_TRICK = 20;
-        private const float REWARD_SPLIT = -20;
-        private const float REWARD_FORWARD_SCALE = 10;
-        private const float REWARD_BACKWARD_SCALE = -10;
+        private const float rewardFinish = 100;
+        private const float rewardDeath = -100;
+        private const float rewardCheckpoint = 50;
+        private const float rewardCooldownScale = 20;
+        private const float rewardTrick = 20;
+        private const float rewardSplit = -20;
+        private const float rewardForwardScale = 10;
+        private const float rewardBackwardScale = -10;
 
         private void Awake() {
-            PointsState = gameObject.AddComponent<PointsState>();
-            InputsState = gameObject.AddComponent<InputsState>();
+            pointsState = gameObject.AddComponent<PointsState>();
+            inputsState = gameObject.AddComponent<InputsState>();
 
-            var events = Utils.PlayerDataLocal!.Events_;
+            var events = Utils.playerDataLocal!.Events_;
             events.Subscribe<Finished.Data>(OnEventFinished);
             events.Subscribe<Death.Data>(OnEventDeath);
             events.Subscribe<CheckpointHit.Data>(OnEventCheckpoint);
@@ -38,9 +38,9 @@ namespace Distance.ML {
         }
 
         private void OnDestroy() {
-            Destroy(PointsState);
+            Destroy(pointsState);
 
-            var events = Utils.PlayerDataLocal!.Events_;
+            var events = Utils.playerDataLocal!.Events_;
             events.Unsubscribe<Finished.Data>(OnEventFinished);
             events.Unsubscribe<Death.Data>(OnEventDeath);
             events.Unsubscribe<CheckpointHit.Data>(OnEventCheckpoint);
@@ -51,42 +51,42 @@ namespace Distance.ML {
 
         private void OnEventFinished(Finished.Data data) {
             if (data.finishType_ != FinishType.Normal) return;
-            LOG.Debug($"finish: reward {REWARD_FINISH}");
-            Reward += REWARD_FINISH;
+            log.Debug($"finish: reward {rewardFinish}");
+            reward += rewardFinish;
         }
 
         private void OnEventDeath(Death.Data _) {
-            LOG.Debug($"death: reward {REWARD_DEATH}");
-            Reward += REWARD_DEATH;
+            log.Debug($"death: reward {rewardDeath}");
+            reward += rewardDeath;
         }
 
         private void OnEventCheckpoint(CheckpointHit.Data _) {
-            LOG.Debug($"checkpoint: reward {REWARD_CHECKPOINT}");
-            Reward += REWARD_CHECKPOINT;
+            log.Debug($"checkpoint: reward {rewardCheckpoint}");
+            reward += rewardCheckpoint;
         }
 
         private void OnEventCooldown(Cooldown.Data data) {
-            LOG.Debug($"cooldown: reward {data.cooldownAmount * REWARD_COOLDOWN_SCALE}");
-            Reward += data.cooldownAmount * REWARD_COOLDOWN_SCALE;
+            log.Debug($"cooldown: reward {data.cooldownAmount * rewardCooldownScale}");
+            reward += data.cooldownAmount * rewardCooldownScale;
         }
 
         private void OnEventTrick(TrickComplete.Data data) {
-            LOG.Debug($"trick: reward {data.cooldownAmount_ * REWARD_TRICK}");
-            Reward += data.cooldownAmount_ * REWARD_TRICK;
+            log.Debug($"trick: reward {data.cooldownAmount_ * rewardTrick}");
+            reward += data.cooldownAmount_ * rewardTrick;
         }
 
         private void OnEventSplit(Split.Data _) {
-            LOG.Debug($"split: reward {REWARD_SPLIT}");
-            Reward += REWARD_SPLIT;
+            log.Debug($"split: reward {rewardSplit}");
+            reward += rewardSplit;
         }
 
         /// update state stuff
         public void UpdateState() {
-            InputsState.UpdateState();
-            PointsState.UpdateState();
+            inputsState.UpdateState();
+            pointsState.UpdateState();
         }
 
         /// reset state for next step
-        public void ResetState() => Reward = 0;
+        public void ResetState() => reward = 0;
     }
 }

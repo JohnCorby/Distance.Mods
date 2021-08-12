@@ -12,15 +12,15 @@ namespace Distance.LevelMods {
             // ReSharper disable once InconsistentNaming
             private static void Postfix(ResourceManager __instance) {
                 // so the gameobject can be serialized/deserialized
-                var prefab = new GameObject(Proxy.DISPLAY_NAME, typeof(Proxy));
+                var prefab = new GameObject(Proxy.displayName, typeof(Proxy));
                 __instance.LevelPrefabs_.Add(prefab.name, prefab);
 
                 // so the component can be deserialized
-                BinaryDeserializer.idToSerializableTypeMap_.Add(Proxy.ID, typeof(Proxy));
+                BinaryDeserializer.idToSerializableTypeMap_.Add(Proxy.id, typeof(Proxy));
 
                 // so the gameobject shows up in the library tab
                 var root = __instance.LevelPrefabFileInfosRoot_;
-                root.AddChildInfo(new LevelPrefabFileInfo(Proxy.DISPLAY_NAME, prefab, root));
+                root.AddChildInfo(new LevelPrefabFileInfo(Proxy.displayName, prefab, root));
             }
         }
     }

@@ -7,68 +7,68 @@ using static Distance.ML.Entry;
 namespace Distance.ML {
     /// holds state for points data
     public class PointsState : MonoBehaviour {
-        private Camera MainCamera = null!;
-        private Camera Camera = null!;
-        private RenderTexture Texture = null!;
+        private Camera mainCamera = null!;
+        private Camera camera = null!;
+        private RenderTexture texture = null!;
 
         /// buffer that holds points data
-        private ComputeBuffer Buffer = null!;
+        private ComputeBuffer buffer = null!;
         /// array of points in byte form so we won't have to allocate/convert more
-        public byte[] Bytes = null!;
+        public byte[] bytes = null!;
 
         private enum ID : uint {
-            NORMAL,
-            KILL_GRID,
-            LASER,
-            SAW,
-            END,
-            CHECKPOINT,
-            COOLDOWN,
-            TELEPORTER,
+            Normal,
+            KillGrid,
+            Laser,
+            Saw,
+            End,
+            Checkpoint,
+            Cooldown,
+            Teleporter,
         }
 
-        private static readonly uint NUM_IDS = (uint)Enum.GetNames(typeof(ID)).Length;
+        private static readonly uint numIds = (uint)Enum.GetNames(typeof(ID)).Length;
 
-        private static readonly Shader STANDARD_SHADER, INVISIBLE_SHADER;
-        private static readonly ComputeShader PROCESS_SHADER;
+        private static readonly Shader standardShader, invisibleShader;
+        private static readonly ComputeShader processShader;
 
         /// first called only on level start, so we good in terms of asset loading
         static PointsState() {
             var assetBundle = (AssetBundle)new Assets("assets").Bundle;
-            STANDARD_SHADER = assetBundle.LoadAsset<Shader>("Standard.shader");
-            INVISIBLE_SHADER = assetBundle.LoadAsset<Shader>("Invisible.shader");
-            PROCESS_SHADER = assetBundle.LoadAsset<ComputeShader>("Process.compute");
+            standardShader = assetBundle.LoadAsset<Shader>("Standard.shader");
+            invisibleShader = assetBundle.LoadAsset<Shader>("Invisible.shader");
+            processShader = assetBundle.LoadAsset<ComputeShader>("Process.compute");
 
-            Shader.SetGlobalInt("_NumIDs", (int)NUM_IDS);
-            PROCESS_SHADER.SetInt("NumIDs", (int)NUM_IDS);
+            Shader.SetGlobalInt("_NumIDs", (int)numIds);
+            processShader.SetInt("NumIDs", (int)numIds);
         }
 
         private void Awake() {
-            MainCamera = Camera.main!;
-            MainCamera.enabled = false;
+            mainCamera = Camera.main!;
+            mainCamera.enabled = false;
 
-            Camera = gameObject.AddComponent<Camera>();
-            Camera.enabled = false;
-            Camera.cullingMask = MainCamera.cullingMask & ~PhysicsEx.carLayerMask_;
-            Camera.clearFlags = CameraClearFlags.SolidColor;
-            Camera.backgroundColor = Color.black;
+            camera = gameObject.AddComponent<Camera>();
+            camera.enabled = false;
+            camera.cullingMask = mainCamera.cullingMask & ~PhysicsEx.carLayerMask_;
+            camera.clearFlags = CameraClearFlags.SolidColor;
+            camera.backgroundColor = Color.black;
 
-            Texture = new RenderTexture(256, 256, 0, RenderTextureFormat.ARGBFloat, RenderTextureReadWrite.Linear);
-            Camera.targetTexture = Texture;
-            Buffer = new ComputeBuffer(Texture.width * Texture.height, sizeof(float) + sizeof(uint));
-            Bytes = new byte[Buffer.count * Buffer.stride];
+            texture = new RenderTexture(256, 256, 0, RenderTextureFormat.ARGBFloat, RenderTextureReadWrite.Linear);
+            camera.targetTexture = texture;
+            buffer = new ComputeBuffer(texture.width * texture.height, sizeof(float) + sizeof(uint));
+            bytes = new byte[buffer.count * buffer.stride];
 
-            PROCESS_SHADER.SetTexture(0, "Input", Texture);
-            PROCESS_SHADER.SetBuffer(0, "Output", Buffer);
+            processShader.SetTexture(0, "Input", texture);
+            processShader.SetBuffer(0, "Output", buffer);
         }
 
         private void OnDestroy() {
-            MainCamera.enabled = true;
+            mainCamera.enabled = true;
 
-            Destroy(Camera);
+            Destroy(camera);
 
-            Texture.Release();
-            Buffer.Release();
+            texture.Release();
+            buffer.Release();
         }
 
         /// modify the scene so that it will make sense to the agent
@@ -76,14 +76,14 @@ namespace Distance.ML {
             foreach (var renderer in Resources.FindObjectsOfTypeAll<Renderer>()) {
                 void Init(ID id) {
                     foreach (var material in renderer.materials) {
-                        material.shader = STANDARD_SHADER;
+                        material.shader = standardShader;
                         material.SetInt("_ID", (int)id);
                     }
                 }
 
                 void Invisible() {
                     foreach (var material in renderer!.materials) {
-                        material.shader = INVISIBLE_SHADER;
+                        material.shader = invisibleShader;
                     }
                 }
 
@@ -93,46 +93,46 @@ namespace Distance.ML {
 
                 // todo add more specific things and planes with the IDs instead of just assigning them like this
                 if (Has(typeof(KillGridBox), typeof(KillGridFollower)))
-                    Init(ID.KILL_GRID);
-                else if (Has(typeof(RaceEndLogic))) Init(ID.END);
-                else if (Has(typeof(LaserLogic))) Init(ID.LASER);
-                else if (Has(typeof(SharpObject))) Init(ID.SAW);
-                else if (Has(typeof(CheckpointLogicBase))) Init(ID.CHECKPOINT);
-                else if (Has(typeof(TriggerCooldownLogic))) Init(ID.COOLDOWN);
+                    Init(ID.KillGrid);
+                else if (Has(typeof(RaceEndLogic))) Init(ID.End);
+                else if (Has(typeof(LaserLogic))) Init(ID.Laser);
+                else if (Has(typeof(SharpObject))) Init(ID.Saw);
+                else if (Has(typeof(CheckpointLogicBase))) Init(ID.Checkpoint);
+                else if (Has(typeof(TriggerCooldownLogic))) Init(ID.Cooldown);
                 else if (Has(typeof(TeleporterEntrance), typeof(TeleporterExit)))
-                    Init(ID.TELEPORTER);
+                    Init(ID.Teleporter);
                 else if (!Has(typeof(Collider))) Invisible();
-                else Init(ID.NORMAL);
+                else Init(ID.Normal);
             }
         }
 
-        private bool DrawOverlay = true;
+        private bool drawOverlay = true;
 
         private void Update() {
             // overlay toggle
             if (Input.GetKey(KeyCode.M) && Input.GetKeyDown(KeyCode.G)) {
-                DrawOverlay = !DrawOverlay;
-                MainCamera.enabled = !DrawOverlay;
-                LOG.Debug($"overlay {(DrawOverlay ? "on" : "off")}");
+                drawOverlay = !drawOverlay;
+                mainCamera.enabled = !drawOverlay;
+                log.Debug($"overlay {(drawOverlay ? "on" : "off")}");
             }
         }
 
         /// draw texture to screen
         private void OnGUI() {
-            if (DrawOverlay)
-                GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), Texture);
+            if (drawOverlay)
+                GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), texture);
         }
 
 
         /// update state stuff
         public void UpdateState() {
-            var parentTransform = Utils.PlayerDataLocal!.Car_.transform;
+            var parentTransform = Utils.playerDataLocal!.Car_.transform;
             transform.position = parentTransform.position + parentTransform.up;
             transform.rotation = parentTransform.rotation;
 
-            Camera.Render();
-            PROCESS_SHADER.Dispatch(0, Texture.width / 8, Texture.height / 8, 1);
-            Buffer.GetData(Bytes);
+            camera.Render();
+            processShader.Dispatch(0, texture.width / 8, texture.height / 8, 1);
+            buffer.GetData(bytes);
         }
     }
 }

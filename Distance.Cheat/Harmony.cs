@@ -18,8 +18,8 @@ namespace Distance.Cheat {
             /// skip method (return false) if cheat instance exists and cheats were ever enabled
             [UsedImplicitly]
             private static bool Prefix() {
-                if (Cheats.Instance != null && Cheats.Instance.CheatsEverEnabled) {
-                    Entry.LOG.Debug("skipping upload because cheats were enabled at some point");
+                if (Cheats.instance != null && Cheats.instance.cheatsEverEnabled) {
+                    Entry.log.Debug("skipping upload because cheats were enabled at some point");
                     return false;
                 }
 

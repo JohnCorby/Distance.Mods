@@ -7,7 +7,7 @@ using UnityEngine;
 namespace Distance.LevelMods {
     [ModEntryPoint("com.github.johncorby/Distance.LevelMods")]
     public class Entry : MonoBehaviour {
-        public static readonly Log LOG = LogManager.GetForCurrentAssembly();
+        public static readonly Log log = LogManager.GetForCurrentAssembly();
 
         public void Initialize(IManager manager) => RuntimePatcher.AutoPatch();
     }
