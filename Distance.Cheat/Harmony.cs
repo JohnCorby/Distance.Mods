@@ -1,9 +1,12 @@
 ﻿using HarmonyLib;
+using JetBrains.Annotations;
 
 namespace Distance.Cheat {
     namespace PlayerDataLocal_ {
         [HarmonyPatch(typeof(PlayerDataLocal), nameof(InitializeVirtual))]
         public static class InitializeVirtual {
+            [UsedImplicitly]
+            // ReSharper disable once InconsistentNaming
             private static void Postfix(PlayerDataLocal __instance) =>
                 __instance.gameObject.AddComponent<Cheats>();
         }
@@ -13,6 +16,7 @@ namespace Distance.Cheat {
         [HarmonyPatch(typeof(GameMode), nameof(UploadScoreAndReplay))]
         public static class UploadScoreAndReplay {
             /// skip method (return false) if cheat instance exists and cheats were ever enabled
+            [UsedImplicitly]
             private static bool Prefix() {
                 if (Cheats.Instance != null && Cheats.Instance.CheatsEverEnabled) {
                     Entry.LOG.Debug("skipping upload because cheats were enabled at some point");
@@ -28,6 +32,8 @@ namespace Distance.Cheat {
         [HarmonyPatch(typeof(CheatsManager), nameof(OnEventSceneLoadFinished))]
         public static class OnEventSceneLoadFinished {
             /// copied from the original, except always sets gameplayCheatsRecognized_ to true so they always work
+            [UsedImplicitly]
+            // ReSharper disable once InconsistentNaming
             private static bool Prefix(CheatsManager __instance) {
                 __instance.gameplayCheatsRecognized_ = true;
                 __instance.UpdateEnabledFlags();

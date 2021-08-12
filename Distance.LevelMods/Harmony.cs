@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using JetBrains.Annotations;
 using Serializers;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ namespace Distance.LevelMods {
         /// register Proxy as custom object
         [HarmonyPatch(typeof(ResourceManager), nameof(FilloutLevelPrefabs))]
         internal static class FilloutLevelPrefabs {
+            [UsedImplicitly]
+            // ReSharper disable once InconsistentNaming
             private static void Postfix(ResourceManager __instance) {
                 // so the gameobject can be serialized/deserialized
                 var prefab = new GameObject(Proxy.DISPLAY_NAME, typeof(Proxy));
