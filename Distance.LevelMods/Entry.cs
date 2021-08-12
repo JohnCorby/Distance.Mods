@@ -1,9 +1,9 @@
-﻿using Events.Level;
+﻿using System.Reflection;
+using Events.Level;
 using Reactor.API.Attributes;
 using Reactor.API.Interfaces.Systems;
 using Reactor.API.Logging;
 using Reactor.API.Runtime.Patching;
-using Serializers;
 using UnityEngine;
 
 namespace Distance.LevelMods {
@@ -13,8 +13,6 @@ namespace Distance.LevelMods {
 
         public void Initialize(IManager manager) {
             PostLoad.Subscribe(OnLevelPostLoad);
-
-            BinaryDeserializer.idToSerializableTypeMap_.Add(Proxy.ID, typeof(Proxy));
 
             RuntimePatcher.AutoPatch();
         }
