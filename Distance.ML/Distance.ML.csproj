@@ -129,4 +129,5 @@
     <Target Name="AfterBuild">
     </Target>
     -->
+    <Import Project="$(SolutionDir)Build.targets"/>
 </Project>

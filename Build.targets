@@ -1,0 +1,9 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <BuildDir>$(SolutionDir)Build\</BuildDir>
+    </PropertyGroup>
+    <Target Name="BuildZip" AfterTargets="AfterBuild">
+        <MakeDir Directories="$(BuildDir)"/>
+        <ZipDirectory SourceDirectory="$(OutDir)" DestinationFile="$(BuildDir)$(ProjectName).zip" Overwrite="true"/>
+    </Target>
+</Project>
