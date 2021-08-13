@@ -36,4 +36,5 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
+          tag_name: release-workflow
           files: Build\*.zip
