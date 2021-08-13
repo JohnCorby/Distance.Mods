@@ -36,7 +36,7 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
     <ItemGroup>
-        <Compile Include="AssetBundleLoader.cs" />
+        <Compile Include="DataLoader.cs" />
         <Compile Include="Entry.cs" />
         <Compile Include="Harmony.cs" />
         <Compile Include="Proxy.cs" />
@@ -121,6 +121,6 @@
     </Target>
     -->
     <Target Name="AfterBuild">
-        <Move SourceFiles="$(OutDir)System.Windows.Forms.dll" DestinationFolder="$(OutDir)Dependencies"/>
+        <Move SourceFiles="$(OutDir)System.Windows.Forms.dll" DestinationFolder="$(OutDir)Dependencies" />
     </Target>
 </Project>

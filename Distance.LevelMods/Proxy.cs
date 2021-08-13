@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Windows.Forms;
 using UnityEngine;
 
@@ -20,19 +21,9 @@ namespace Distance.LevelMods {
             };
             if (dialog.ShowDialog() != DialogResult.OK) return;
             try {
-                var bundle = AssetBundle.LoadFromFile(dialog.FileName);
-                try {
-                    prefab = bundle.LoadPrefab();
-                } catch (ArgumentException) {
-                    try {
-                        var script = bundle.LoadScript();
-                        prefab = new GameObject(script.Name, script);
-                    } catch (ArgumentException) {
-                        throw new ArgumentException($"can't load prefab or script form assetbundle at {dialog.FileName}");
-                    }
-                }
+                prefab = DataLoader.Load(File.ReadAllBytes(dialog.FileName), "Entry");
             } catch (Exception e) {
-                Entry.log.Error($"error loading assetbundle at {dialog.FileName}: {e}");
+                Entry.log.Error($"error loading prefab from file {dialog.FileName}: {e.Message}");
             }
         }
 
