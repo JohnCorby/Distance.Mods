@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Windows.Forms;
 using UnityEngine;
@@ -13,19 +14,24 @@ namespace Distance.LevelMods {
 
         public override void OnLevelEditorEnter() {
             log.Debug("level editor enter");
+
+            if (data != null) {
+                entryComp = DataLoader.Load(data);
+            }
         }
 
         public override void LevelEditorSpawned() {
             LoadPrefab();
         }
 
-        public Component? entryComp;
+        public byte[]? data;
+        public SerialComponent? entryComp;
 
         public override void Visit(IVisitor visitor, ISerializable prefabComp, int version) {
             var label = new NGUILabelInspector.Label("This is all test stuff lol", Options.warningColor_);
             visitor.VisitLabel("Warning Label", ref label, true);
 
-            visitor.VisitAction("Load Prefab", LoadPrefab, entryComp == null,
+            visitor.VisitAction("Load Prefab", LoadPrefab, true,
                 Options.Description.Format("Load custom object into this proxy"));
 
             visitor.VisitReference("Entry Component", entryComp, null);
@@ -36,7 +42,8 @@ namespace Distance.LevelMods {
                 Title = "Choose AssetBundle to load"
             };
             if (dialog.ShowDialog() != DialogResult.OK) return;
-            entryComp = DataLoader.Load(File.ReadAllBytes(dialog.FileName));
+            data = File.ReadAllBytes(dialog.FileName);
+            entryComp = DataLoader.Load(data);
             log.Debug($"entry component is {entryComp}");
             // Instantiate()
         }

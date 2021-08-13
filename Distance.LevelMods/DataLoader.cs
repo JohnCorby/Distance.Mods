@@ -15,7 +15,7 @@ namespace Distance.LevelMods {
         /// dll,
         /// bundle with entry script, or
         /// bundle with entry prefab (that has entry script)
-        public static Component? Load(byte[] data) {
+        public static SerialComponent? Load(byte[] data) {
             try {
                 // todo check is url???
 
@@ -27,25 +27,25 @@ namespace Distance.LevelMods {
 
                 return LoadFromBundle(data);
             } catch (Exception e) {
-                log.Error($"error loading data: {e.Message}");
+                log.Exception(e);
                 return null;
             }
         }
 
 
         /// treat data as dll, load entry script
-        private static Component LoadFromDll(byte[] data) {
+        private static SerialComponent LoadFromDll(byte[] data) {
             var dll = Assembly.Load(data);
             var entryTypes = dll.GetExportedTypes().Where(type => type.Name == entryName).ToArray();
 
             var entryType = GetEntryType(entryTypes, $"dll {dll}");
             var entryPrefab = new GameObject(entryType.Namespace);
-            return entryPrefab.AddComponent(entryType);
+            return (SerialComponent)entryPrefab.AddComponent(entryType);
         }
 
         /// treat data as bundle, load dlls, find entry script.
         /// load entry prefab or create new
-        private static Component LoadFromBundle(byte[] data) {
+        private static SerialComponent LoadFromBundle(byte[] data) {
             var bundle = AssetBundle.LoadFromMemory(data)!;
             try {
                 var entryTypes = bundle.GetAllAssetNames()
@@ -85,19 +85,19 @@ namespace Distance.LevelMods {
         /// get entry comp from bundle
         /// by loading entry prefab
         /// or making minimal gameobject from entry type
-        private static Component GetEntryComp(AssetBundle bundle, Type entryType) {
+        private static SerialComponent GetEntryComp(AssetBundle bundle, Type entryType) {
             var asset = bundle.GetAllAssetNames()
                 .SingleOrDefault(asset =>
                     asset.EndsWith(".prefab") &&
                     Path.GetFileNameWithoutExtension(asset) == entryType.Namespace?.ToLower());
-            Component entryComp;
+            SerialComponent entryComp;
             if (asset == null) {
                 log.Debug($"no entry prefab found in bundle {bundle.name}. making minimal one from entry type");
                 var entryPrefab = new GameObject(entryType.Namespace);
-                entryComp = entryPrefab.AddComponent(entryType);
+                entryComp = (SerialComponent)entryPrefab.AddComponent(entryType);
             } else {
                 var entryPrefab = bundle.LoadAsset<GameObject>(asset);
-                entryComp = entryPrefab.GetComponent(entryType) ??
+                entryComp = (SerialComponent)entryPrefab.GetComponent(entryType) ??
                             throw new Exception($"entry prefab {entryPrefab.name} in bundle {bundle.name} " +
                                                 $"does not have entry component {entryType.FullName}");
             }

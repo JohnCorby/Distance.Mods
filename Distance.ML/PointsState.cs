@@ -38,6 +38,7 @@ namespace Distance.ML {
             standardShader = assetBundle.LoadAsset<Shader>("Standard.shader");
             invisibleShader = assetBundle.LoadAsset<Shader>("Invisible.shader");
             processShader = assetBundle.LoadAsset<ComputeShader>("Process.compute");
+            assetBundle.Unload(false);
 
             Shader.SetGlobalInt("_NumIDs", (int)numIds);
             processShader.SetInt("NumIDs", (int)numIds);
