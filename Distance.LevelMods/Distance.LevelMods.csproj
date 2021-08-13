@@ -39,6 +39,8 @@
         <Compile Include="DataLoader.cs" />
         <Compile Include="Entry.cs" />
         <Compile Include="Harmony.cs" />
+        <Compile Include="CompLoader.cs" />
+        <Compile Include="CompManager.cs" />
         <Compile Include="Proxy.cs" />
     </ItemGroup>
     <ItemGroup>
