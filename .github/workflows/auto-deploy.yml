@@ -13,12 +13,13 @@ jobs:
     name: Build and Publish GitHub Release
     runs-on: windows-latest
 
+    env:
+      SOLUTION: Distance.Mods.sln
+      RELEASE_BODY: This release was automatically generated as part of a GitHub workflow.
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
-      - name: DotEnv
-        uses: xom9ikk/dotenv@v1.0.2
 
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.0.2
@@ -35,7 +36,4 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          name: "Workflow-Automated Deployment [#${{ github.run_number }}]"
-          tag_name: release-workflow-${{ github.run_number }}
-          body: "${{ env.RELEASE_BODY }}"
-          files: Build\**\*.*
+          files: Build\*.zip
