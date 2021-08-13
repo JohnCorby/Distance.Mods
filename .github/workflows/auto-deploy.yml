@@ -13,11 +13,6 @@ jobs:
     name: Build and Publish GitHub Release
     runs-on: windows-latest
 
-    env:
-      SOLUTION: Distance.Mods.sln
-      ARTIFACTS: Build/Distance.Cheat.zip;Build/Distance.LevelMods.zip;Build/Distance.ML.zip
-      RELEASE_BODY: This release was automatically generated as part of a GitHub workflow.
-
     steps:
       - name: Checkout
         uses: actions/checkout@v2
