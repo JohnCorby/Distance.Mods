@@ -22,7 +22,7 @@ namespace Distance.LevelMods {
                 try {
                     return LoadFromDll(data);
                 } catch (BadImageFormatException) {
-                    log.Info("data is not dll. trying to load as assetbundle");
+                    log.Debug("data is not dll. trying to load as assetbundle");
                 }
 
                 return LoadFromBundle(data);
@@ -92,7 +92,7 @@ namespace Distance.LevelMods {
                     Path.GetFileNameWithoutExtension(asset) == entryType.Namespace?.ToLower());
             Component entryComp;
             if (asset == null) {
-                log.Info($"no entry prefab found in bundle {bundle.name}. making minimal one from entry type");
+                log.Debug($"no entry prefab found in bundle {bundle.name}. making minimal one from entry type");
                 var entryPrefab = new GameObject(entryType.Namespace);
                 entryComp = entryPrefab.AddComponent(entryType);
             } else {

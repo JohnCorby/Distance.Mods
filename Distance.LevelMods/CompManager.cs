@@ -19,22 +19,15 @@ namespace Distance.LevelMods {
         }
 
         /// register custom object so it can be saved/loaded
-        public static void Register(GameObject prefab, Type type) {
-            if (!type.IsAssignableFrom(typeof(SerialComponent)))
-                throw new ArgumentException($"type {type.FullName} is not a {nameof(SerialComponent)}");
-
-            var comp = (SerialComponent)prefab.GetComponent(type) ??
-                       throw new NullReferenceException($"no component of type {type.FullName} on prefab {prefab.name}");
-
-            prefab.name = comp.DisplayName_;
+        public static void Register(SerialComponent comp) {
+            comp.gameObject.name = comp.DisplayName_;
 
             var man = G.Sys.ResourceManager_!;
-            man.LevelPrefabs_.Add(prefab.name, prefab);
-
-            BinaryDeserializer.idToSerializableTypeMap_.Add(comp.ID_, comp.GetType());
+            man.LevelPrefabs_[comp.DisplayName_] = comp.gameObject;
+            BinaryDeserializer.idToSerializableTypeMap_[comp.ID_] = comp.GetType();
 
             // var root = man.LevelPrefabFileInfosRoot_;
-            // root.AddChildInfo(new LevelPrefabFileInfo(prefab.name, prefab, root));
+            // root.AddChildInfo(new LevelPrefabFileInfo(comp.DisplayName_, comp.gameObject, root));
         }
     }
 }

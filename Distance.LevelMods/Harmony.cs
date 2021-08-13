@@ -19,9 +19,9 @@ namespace Distance.LevelMods {
                     prefab.name = comp.DisplayName_;
 
                     // so the gameobject can be serialized/deserialized
-                    man.LevelPrefabs_.Add(prefab.name, prefab);
+                    man.LevelPrefabs_[prefab.name] = prefab;
                     // so the component can be deserialized
-                    BinaryDeserializer.idToSerializableTypeMap_.Add(comp.ID_, comp.GetType());
+                    BinaryDeserializer.idToSerializableTypeMap_[comp.ID_] = comp.GetType();
 
                     // so the gameobject shows up in the library tab
                     root.AddChildInfo(new LevelPrefabFileInfo(prefab.name, prefab, root));
@@ -37,7 +37,7 @@ namespace Distance.LevelMods {
 
                     // this comp can go on any gameobject, regardless of if it's on that object's prefab
                     man.AddedComponentsPrefab_.AddComponent(comp.GetType());
-                    BinaryDeserializer.idToSerializableTypeMap_.Add(comp.ID_, comp.GetType());
+                    BinaryDeserializer.idToSerializableTypeMap_[comp.ID_] = comp.GetType();
 
                     // we dont add it to level prefabs because the prefab itself should never be saved or loaded
                 }
@@ -48,8 +48,8 @@ namespace Distance.LevelMods {
                     var comp = prefab.AddComponent<CompManager>();
                     prefab.name = comp.DisplayName_;
 
-                    man.LevelPrefabs_.Add(prefab.name, prefab);
-                    BinaryDeserializer.idToSerializableTypeMap_.Add(comp.ID_, comp.GetType());
+                    man.LevelPrefabs_[prefab.name] = prefab;
+                    BinaryDeserializer.idToSerializableTypeMap_[comp.ID_] = comp.GetType();
                 }
             }
         }
