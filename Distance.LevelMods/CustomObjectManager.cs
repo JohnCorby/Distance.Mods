@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Serializers;
 using UnityEngine;
+using static Distance.LevelMods.Entry;
 
 namespace Distance.LevelMods {
     public class CustomObjectManager : SerialComponent {
@@ -10,13 +11,21 @@ namespace Distance.LevelMods {
         public override bool AllowCopyPaste_ => false;
 
         public static CustomObjectManager? instance;
-        private void Awake() => instance = this;
-        private void OnDestroy() => instance = null;
+        private void Awake() {
+            log.Debug("awake");
+            instance = this;
+        }
+
+        private void OnDestroy() {
+            log.Debug("destroyed");
+            instance = null;
+        }
 
 
-        public Dictionary<string, byte[]> datas = null!;
+        public Dictionary<string, byte[]> datas = new();
 
         public override void Visit(IVisitor visitor, ISerializable prefabComp, int version) {
+            log.Debug($"visiting as ${visitor.GetType().Name}");
             switch (visitor) {
                 case Serializer serializer:
                     serializer.VisitDictionaryGeneric(nameof(datas), ref datas,
@@ -47,6 +56,7 @@ namespace Distance.LevelMods {
                 var le = G.Sys.LevelEditor_;
                 var prefab = man.levelPrefabs_[nameof(CustomObjectManager)];
                 var obj = le.CreateObject(prefab);
+                obj.SetActive(true);
                 ReferenceMap.Handle<GameObject> handle = default;
                 le.AddGameObject(ref handle, obj, le.WorkingLevel_.ActiveLayer_);
             }

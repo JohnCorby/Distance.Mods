@@ -44,6 +44,7 @@ namespace Distance.LevelMods {
 
             var entryType = GetEntryType(entryTypes, $"dll {dll}");
             var entryPrefab = new GameObject(entryType.Namespace);
+            entryPrefab.SetActive(false);
             return (SerialComponent)entryPrefab.AddComponent(entryType);
         }
 
@@ -101,6 +102,7 @@ namespace Distance.LevelMods {
                 entryPrefab = bundle.LoadAsset<GameObject>(asset);
             }
 
+            entryPrefab.SetActive(false);
             foreach (var comp in entryPrefab.GetComponents<Component>())
                 if (!Serializer.IsComponentSerializable(comp))
                     log.Warning($"gameobject {entryPrefab.name} " +

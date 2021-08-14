@@ -10,30 +10,14 @@ namespace Distance.LevelMods {
         internal static class FilloutLevelPrefabs {
             [UsedImplicitly]
             private static void Postfix() {
+                // manager can be saved/loaded, but not added via tab or put on any object
+                var prefab = new GameObject(nameof(CustomObjectManager));
+                prefab.SetActive(false);
+                var comp = prefab.AddComponent<CustomObjectManager>();
+
                 var man = G.Sys.ResourceManager_!;
-
-                // {
-                //     var prefab = new GameObject(nameof(Proxy));
-                //     var comp = prefab.AddComponent<Proxy>();
-                //
-                //     // so the gameobject can be serialized/deserialized
-                //     man.LevelPrefabs_[prefab.name] = prefab;
-                //     // so the component can be deserialized
-                //     BinaryDeserializer.idToSerializableTypeMap_[comp.ID_] = comp.GetType();
-                //
-                //     // so the gameobject shows up in the library tab
-                //     var root = man.LevelPrefabFileInfosRoot_!;
-                //     root.AddChildInfo(new LevelPrefabFileInfo(prefab.name, prefab, root));
-                // }
-
-                {
-                    // manager can be saved/loaded, but not added via tab or put on any object
-                    var prefab = new GameObject(nameof(CustomObjectManager));
-                    var comp = prefab.AddComponent<CustomObjectManager>();
-
-                    man.LevelPrefabs_[prefab.name] = prefab;
-                    BinaryDeserializer.idToSerializableTypeMap_[comp.ID_] = comp.GetType();
-                }
+                man.LevelPrefabs_[prefab.name] = prefab;
+                BinaryDeserializer.idToSerializableTypeMap_[comp.ID_] = comp.GetType();
             }
         }
     }
