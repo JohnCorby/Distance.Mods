@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using HarmonyLib;
+using Serializers;
 using UnityEngine;
 using static Distance.LevelMods.Entry;
 
@@ -92,34 +93,42 @@ namespace Distance.LevelMods {
                 .SingleOrDefault(asset =>
                     asset.EndsWith(".prefab") &&
                     Path.GetFileNameWithoutExtension(asset) == entryType.Namespace?.ToLower());
-            SerialComponent entryComp;
+            GameObject entryPrefab;
             if (asset == null) {
                 log.Debug($"no entry prefab found in bundle {bundle.name}. making minimal one from entry type");
-                var entryPrefab = new GameObject(entryType.Namespace);
-                entryComp = (SerialComponent)entryPrefab.AddComponent(entryType);
+                entryPrefab = new GameObject(entryType.Namespace);
             } else {
-                var entryPrefab = bundle.LoadAsset<GameObject>(asset);
-                entryComp = (SerialComponent)entryPrefab.GetComponent(entryType) ??
-                            throw new Exception($"entry prefab {entryPrefab.name} in bundle {bundle.name} " +
-                                                $"does not have entry component {entryType.FullName}");
+                entryPrefab = bundle.LoadAsset<GameObject>(asset);
             }
 
-            // call init methods
-            {
-                const string name = "LoadAssets";
+            foreach (var comp in entryPrefab.GetComponents<Component>())
+                if (!Serializer.IsComponentSerializable(comp))
+                    log.Warning($"gameobject {entryPrefab.name} " +
+                                $"has non-serializable component {comp.GetType().FullName}");
+
+            var entryComp = (SerialComponent)entryPrefab.AddComponent(entryType);
+
+            bool Call(string name, params object[] args) {
+                var signature = $"{name}({args.Join(arg => arg.GetType().Name)})";
                 try {
                     entryType.InvokeMember(name,
                         BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic |
                         BindingFlags.DeclaredOnly | BindingFlags.InvokeMethod,
-                        null, entryComp, new object[] { bundle });
+                        null, entryComp, args);
+                    return true;
                 } catch (MissingMethodException) {
                     log.Warning($"entry type {entryType.FullName} in bundle {bundle.name} " +
-                                $"does not have {name}({nameof(AssetBundle)}) method");
+                                $"does not have {signature} method");
+                    return false;
                 } catch (AmbiguousMatchException) {
                     log.Warning($"entry type {entryType.FullName} in bundle {bundle.name} " +
-                                $"has multiple {name}({nameof(AssetBundle)}) methods");
+                                $"has multiple {signature} methods");
+                    return false;
                 }
             }
+
+            if (!Call("Init", bundle))
+                Call("Init");
 
             return entryComp;
         }

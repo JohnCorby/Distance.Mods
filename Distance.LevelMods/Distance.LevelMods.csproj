@@ -40,7 +40,7 @@
         <Compile Include="Entry.cs" />
         <Compile Include="Harmony.cs" />
         <Compile Include="LoadCustomObjectTool.cs" />
-        <Compile Include="CompManager.cs" />
+        <Compile Include="CustomObjectManager.cs" />
         <Compile Include="Proxy.cs" />
     </ItemGroup>
     <ItemGroup>

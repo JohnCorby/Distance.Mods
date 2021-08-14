@@ -30,7 +30,7 @@ namespace Distance.LevelMods {
                 return false;
             }
 
-            // todo register
+            CustomObjectManager.Register(comp);
 
             var info = new LevelPrefabFileInfo(comp.DisplayName_, comp.gameObject, null);
             G.Sys.LevelEditor_.StartToolNextFrame(new CreateObjectByCursorTool(info));

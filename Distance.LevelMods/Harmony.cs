@@ -11,27 +11,25 @@ namespace Distance.LevelMods {
             [UsedImplicitly]
             private static void Postfix() {
                 var man = G.Sys.ResourceManager_!;
-                var root = man.LevelPrefabFileInfosRoot_!;
 
-                {
-                    var prefab = new GameObject();
-                    var comp = prefab.AddComponent<Proxy>();
-                    prefab.name = comp.DisplayName_;
-
-                    // so the gameobject can be serialized/deserialized
-                    man.LevelPrefabs_[prefab.name] = prefab;
-                    // so the component can be deserialized
-                    BinaryDeserializer.idToSerializableTypeMap_[comp.ID_] = comp.GetType();
-
-                    // so the gameobject shows up in the library tab
-                    root.AddChildInfo(new LevelPrefabFileInfo(prefab.name, prefab, root));
-                }
+                // {
+                //     var prefab = new GameObject(nameof(Proxy));
+                //     var comp = prefab.AddComponent<Proxy>();
+                //
+                //     // so the gameobject can be serialized/deserialized
+                //     man.LevelPrefabs_[prefab.name] = prefab;
+                //     // so the component can be deserialized
+                //     BinaryDeserializer.idToSerializableTypeMap_[comp.ID_] = comp.GetType();
+                //
+                //     // so the gameobject shows up in the library tab
+                //     var root = man.LevelPrefabFileInfosRoot_!;
+                //     root.AddChildInfo(new LevelPrefabFileInfo(prefab.name, prefab, root));
+                // }
 
                 {
                     // manager can be saved/loaded, but not added via tab or put on any object
-                    var prefab = new GameObject();
-                    var comp = prefab.AddComponent<CompManager>();
-                    prefab.name = comp.DisplayName_;
+                    var prefab = new GameObject(nameof(CustomObjectManager));
+                    var comp = prefab.AddComponent<CustomObjectManager>();
 
                     man.LevelPrefabs_[prefab.name] = prefab;
                     BinaryDeserializer.idToSerializableTypeMap_[comp.ID_] = comp.GetType();
