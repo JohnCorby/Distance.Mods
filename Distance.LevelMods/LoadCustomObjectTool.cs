@@ -1,10 +1,6 @@
-using System;
 using System.IO;
 using System.Windows.Forms;
-using LevelEditorActions;
 using LevelEditorTools;
-using UnityEngine;
-using static Distance.LevelMods.Entry;
 
 namespace Distance.LevelMods {
     public class LoadCustomObjectTool : InstantTool {
@@ -24,15 +20,14 @@ namespace Distance.LevelMods {
             try {
                 comp = DataLoader.Load(data);
             } catch (DataLoadException e) {
-                PrintMessage(e.Message);
                 G.Sys.MenuPanelManager_.Clear();
                 G.Sys.MenuPanelManager_.ShowError(e.Message, e.GetType().ToString());
                 return false;
             }
 
-            CustomObjectManager.Register(comp);
+            CustomObjectManager.Register(comp, data);
 
-            var info = new LevelPrefabFileInfo(comp.DisplayName_, comp.gameObject, null);
+            var info = new LevelPrefabFileInfo(comp.gameObject.name, comp.gameObject, null);
             G.Sys.LevelEditor_.StartToolNextFrame(new CreateObjectByCursorTool(info));
             return true;
         }
