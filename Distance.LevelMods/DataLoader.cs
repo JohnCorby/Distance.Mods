@@ -57,9 +57,8 @@ namespace Distance.LevelMods {
 
                 var entryType = GetEntryType(entryTypes, $"bundle {bundle.name}");
                 return GetEntryComp(bundle, entryType);
-            } catch (Exception) {
-                bundle.Unload(true);
-                throw;
+            } finally {
+                bundle.Unload(false);
             }
         }
 
@@ -102,24 +101,21 @@ namespace Distance.LevelMods {
                                                 $"does not have entry component {entryType.FullName}");
             }
 
-            // init bundle field
+            // call init methods
             {
-                var fields = entryType.GetFields(BindingFlags.Instance | BindingFlags.NonPublic)
-                    .Where(info => info.FieldType == typeof(AssetBundle)).ToArray();
-                switch (fields.Length) {
-                    case < 1:
-                        log.Warning($"entry type {entryType.FullName} in bundle {bundle.name} " +
-                                    "does not has assetbundle field to init");
-                        return entryComp;
-                    case > 1:
-                        log.Warning($"entry type {entryType.FullName} in bundle {bundle.name} " +
-                                    "has multiple assetbundle fields " +
-                                    fields.Join(field => field.Name));
-                        return entryComp;
+                const string name = "LoadAssets";
+                try {
+                    entryType.InvokeMember(name,
+                        BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic |
+                        BindingFlags.DeclaredOnly | BindingFlags.InvokeMethod,
+                        null, entryComp, new object[] { bundle });
+                } catch (MissingMethodException) {
+                    log.Warning($"entry type {entryType.FullName} in bundle {bundle.name} " +
+                                $"does not have {name}({nameof(AssetBundle)}) method");
+                } catch (AmbiguousMatchException) {
+                    log.Warning($"entry type {entryType.FullName} in bundle {bundle.name} " +
+                                $"has multiple {name}({nameof(AssetBundle)}) methods");
                 }
-
-                var field = fields[0];
-                field.SetValue(entryComp, bundle);
             }
 
             return entryComp;

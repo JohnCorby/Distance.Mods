@@ -15,7 +15,6 @@ jobs:
 
     env:
       SOLUTION: Distance.Mods.sln
-      RELEASE_BODY: This release was automatically generated as part of a GitHub workflow.
 
     steps:
       - name: Checkout
