@@ -5,13 +5,13 @@ using UnityEngine;
 
 namespace Distance.LevelMods {
     namespace ResourceManager_ {
-        /// register levelmods components
+        /// register our components
         [HarmonyPatch(typeof(ResourceManager), nameof(FilloutLevelPrefabs))]
         internal static class FilloutLevelPrefabs {
             [UsedImplicitly]
             private static void Postfix() {
                 var man = G.Sys.ResourceManager_!;
-                var root = man.LevelPrefabFileInfosRoot_;
+                var root = man.LevelPrefabFileInfosRoot_!;
 
                 {
                     var prefab = new GameObject();
@@ -28,18 +28,6 @@ namespace Distance.LevelMods {
                 }
 
                 {
-                    // simple prefab used for the library tab
-                    var prefab = new GameObject();
-                    var comp = prefab.AddComponent<CompLoader>();
-                    prefab.name = comp.DisplayName_;
-
-                    root.AddChildInfo(new LevelPrefabFileInfo(prefab.name, prefab, root));
-
-                    // this comp should not be saved or loaded
-                    // and neither should the prefab
-                }
-
-                {
                     // manager can be saved/loaded, but not added via tab or put on any object
                     var prefab = new GameObject();
                     var comp = prefab.AddComponent<CompManager>();
@@ -48,6 +36,18 @@ namespace Distance.LevelMods {
                     man.LevelPrefabs_[prefab.name] = prefab;
                     BinaryDeserializer.idToSerializableTypeMap_[comp.ID_] = comp.GetType();
                 }
+            }
+        }
+    }
+
+    namespace LevelEditor_ {
+        /// register our tools
+        [HarmonyPatch(typeof(LevelEditor), nameof(RegisterToolJobs))]
+        internal static class RegisterToolJobs {
+            [UsedImplicitly]
+            private static void Postfix() {
+                G.Sys.LevelEditor_.currentRegisteringToolType_ = typeof(LoadCustomObjectTool);
+                G.Sys.LevelEditor_.RegisterTool(LoadCustomObjectTool.info);
             }
         }
     }
