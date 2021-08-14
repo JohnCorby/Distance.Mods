@@ -35,11 +35,8 @@ namespace Distance.LevelMods {
 
                     root.AddChildInfo(new LevelPrefabFileInfo(prefab.name, prefab, root));
 
-                    // this comp can go on any gameobject, regardless of if it's on that object's prefab
-                    man.AddedComponentsPrefab_.AddComponent(comp.GetType());
-                    BinaryDeserializer.idToSerializableTypeMap_[comp.ID_] = comp.GetType();
-
-                    // we dont add it to level prefabs because the prefab itself should never be saved or loaded
+                    // this comp should not be saved or loaded
+                    // and neither should the prefab
                 }
 
                 {

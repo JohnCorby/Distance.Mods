@@ -41,7 +41,7 @@ namespace Distance.LevelMods {
 
         private void LoadPrefab() {
             using var dialog = new OpenFileDialog {
-                Title = "Choose AssetBundle to load"
+                Title = "Choose AssetBundle or DLL to load"
             };
             if (dialog.ShowDialog() != DialogResult.OK) return;
             data = File.ReadAllBytes(dialog.FileName);

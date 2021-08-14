@@ -8,6 +8,10 @@ using UnityEngine;
 using static Distance.LevelMods.Entry;
 
 namespace Distance.LevelMods {
+    public class DataLoadException : Exception {
+        public DataLoadException(Exception e) : base($"error loading data: {e.Message}") => log.Exception(this);
+    }
+
     public static class DataLoader {
         private const string entryName = "Entry";
 
@@ -15,7 +19,7 @@ namespace Distance.LevelMods {
         /// dll,
         /// bundle with entry script, or
         /// bundle with entry prefab (that has entry script)
-        public static SerialComponent? Load(byte[] data) {
+        public static SerialComponent Load(byte[] data) {
             try {
                 // todo check is url???
 
@@ -27,8 +31,7 @@ namespace Distance.LevelMods {
 
                 return LoadFromBundle(data);
             } catch (Exception e) {
-                log.Exception(e);
-                return null;
+                throw new DataLoadException(e);
             }
         }
 
