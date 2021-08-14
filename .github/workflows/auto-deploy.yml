@@ -35,5 +35,5 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: release-workflow
+          tag_name: release-workflow-${{ github.run_number }}
           files: Build\*.zip
