@@ -43,7 +43,7 @@ namespace Distance.LevelMods {
             var entryTypes = dll.GetExportedTypes().Where(type => type.Name == entryName).ToArray();
 
             var entryType = GetEntryType(entryTypes, $"dll {dll}");
-            var entryPrefab = new GameObject(entryType.Namespace);
+            var entryPrefab = Utils.NewPrefab(entryType.Namespace);
             entryPrefab.SetActive(false);
             return (SerialComponent)entryPrefab.AddComponent(entryType);
         }
@@ -96,13 +96,12 @@ namespace Distance.LevelMods {
                     Path.GetFileNameWithoutExtension(asset) == entryType.Namespace?.ToLower());
             GameObject entryPrefab;
             if (asset == null) {
-                log.Debug($"no entry prefab found in bundle {bundle.name}. making minimal one from entry type");
-                entryPrefab = new GameObject(entryType.Namespace);
+                log.Debug($"no entry prefab found in bundle {bundle.name}. making empty one");
+                entryPrefab = Utils.NewPrefab(entryType.Namespace);
             } else {
                 entryPrefab = bundle.LoadAsset<GameObject>(asset);
             }
 
-            entryPrefab.SetActive(false);
             foreach (var comp in entryPrefab.GetComponents<Component>())
                 if (!Serializer.IsComponentSerializable(comp))
                     log.Warning($"gameobject {entryPrefab.name} " +

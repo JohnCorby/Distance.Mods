@@ -21,7 +21,7 @@ namespace Distance.LevelMods {
                 comp = DataLoader.Load(data);
             } catch (DataLoadException e) {
                 G.Sys.MenuPanelManager_.Clear();
-                G.Sys.MenuPanelManager_.ShowError(e.Message, e.GetType().ToString());
+                G.Sys.MenuPanelManager_.ShowError(e.Message, e.GetType().Name);
                 return false;
             }
 

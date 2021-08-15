@@ -1,12 +1,12 @@
 ﻿using HarmonyLib;
 using JetBrains.Annotations;
 
+// ReSharper disable InconsistentNaming
 namespace Distance.Cheat {
     namespace PlayerDataLocal_ {
         [HarmonyPatch(typeof(PlayerDataLocal), nameof(InitializeVirtual))]
         public static class InitializeVirtual {
             [UsedImplicitly]
-            // ReSharper disable once InconsistentNaming
             private static void Postfix(PlayerDataLocal __instance) =>
                 __instance.gameObject.AddComponent<Cheats>();
         }
@@ -33,7 +33,6 @@ namespace Distance.Cheat {
         public static class OnEventSceneLoadFinished {
             /// copied from the original, except always sets gameplayCheatsRecognized_ to true so they always work
             [UsedImplicitly]
-            // ReSharper disable once InconsistentNaming
             private static bool Prefix(CheatsManager __instance) {
                 __instance.gameplayCheatsRecognized_ = true;
                 __instance.UpdateEnabledFlags();

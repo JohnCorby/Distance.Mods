@@ -41,9 +41,12 @@
         <Compile Include="Harmony.cs" />
         <Compile Include="LoadCustomObjectTool.cs" />
         <Compile Include="CustomObjectManager.cs" />
-        <Compile Include="Proxy.cs" />
+        <Compile Include="Utils.cs" />
     </ItemGroup>
     <ItemGroup>
+        <Content Include="Assets\empty">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
         <Content Include="mod.json">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>

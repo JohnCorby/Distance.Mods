@@ -1,22 +1,20 @@
 ﻿using HarmonyLib;
 using JetBrains.Annotations;
 using Serializers;
-using UnityEngine;
 
+// ReSharper disable InconsistentNaming
 namespace Distance.LevelMods {
     namespace ResourceManager_ {
         /// register our components
         [HarmonyPatch(typeof(ResourceManager), nameof(FilloutLevelPrefabs))]
         internal static class FilloutLevelPrefabs {
             [UsedImplicitly]
-            private static void Postfix() {
+            private static void Postfix(ResourceManager __instance) {
                 // manager can be saved/loaded, but not added via tab or put on any object
-                var prefab = new GameObject(nameof(CustomObjectManager));
-                prefab.SetActive(false);
+                var prefab = Utils.NewPrefab(nameof(CustomObjectManager));
                 var comp = prefab.AddComponent<CustomObjectManager>();
 
-                var man = G.Sys.ResourceManager_!;
-                man.LevelPrefabs_[prefab.name] = prefab;
+                __instance.LevelPrefabs_[prefab.name] = prefab;
                 BinaryDeserializer.idToSerializableTypeMap_[comp.ID_] = comp.GetType();
             }
         }
@@ -27,20 +25,21 @@ namespace Distance.LevelMods {
         [HarmonyPatch(typeof(LevelEditor), nameof(RegisterToolJobs))]
         internal static class RegisterToolJobs {
             [UsedImplicitly]
-            private static void Postfix() {
-                G.Sys.LevelEditor_.currentRegisteringToolType_ = typeof(LoadCustomObjectTool);
-                G.Sys.LevelEditor_.RegisterTool(LoadCustomObjectTool.info);
+            private static void Postfix(LevelEditor __instance) {
+                __instance.currentRegisteringToolType_ = typeof(LoadCustomObjectTool);
+                __instance.RegisterTool(LoadCustomObjectTool.info);
             }
         }
     }
 
-    // namespace Deserializer_ {
-    //     [HarmonyPatch(typeof(Deserializer), nameof(VisitGameObject))]
-    //     internal static class VisitGameObject {
-    //         [UsedImplicitly]
-    //         private static void Postfix() {
-    //             Entry.log.Debug("TODO");
-    //         }
-    //     }
-    // }
+    namespace LevelLayer_ {
+        /// make custom object manager layer special
+        [HarmonyPatch(typeof(LevelLayer), nameof(IsTrackNodeLayer_), MethodType.Getter)]
+        internal static class IsTrackNodeLayer_ {
+            [UsedImplicitly]
+            private static void Postfix(LevelLayer __instance, ref bool __result) {
+                __result = __result || __instance.Name_ == nameof(CustomObjectManager);
+            }
+        }
+    }
 }

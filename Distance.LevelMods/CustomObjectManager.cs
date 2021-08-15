@@ -11,6 +11,7 @@ namespace Distance.LevelMods {
         public override bool AllowCopyPaste_ => false;
 
         public static CustomObjectManager? instance;
+
         private void Awake() {
             log.Debug("awake");
             instance = this;
@@ -25,26 +26,42 @@ namespace Distance.LevelMods {
         public Dictionary<string, byte[]> datas = new();
 
         public override void Visit(IVisitor visitor, ISerializable prefabComp, int version) {
-            log.Debug($"visiting as ${visitor.GetType().Name}");
+            log.Debug($"visiting as {visitor.GetType().Name}");
             switch (visitor) {
-                case Serializer serializer:
+                case BinarySerializer serializer:
                     serializer.VisitDictionaryGeneric(nameof(datas), ref datas,
-                        (string name, ref string val, string options) => visitor.Visit(name, ref val, options),
-                        (string name, ref byte[] val, string options) =>
-                            visitor.VisitArray(name, ref val, options));
+                        visitor.Visit, visitor.VisitArray);
+
+                    foreach (var pair in datas)
+                        log.Debug($"saved custom object {pair.Key}");
+
                     break;
                 case BinaryDeserializer deserializer:
                     deserializer.VisitDictionaryGeneric(nameof(datas), ref datas,
-                        (string name, ref string val, string options) => visitor.Visit(name, ref val, options),
-                        (string name, ref byte[] val, string options) => visitor.VisitArray(name, ref val, options),
+                        visitor.Visit, visitor.VisitArray,
                         string.Empty, new byte[0]);
+
+                    foreach (var pair in datas) {
+                        log.Debug($"loading custom object {pair.Key}");
+
+                        SerialComponent comp;
+                        try {
+                            comp = DataLoader.Load(pair.Value);
+                        } catch (DataLoadException e) {
+                            log.Exception(e);
+                            continue;
+                        }
+
+                        Register(comp);
+                    }
+
                     break;
             }
         }
 
 
         /// register custom object so it can be saved/loaded
-        public static void Register(SerialComponent entryComp, byte[] data) {
+        public static void Register(SerialComponent entryComp, byte[]? data = null) {
             var man = G.Sys.ResourceManager_!;
             man.LevelPrefabs_[entryComp.gameObject.name] = entryComp.gameObject;
             BinaryDeserializer.idToSerializableTypeMap_[entryComp.ID_] = entryComp.GetType();
@@ -52,13 +69,15 @@ namespace Distance.LevelMods {
             // var root = man.LevelPrefabFileInfosRoot_;
             // root.AddChildInfo(new LevelPrefabFileInfo(entryComp.gameObject.name, entryComp.gameObject, root));
 
+            if (data == null) return;
             if (instance == null) {
                 var le = G.Sys.LevelEditor_;
                 var prefab = man.levelPrefabs_[nameof(CustomObjectManager)];
                 var obj = le.CreateObject(prefab);
-                obj.SetActive(true);
+
+                var layer = le.WorkingLevel_.CreateAndInsertNewLayer(0, nameof(CustomObjectManager), false, true, false);
                 ReferenceMap.Handle<GameObject> handle = default;
-                le.AddGameObject(ref handle, obj, le.WorkingLevel_.ActiveLayer_);
+                le.AddGameObject(ref handle, obj, layer);
             }
 
             instance!.datas[entryComp.gameObject.name] = data;
