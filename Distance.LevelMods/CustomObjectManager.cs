@@ -11,11 +11,7 @@ namespace Distance.LevelMods {
         public override bool AllowInspect_ => false;
         public override bool AllowCopyPaste_ => false;
 
-        private void Awake() {
-            log.Debug("awake");
-            InitDatas();
-        }
-
+        private void Awake() => log.Debug("awake");
         private void OnDestroy() => log.Debug("destroyed");
 
 
@@ -56,9 +52,9 @@ namespace Distance.LevelMods {
         }
 
         /// find custom objects and add it to the datas list
-        private void InitDatas() {
-            var level = G.Sys.LevelEditor_.WorkingLevel_;
-            foreach (var customObject in level.FindComponentsOfType<CustomObject>())
+        public void InitDatas(IEnumerable<CustomObject> customObjects) {
+            datas.Clear();
+            foreach (var customObject in customObjects)
                 datas[customObject.name] = customObject.data;
         }
 

@@ -39,12 +39,14 @@ namespace Distance.LevelMods {
         internal static class SaveToPath {
             [UsedImplicitly]
             private static void Prefix(Level __instance) {
-                if (__instance.FindComponentsOfType<CustomObject>().IsNullOrEmpty()) return;
+                var customObjects = __instance.FindComponentsOfType<CustomObject>();
+                if (customObjects.IsNullOrEmpty()) return;
 
                 var le = G.Sys.levelEditor_!;
 
                 var prefab = G.Sys.ResourceManager_.levelPrefabs_[nameof(CustomObjectManager)];
                 var obj = le.CreateObject(prefab);
+                obj.GetComponent<CustomObjectManager>().InitDatas(customObjects);
 
                 var layer = __instance.CreateAndInsertNewLayer(0, nameof(CustomObjectManager), false, true, false);
                 ReferenceMap.Handle<GameObject> handle = default;
