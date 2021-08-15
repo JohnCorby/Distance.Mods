@@ -60,12 +60,21 @@ namespace Distance.LevelMods {
 
 
         /// register custom object so it can be saved/loaded
-        public static void Register(SerialComponent entryComp, byte[] data) {
+        public static bool Register(SerialComponent entryComp, byte[] data) {
+            if (BinaryDeserializer.idToSerializableTypeMap_.TryGetValue(entryComp.ID_, out var existing) &&
+                existing != entryComp.GetType()) {
+                G.Sys.MenuPanelManager_.Clear();
+                G.Sys.MenuPanelManager_.ShowError($"id {entryComp.ID_} for {entryComp.GetType().FullName}" +
+                                                  $"is already being used by {existing.FullName}");
+                return false;
+            }
+
+            BinaryDeserializer.idToSerializableTypeMap_[entryComp.ID_] = entryComp.GetType();
+
             entryComp.gameObject.AddComponent<CustomObject>().data = data;
 
             var man = G.Sys.ResourceManager_!;
             man.LevelPrefabs_[entryComp.name] = entryComp.gameObject;
-            BinaryDeserializer.idToSerializableTypeMap_[entryComp.ID_] = entryComp.GetType();
 
             var root = man.LevelPrefabFileInfosRoot_;
             var info = new LevelPrefabFileInfo(entryComp.name, entryComp.gameObject, root);
@@ -73,6 +82,7 @@ namespace Distance.LevelMods {
                 G.Sys.LevelEditor_.DoFramesLater(2, () => G.Sys.LevelEditor_.SetToolText(
                     $"Updated prefab for custom object {entryComp.name}"));
             root.AddChildInfo(info);
+            return true;
         }
     }
 }
