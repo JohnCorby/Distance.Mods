@@ -72,7 +72,11 @@ namespace Distance.LevelMods {
             BinaryDeserializer.idToSerializableTypeMap_[entryComp.ID_] = entryComp.GetType();
 
             var root = man.LevelPrefabFileInfosRoot_;
-            root.AddChildInfo(new LevelPrefabFileInfo(entryComp.name, entryComp.gameObject, root));
+            var info = new LevelPrefabFileInfo(entryComp.name, entryComp.gameObject, root);
+            if (root.childInfos_.RemoveAll(info1 => info1.Name_ == info.Name_) > 0)
+                G.Sys.LevelEditor_.DoFramesLater(2, () => G.Sys.LevelEditor_.SetToolText(
+                    $"Updated prefab for custom object {entryComp.name}"));
+            root.AddChildInfo(info);
         }
     }
 }

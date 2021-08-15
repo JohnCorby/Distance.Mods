@@ -39,6 +39,8 @@ namespace Distance.LevelMods {
         internal static class SaveToPath {
             [UsedImplicitly]
             private static void Prefix(Level __instance) {
+                if (__instance.FindComponentsOfType<CustomObject>().IsNullOrEmpty()) return;
+
                 var le = G.Sys.levelEditor_!;
 
                 var prefab = G.Sys.ResourceManager_.levelPrefabs_[nameof(CustomObjectManager)];

@@ -17,9 +17,11 @@ namespace Distance.LevelMods {
                 G.Sys.LevelEditor_.AddEventToRegisteredHotKeys(InputEvent.Create("ctrl+shift+o"),
                     LoadCustomObjectTool.info.Name_));
 
-            PostLoad.Subscribe(data =>
+            PostLoad.Subscribe(data => {
                 // remove custom object manager when a level loads
-                data.level_.TryDeleteLayer(data.level_.GetLayer(nameof(CustomObjectManager)), true));
+                var layer = data.level_.GetLayer(nameof(CustomObjectManager));
+                if (layer != null) data.level_.TryDeleteLayer(layer, true);
+            });
 
             RuntimePatcher.AutoPatch();
         }
