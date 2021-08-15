@@ -1,4 +1,5 @@
-﻿using Events.LevelEditor;
+﻿using Events.Level;
+using Events.LevelEditor;
 using Reactor.API.Attributes;
 using Reactor.API.Interfaces.Systems;
 using Reactor.API.Logging;
@@ -11,12 +12,14 @@ namespace Distance.LevelMods {
         public static readonly Log log = LogManager.GetForCurrentAssembly();
 
         public void Initialize(IManager manager) {
-            ControlSchemeChanged.Subscribe(_ => {
+            ControlSchemeChanged.Subscribe(_ =>
                 // register hotkeys for custom tools
                 G.Sys.LevelEditor_.AddEventToRegisteredHotKeys(InputEvent.Create("ctrl+shift+o"),
-                    LoadCustomObjectTool.info.Name_);
-            });
+                    LoadCustomObjectTool.info.Name_));
 
+            PostLoad.Subscribe(data =>
+                // remove custom object manager when a level loads
+                data.level_.TryDeleteLayer(data.level_.GetLayer(nameof(CustomObjectManager)), true));
 
             RuntimePatcher.AutoPatch();
         }

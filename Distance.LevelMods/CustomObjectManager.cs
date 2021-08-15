@@ -1,26 +1,22 @@
 using System.Collections.Generic;
 using Serializers;
-using UnityEngine;
 using static Distance.LevelMods.Entry;
 
 namespace Distance.LevelMods {
+    /// this holds the data for all the custom objects.
+    /// it will be serialized into the level on save
     public class CustomObjectManager : SerialComponent {
-        public override ComponentID ID_ => (ComponentID)6969;
+        public override ComponentID ID_ => (ComponentID)int.MinValue;
 
         public override bool AllowInspect_ => false;
         public override bool AllowCopyPaste_ => false;
 
-        public static CustomObjectManager? instance;
-
         private void Awake() {
             log.Debug("awake");
-            instance = this;
+            InitDatas();
         }
 
-        private void OnDestroy() {
-            log.Debug("destroyed");
-            instance = null;
-        }
+        private void OnDestroy() => log.Debug("destroyed");
 
 
         public Dictionary<string, byte[]> datas = new();
@@ -52,35 +48,31 @@ namespace Distance.LevelMods {
                             continue;
                         }
 
-                        Register(comp);
+                        Register(comp, pair.Value);
                     }
 
                     break;
             }
         }
 
+        /// find custom objects and add it to the datas list
+        private void InitDatas() {
+            var level = G.Sys.LevelEditor_.WorkingLevel_;
+            foreach (var customObject in level.FindComponentsOfType<CustomObject>())
+                datas[customObject.name] = customObject.data;
+        }
+
 
         /// register custom object so it can be saved/loaded
-        public static void Register(SerialComponent entryComp, byte[]? data = null) {
+        public static void Register(SerialComponent entryComp, byte[] data) {
+            entryComp.gameObject.AddComponent<CustomObject>().data = data;
+
             var man = G.Sys.ResourceManager_!;
-            man.LevelPrefabs_[entryComp.gameObject.name] = entryComp.gameObject;
+            man.LevelPrefabs_[entryComp.name] = entryComp.gameObject;
             BinaryDeserializer.idToSerializableTypeMap_[entryComp.ID_] = entryComp.GetType();
 
-            // var root = man.LevelPrefabFileInfosRoot_;
-            // root.AddChildInfo(new LevelPrefabFileInfo(entryComp.gameObject.name, entryComp.gameObject, root));
-
-            if (data == null) return;
-            if (instance == null) {
-                var le = G.Sys.LevelEditor_;
-                var prefab = man.levelPrefabs_[nameof(CustomObjectManager)];
-                var obj = le.CreateObject(prefab);
-
-                var layer = le.WorkingLevel_.CreateAndInsertNewLayer(0, nameof(CustomObjectManager), false, true, false);
-                ReferenceMap.Handle<GameObject> handle = default;
-                le.AddGameObject(ref handle, obj, layer);
-            }
-
-            instance!.datas[entryComp.gameObject.name] = data;
+            var root = man.LevelPrefabFileInfosRoot_;
+            root.AddChildInfo(new LevelPrefabFileInfo(entryComp.name, entryComp.gameObject, root));
         }
     }
 }

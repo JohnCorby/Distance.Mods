@@ -27,7 +27,7 @@ namespace Distance.LevelMods {
 
             CustomObjectManager.Register(comp, data);
 
-            var info = new LevelPrefabFileInfo(comp.gameObject.name, comp.gameObject, null);
+            var info = new LevelPrefabFileInfo(comp.name, comp.gameObject, null);
             G.Sys.LevelEditor_.StartToolNextFrame(new CreateObjectByCursorTool(info));
             return true;
         }

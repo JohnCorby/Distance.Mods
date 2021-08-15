@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using JetBrains.Annotations;
 using Serializers;
+using UnityEngine;
 
 // ReSharper disable InconsistentNaming
 namespace Distance.LevelMods {
@@ -32,13 +33,26 @@ namespace Distance.LevelMods {
         }
     }
 
-    namespace LevelLayer_ {
-        /// make custom object manager layer special
-        [HarmonyPatch(typeof(LevelLayer), nameof(IsTrackNodeLayer_), MethodType.Getter)]
-        internal static class IsTrackNodeLayer_ {
+    namespace Level_ {
+        /// temporarily add the manager when we save
+        [HarmonyPatch(typeof(Level), nameof(SaveToPath), typeof(string), typeof(bool))]
+        internal static class SaveToPath {
             [UsedImplicitly]
-            private static void Postfix(LevelLayer __instance, ref bool __result) {
-                __result = __result || __instance.Name_ == nameof(CustomObjectManager);
+            private static void Prefix(Level __instance) {
+                var le = G.Sys.levelEditor_!;
+
+                var prefab = G.Sys.ResourceManager_.levelPrefabs_[nameof(CustomObjectManager)];
+                var obj = le.CreateObject(prefab);
+
+                var layer = __instance.CreateAndInsertNewLayer(0, nameof(CustomObjectManager), false, true, false);
+                ReferenceMap.Handle<GameObject> handle = default;
+                le.AddGameObject(ref handle, obj, layer);
+            }
+
+            [UsedImplicitly]
+            private static void Postfix(Level __instance) {
+                var layer = __instance.GetLayer(nameof(CustomObjectManager));
+                if (layer != null) __instance.TryDeleteLayer(layer, true);
             }
         }
     }

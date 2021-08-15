@@ -36,6 +36,7 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
     <ItemGroup>
+        <Compile Include="CustomObject.cs" />
         <Compile Include="DataLoader.cs" />
         <Compile Include="Entry.cs" />
         <Compile Include="Harmony.cs" />
