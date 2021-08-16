@@ -18,7 +18,6 @@ namespace Distance.LevelMods {
         public Dictionary<string, byte[]> datas = new();
 
         public override void Visit(IVisitor visitor, ISerializable prefabComp, int version) {
-            log.Debug($"visiting as {visitor.GetType().Name}");
             switch (visitor) {
                 case BinarySerializer serializer:
                     serializer.VisitDictionaryGeneric(nameof(datas), ref datas,

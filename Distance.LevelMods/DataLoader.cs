@@ -44,8 +44,9 @@ namespace Distance.LevelMods {
 
             var entryType = GetEntryType(entryTypes, $"dll {dll}");
             var entryPrefab = Utils.NewPrefab(entryType.Namespace);
-            entryPrefab.SetActive(false);
-            return (SerialComponent)entryPrefab.AddComponent(entryType);
+            var entryComp = (SerialComponent)entryPrefab.AddComponent(entryType);
+            entryComp.CallInit($"dll {dll}");
+            return entryComp;
         }
 
         /// treat data as bundle, load dlls, find entry script.
@@ -96,42 +97,42 @@ namespace Distance.LevelMods {
                     Path.GetFileNameWithoutExtension(asset) == entryType.Namespace?.ToLower());
             GameObject entryPrefab;
             if (asset == null) {
-                log.Debug($"no entry prefab found in bundle {bundle.name}. making empty one");
+                log.Debug($"no entry prefab {entryType.Namespace} found in bundle {bundle.name}. making empty one");
                 entryPrefab = Utils.NewPrefab(entryType.Namespace);
             } else {
                 entryPrefab = bundle.LoadAsset<GameObject>(asset);
             }
 
+            var entryComp = (SerialComponent)entryPrefab.AddComponent(entryType);
+            if (!entryComp.CallInit($"bundle {bundle.name}", bundle))
+                entryComp.CallInit($"bundle {bundle.name}");
+
             foreach (var comp in entryPrefab.GetComponents<Component>())
                 if (!Serializer.IsComponentSerializable(comp))
-                    log.Warning($"gameobject {entryPrefab.name} " +
+                    log.Warning($"entry prefab {entryPrefab.name} " +
                                 $"has non-serializable component {comp.GetType().FullName}");
 
-            var entryComp = (SerialComponent)entryPrefab.AddComponent(entryType);
-
-            bool Call(string name, params object[] args) {
-                var signature = $"{name}({args.Join(arg => arg.GetType().Name)})";
-                try {
-                    entryType.InvokeMember(name,
-                        BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic |
-                        BindingFlags.DeclaredOnly | BindingFlags.InvokeMethod,
-                        null, entryComp, args);
-                    return true;
-                } catch (MissingMethodException) {
-                    log.Warning($"entry type {entryType.FullName} in bundle {bundle.name} " +
-                                $"does not have {signature} method");
-                    return false;
-                } catch (AmbiguousMatchException) {
-                    log.Warning($"entry type {entryType.FullName} in bundle {bundle.name} " +
-                                $"has multiple {signature} methods");
-                    return false;
-                }
-            }
-
-            if (!Call("Init", bundle))
-                Call("Init");
-
             return entryComp;
+        }
+
+        private static bool CallInit(this SerialComponent entryComp, string container, params object[] args) {
+            const string name = "Init";
+            var signature = $"{name}({args.Join(arg => arg.GetType().Name)})";
+            try {
+                entryComp.GetType().InvokeMember(name,
+                    BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic |
+                    BindingFlags.DeclaredOnly | BindingFlags.InvokeMethod,
+                    null, entryComp, args);
+                return true;
+            } catch (MissingMethodException) {
+                log.Warning($"entry comp {entryComp.GetType().FullName} in {container} " +
+                            $"does not have {signature} method");
+                return false;
+            } catch (AmbiguousMatchException) {
+                log.Warning($"entry type {entryComp.GetType().FullName} in {container} " +
+                            $"has multiple {signature} methods");
+                return false;
+            }
         }
     }
 }
